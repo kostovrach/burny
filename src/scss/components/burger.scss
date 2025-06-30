@@ -1,0 +1,45 @@
+@use "../utils/abstracts" as *;
+
+.burger {
+	cursor: pointer;
+	position: relative;
+	width: 2rem;
+	height: 1.5rem;
+	display: none;
+	& span {
+		display: block;
+		width: 100%;
+		background-color: $c-FFFFFF;
+		height: rem(3);
+		border-radius: 0.5rem;
+		overflow: hidden;
+		pointer-events: none;
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: rem(3);
+			border-radius: 0.5rem;
+			overflow: hidden;
+			background-color: inherit;
+			pointer-events: none;
+		}
+		&::after {
+			top: auto;
+			bottom: 0;
+		}
+		.sticky &,
+		.fill & {
+			background-color: $c-000000;
+		}
+	}
+}
+@media (max-width: 1240px) {
+	.burger {
+		@include flex-center();
+	}
+}

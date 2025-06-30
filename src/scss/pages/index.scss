@@ -1,0 +1,190 @@
+@use "../utils/abstracts" as *;
+
+.index-hero {
+	min-height: 100lvh;
+	overflow: clip;
+	&__background {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		filter: brightness(50%);
+		&-container {
+			position: relative;
+			z-index: -1;
+		}
+		&-image-container {
+			width: 100%;
+			height: 100lvh;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&-thumbs {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			right: rem(32);
+			translate: 0 -50%;
+			overflow: visible;
+			&-item {
+				cursor: pointer;
+				width: rem(94);
+				height: rem(54);
+				&.swiper-slide-thumb-active {
+					position: relative;
+					z-index: 1;
+					&::after {
+						content: "";
+						position: absolute;
+						inset: -0.875rem;
+						width: calc(100% + 1.75rem);
+						height: calc(100% + 1.75rem);
+						background: url("/assets/img/service/border.png") no-repeat center / contain;
+						pointer-events: none;
+						z-index: 1;
+						transition: $duration;
+					}
+				}
+			}
+			&-image-container {
+				width: rem(94);
+				height: rem(54);
+				overflow: hidden;
+				opacity: 0.8;
+			}
+			&-image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__container {
+		padding: rem(96) 0;
+		min-height: 100lvh;
+		@include flex-center();
+		@include content-width();
+	}
+	&__titlebox {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
+		gap: rem(96);
+		color: $c-FFFFFF;
+	}
+	&__title {
+		grid-column: span 2;
+		text-transform: uppercase;
+		font-size: lineScale(96, 40, 480, 1440);
+		line-height: 1;
+		font-weight: $fw-bold;
+	}
+	&__subtitle {
+		grid-row: 2;
+		position: relative;
+		text-transform: lowercase;
+		font-size: lineScale(22, 18, 480, 1440);
+		line-height: 150%;
+		padding-left: rem(32);
+		&::before {
+			content: "—";
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&--accent {
+			display: inline-block;
+			border-bottom: rem(2) dotted $c-FFFFFF;
+		}
+	}
+	&__button-container {
+		grid-column: 2;
+		grid-row: span 1;
+	}
+}
+.index-about {
+	padding: rem(128) 0;
+	&__container {
+		@include content-width();
+	}
+	&__titlebox {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(64);
+	}
+	&__title {
+		grid-column: span 2;
+		color: $c-FFFFFF;
+		font-size: lineScale(64, 24, 480, 1440);
+		line-height: 1;
+		font-weight: $fw-bold;
+	}
+	&__subtitle {
+        grid-column: 2;
+        position: relative;
+        font-size: lineScale(24,16,480,1440);
+        line-height: 120%;
+        padding-top: rem(64);
+        opacity: .8;
+        &::before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: rem(128);
+            height: rem(2);
+            background-color: $c-C6A47D;
+        }
+	}
+    &__metrics {
+        display: flex;
+        flex-direction: column;
+        gap: rem(64);
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: rem(32);
+            &:nth-child(3n+1) {
+                align-self: flex-start;
+            }
+            &:nth-child(3n+2) {
+                align-self: center;
+            }
+            &:nth-child(3n+3) {
+                align-self: flex-end;
+            }
+        }
+        &-value {
+            color: $c-FFFFFF;
+            font-size: lineScale(32,24,480,1440);
+            line-height: 1;
+            font-weight: $fw-bold;
+            &-number {
+                font-size: lineScale(96,40,480,1440);
+                line-height: 1;
+            }
+        }
+        &-text {
+            max-width: 35ch;
+            display: block;
+            position: relative;
+            font-size: lineScale(24,18,480,1440);
+            padding-left: rem(64);
+            &::before{
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: rem(2);
+                background-color: $c-C6A47D;
+            }
+        }
+    }
+}

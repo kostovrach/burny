@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../components/head.html', { "title": "BURNY - Океан рядом, Город вокруг" })
+	<body>
+		@@include('../components/header.html')
+		<main>
+			<section class="index-hero">
+				<div class="index-hero__background">
+					<div class="index-hero__background-container swiper">
+						<div class="index-hero__background-wrapper swiper-wrapper">
+							<div class="index-hero__background-slide swiper-slide">
+								<picture class="index-hero__background-image-container" data-swiper-parallax="600" data-swiper-parallax-duration="2200" data-swiper-parallax-opacity="0">
+									<img class="index-hero__background-image" src="assets/img/backgrounds/index-hero-slider/bg.jpg" alt="#" />
+								</picture>
+							</div>
+							<div class="index-hero__background-slide swiper-slide">
+								<picture class="index-hero__background-image-container" data-swiper-parallax="600" data-swiper-parallax-duration="2200" data-swiper-parallax-opacity="0">
+									<img class="index-hero__background-image" src="assets/img/backgrounds/index-hero-slider/bg1.jpg" alt="#" />
+								</picture>
+							</div>
+							<div class="index-hero__background-slide swiper-slide">
+								<picture class="index-hero__background-image-container" data-swiper-parallax="600" data-swiper-parallax-duration="2200" data-swiper-parallax-opacity="0">
+									<img class="index-hero__background-image" src="assets/img/backgrounds/index-hero-slider/bg2.jpg" alt="#" />
+								</picture>
+							</div>
+							<div class="index-hero__background-slide swiper-slide">
+								<picture class="index-hero__background-image-container" data-swiper-parallax="600" data-swiper-parallax-duration="2200" data-swiper-parallax-opacity="0">
+									<img class="index-hero__background-image" src="assets/img/backgrounds/index-hero-slider/bg3.jpg" alt="#" />
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="index-hero__background-thumbs swiper">
+						<div class="index-hero__background-thumbs-wrapper swiper-wrapper">
+							<div class="index-hero__background-thumbs-item swiper-slide">
+								<picture class="index-hero__background-thumbs-image-container">
+									<img class="index-hero__background-thumbs-image" src="assets/img/backgrounds/index-hero-slider/bg.jpg" alt="#" />
+								</picture>
+							</div>
+							<div class="index-hero__background-thumbs-item swiper-slide">
+								<picture class="index-hero__background-thumbs-image-container">
+									<img class="index-hero__background-thumbs-image" src="assets/img/backgrounds/index-hero-slider/bg1.jpg" alt="#" />
+								</picture>
+							</div>
+							<div class="index-hero__background-thumbs-item swiper-slide">
+								<picture class="index-hero__background-thumbs-image-container">
+									<img class="index-hero__background-thumbs-image" src="assets/img/backgrounds/index-hero-slider/bg2.jpg" alt="#" />
+								</picture>
+							</div>
+							<div class="index-hero__background-thumbs-item swiper-slide">
+								<picture class="index-hero__background-thumbs-image-container">
+									<img class="index-hero__background-thumbs-image" src="assets/img/backgrounds/index-hero-slider/bg3.jpg" alt="#" />
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="index-hero__container">
+					<div class="index-hero__titlebox">
+						<h1 class="index-hero__title">Океан рядом, Город вокруг — BURNY</h1>
+						<p class="index-hero__subtitle">это первый дальневосточный проект, построенный по&nbsp;концепции <span class="index-hero__subtitle--accent">город в&nbsp;городе</span>, собравший под одной крышей все, что нужно современному деловому&nbsp;человеку.</p>
+						<div class="index-hero__button-container">@@include('../components/button.html', { "title": "Смотреть", "text": "Фильм о нас", "href": "#" })</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-about">
+				<div class="index-about__container">
+					<div class="index-about__titlebox">
+						<h1 class="index-about__title">С одной стороны — океанский простор, а&nbsp;с&nbsp;другой — центр Владивостока.</h1>
+						<p class="index-about__subtitle">
+							BURNY CITY — знаковый проект Владивостока, где соединились лучшие возможности для деловой жизни и&nbsp;качественного отдыха.
+							<br /><br />
+							Обосновавшись на мысе Бурном, он с трех сторон окружён заливом, а четвертой выходит на центр города. Вокруг комплекса разбит собственный парк с&nbsp;ландшафтным дизайном в общей стилистике комплекса.
+						</p>
+					</div>
+					<ul class="index-about__metrics">
+						<li class="index-about__metrics-item">
+							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">3</span> здания</div>
+							<p class="index-about__metrics-text">Объединенных переходами, парковочной зоной и&nbsp;стилобатом</p>
+						</li>
+						<li class="index-about__metrics-item">
+							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">32</span> зоны</div>
+							<p class="index-about__metrics-text">Коммерческие зоны, доступные для аренды, включают офисы и торговые площади</p>
+						</li>
+						<li class="index-about__metrics-item">
+							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">3500</span> паркомест</div>
+							<p class="index-about__metrics-text">Общее количество парковочных мест на&nbsp;закрытой и&nbsp;открытой парковках</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

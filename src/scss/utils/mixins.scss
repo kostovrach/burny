@@ -1,0 +1,85 @@
+@use "variables" as *;
+@use "functions" as *;
+
+@mixin content-width() {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-left: rem(32);
+	padding-right: rem(32);
+	@media (max-width: 768px) {
+		padding-left: rem(16);
+		padding-right: rem(16);
+	}
+}
+@mixin flex-center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin gradient-text($gradient: linear-gradient(90deg, black, white), $fallback-color: black) {
+	color: $fallback-color;
+
+	background: $gradient;
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+@mixin hover-underline($bg-color: black) {
+	position: relative;
+	width: fit-content;
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: rem(1);
+		width: 0;
+		background-color: $bg-color;
+		transition: $duration;
+	}
+	&:hover::after {
+		width: 100%;
+	}
+}
+@mixin drop-shadow() {
+	filter: drop-shadow(0 0 10px rgba(black, 0.3));
+}
+@mixin tg-hover {
+	transition: scale $duration;
+	will-change: scale;
+	border-radius: 50%;
+	@include flex-center();
+	@media (pointer: fine) {
+		&:hover {
+			background-color: #229ed9;
+			scale: 1.1;
+		}
+	}
+}
+@mixin vk-hover {
+	transition: scale $duration;
+	will-change: scale;
+	border-radius: 50%;
+	@include flex-center();
+	@media (pointer: fine) {
+		&:hover {
+			background-color: #0e7cff;
+			scale: 1.1;
+		}
+	}
+}
+@mixin insta-hover {
+	transition: scale $duration;
+	will-change: scale;
+	border-radius: 50%;
+	@include flex-center();
+	@media (pointer: fine) {
+		&:hover {
+			background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+			scale: 1.1;
+		}
+	}
+}
