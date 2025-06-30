@@ -39,11 +39,17 @@ body {
 	-webkit-text-size-adjust: 100%;
 	background-color: var.$main-color;
 	color: var.$accent-color;
-	background-image: url('../assets/img/backgrounds/main-bg.svg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+	&::before {
+		content: "";
+		position: fixed;
+		z-index: -1;
+		inset: 0;
+		opacity: .6;
+		background-image: url("../assets/img/backgrounds/main-bg.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
 }
 input,
 button,
@@ -121,10 +127,10 @@ picture {
 dialog {
 	max-width: initial;
 	max-height: initial;
-    &:focus,
-	& *:focus  {
-        outline: none;
-    }
+	&:focus,
+	& *:focus {
+		outline: none;
+	}
 }
 dialog::backdrop {
 	all: unset;
@@ -134,7 +140,7 @@ dialog::backdrop {
 }
 
 .swiper-wrapper {
-  -webkit-transition-timing-function:linear !important; 
-  -o-transition-timing-function:linear !important;
-  transition-timing-function:linear !important;
+	-webkit-transition-timing-function: linear !important;
+	-o-transition-timing-function: linear !important;
+	transition-timing-function: linear !important;
 }

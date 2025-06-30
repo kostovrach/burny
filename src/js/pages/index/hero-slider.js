@@ -7,32 +7,39 @@
 	const thumbsSwiper = new Swiper(thumbsSlider, {
 		spaceBetween: 16,
 		slidesPerView: "auto",
-        direction: "vertical",
-		freeMode: true,
+		direction: "vertical",
 		watchSlidesProgress: true,
 		mousewheel: true,
 	});
 
-	new Swiper(mainSlider, {
+	const mainSwiper = new Swiper(mainSlider, {
 		spaceBetween: 0,
-        autoplay: {
-            ebable: true,
-            speed: 16000,
-        },
-        loop: true,
+		loop: true,
 		parallax: true,
+		autoplay: {
+			enable: true,
+			speed: 16000,
+		},
 		effect: "creative",
 		creativeEffect: {
 			next: {
 				translate: ["100%", 0],
 			},
-            prev: {
+			prev: {
 				translate: ["100%", 0],
-
-            },
+			},
 		},
 		thumbs: {
 			swiper: thumbsSwiper,
 		},
+	});
+
+	mainSwiper.on("slideChange", () => {
+		const realIndex = mainSwiper.realIndex;
+		const targetSlide = thumbsSwiper.slides[realIndex];
+
+		if (targetSlide) {
+			thumbsSwiper.slideTo(thumbsSwiper.slides.indexOf(targetSlide), 600);
+		}
 	});
 })();
