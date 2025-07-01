@@ -93,7 +93,7 @@
 			flex-direction: column;
 			gap: rem(64);
 			margin-top: rem(16);
-			transition: all $duration ease;
+			transition: all $duration;
 		}
 		&-title {
 			cursor: pointer;

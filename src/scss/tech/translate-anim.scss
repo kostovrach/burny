@@ -6,30 +6,30 @@
 		position: relative;
 		display: inline-block;
 		line-height: 1;
-        transition: translate $duration $spring;
+		transition: translate $duration $spring;
 		&::before {
 			content: attr(data-text);
 			position: absolute;
 			left: 0;
 			top: 0;
 			width: 100%;
-            translate: 0 120%;
-            transition: translate $duration $spring;
-            pointer-events: none;
+			translate: 0 120%;
+			transition: translate $duration $spring;
+			pointer-events: none;
 		}
 	}
 	&.is-hovered > span {
-        translate: 0 -120%;
-        &::before{
-            translate: 0 120%;
-            pointer-events: auto;
-        }
+		translate: 0 -120%;
+		&::before {
+			translate: 0 120%;
+			pointer-events: auto;
+		}
 	}
 	&.is-leaving > span {
-        translate: 0 0;
-        &::before{
-            translate: 0 120%;
-            pointer-events: none;
-        }
+		translate: 0 0;
+		&::before {
+			translate: 0 120%;
+			pointer-events: none;
+		}
 	}
 }
