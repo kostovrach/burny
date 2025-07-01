@@ -18,15 +18,18 @@
 		parallax: true,
 		autoplay: {
 			enable: true,
-			speed: 16000,
+			delay: 5000,
 		},
+		speed: 800,
 		effect: "creative",
 		creativeEffect: {
 			next: {
-				translate: ["100%", 0],
+				translate: ["-10%", 0, 0],
+				opacity: 0,
 			},
 			prev: {
-				translate: ["100%", 0],
+				translate: ["10%", 0, 0],
+				opacity: 0,
 			},
 		},
 		thumbs: {

@@ -3,6 +3,7 @@
 		constructor() {
 			this.container = document.getElementById("index-buildingContainer");
 			this.model = document.getElementById("index-buildingModel");
+			this.modelImage = document.getElementById("index-buildingModelImage");
 			this.infoPanel = document.getElementById("index-building-infoPanel");
 			this.panelTitle = document.getElementById("index-building-panelTitle");
 			this.panelContent = document.getElementById("index-building-panelContent");
@@ -99,12 +100,12 @@
 
 		applyParallax() {
 			const transform = `translate(${this.parallaxOffset.x}px, ${this.parallaxOffset.y}px)`;
-			this.model.style.transform = transform;
+			this.modelImage.style.transform = transform;
 		}
 
 		resetParallax() {
 			this.parallaxOffset = { x: 0, y: 0 };
-			this.model.style.transform = "translate(0, 0)";
+			//this.modelImage.style.transform = "translate(0, 0)";
 		}
 
 		handlePointClick(point) {
@@ -133,8 +134,10 @@
 			} else {
 				this.panelTitle.textContent = data.title;
 				this.panelContent.innerHTML = `
-					<img src="${data.image}" alt="${data.title}" class="info-image">
-					<div class="info-text">${data.description}</div>
+					<div class="index-demo__info-panel-text">${data.description}</div>
+					<picture class="index-demo__info-panel-image-container">
+						<img src="${data.image}" alt="${data.title}" class="index-demo__info-panel-image">
+					</picture>
 				`;
 			}
 

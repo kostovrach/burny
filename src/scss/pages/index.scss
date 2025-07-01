@@ -191,6 +191,7 @@
 	}
 }
 .index-demo {
+	padding: rem(128) 0;
 	&__container {
 		max-width: 1920px;
 		margin: 0 auto;
@@ -199,6 +200,7 @@
 	&__building {
 		position: relative;
 		width: 100%;
+		min-width: rem(1600);
 		height: rem(900);
 		&-model {
 			position: absolute;
@@ -206,10 +208,10 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			transition: transform calc($duration / 3), scale $duration, width $duration;
+			transition: transform calc($duration / 2), scale $duration, translate $duration;
 			&.active {
-				width: 80%;
-				scale: .9;
+				scale: 0.85;
+				translate: -10% 0;
 			}
 		}
 		&-image-container {
@@ -220,52 +222,286 @@
 		&-image {
 			width: 100%;
 			height: 100%;
-			object-fit: contain;
+			object-fit: cover;
+		}
+		&-cloud-container {
+			position: absolute;
+			z-index: 1;
+			top: 10%;
+			left: 50%;
+			translate: -50% 0;
+			scale: 1.25;
+			transition: all $duration;
+			.active & {
+				scale: 1.5;
+				translate: -40% 0;
+			}
+		}
+		&-cloud {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 		&-point {
 			cursor: pointer;
+			box-sizing: content-box;
 			position: absolute;
 			z-index: 1;
-			width: rem(24);
+			width: rem(20);
+			height: rem(20);
 			aspect-ratio: 1/1;
-			background: #3498db;
-			//border: 10px solid rgba($c-FFFFFF, 0.3);
+			background: $c-C6A47D;
+			outline: rem(6) solid rgba($c-FFFFFF, 1);
 			border-radius: 50%;
 			transform: translate(-50%, -50%);
+			will-change: scale;
 			transition: all $duration $spring;
-			&::before{
-				content:'';
-				position: absolute;
-				z-index: -1;
-				inset: 0;
-				width: 100%;
-				height: 100%;
-				background-color: $c-FFFFFF;
+			&.active,
+			&:hover {
+				translate: 50% 50%;
+				scale: 3;
+				outline-color: rgba($c-FFFFFF, 0.3);
+				> img {
+					opacity: 1;
+				}
 			}
 			&-image {
+				position: absolute;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				display: none;
+				border-radius: 50%;
+				overflow: hidden;
+				opacity: 0;
+				transition: all $duration $spring;
 			}
 		}
 	}
 	&__info-panel {
 		position: absolute;
+		z-index: 2;
 		top: 50%;
-		right: -400px;
-		width: 380px;
-		height: 500px;
-		background: rgba(255, 255, 255, 0.95);
+		right: 0;
+		max-width: rem(465);
+		max-height: rem(600);
+		border: rem(2) solid $c-C6A47D;
 		backdrop-filter: blur(10px);
-		border-radius: 15px;
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-		transform: translateY(-50%);
-		transition: right $duration cubic-bezier(0.4, 0, 0.2, 1);
-		z-index: 1;
+		translate: 0 -50%;
+		padding: rem(64);
 		overflow: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transition: all $duration $spring;
 		&.active {
-			right: 30px;
+			right: 5%;
+			opacity: 1;
+			pointer-events: auto;
 		}
+		&-close-btn {
+			cursor: pointer;
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+		}
+		&-title {
+			color: $c-FFFFFF;
+			font-size: lineScale(40, 24, 480, 1440);
+			line-height: 1;
+			font-weight: $fw-bold;
+		}
+		&-text {
+			color: $c-FFFFFF;
+			font-size: lineScale(18, 16, 480, 1440);
+			line-height: 150%;
+			margin-top: rem(32);
+		}
+		&-image-container {
+			width: 100%;
+			height: rem(160);
+			margin-top: rem(52);
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.index-services {
+	padding: rem(128) 0;
+	&__titlebox {
+		@include content-width();
+	}
+	&__title {
+		position: relative;
+		color: $c-FFFFFF;
+		font-size: lineScale(64, 24, 480, 1440);
+		line-height: 1;
+		font-weight: $fw-bold;
+		padding-bottom: rem(64);
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: rem(128);
+			height: rem(2);
+			background-color: $c-C6A47D;
+		}
+	}
+	&__body {
+		position: relative;
+		margin-top: rem(128);
+	}
+	&__slider {
+		counter-reset: item;
+		&-pagination {
+			width: fit-content !important;
+			height: fit-content !important;
+			top: 50% !important;
+			left: auto !important;
+			right: rem(32) !important;
+			translate: 0 -50%;
+			display: flex;
+			flex-direction: column;
+			gap: rem(24);
+			& .swiper-pagination-bullet {
+				position: relative;
+				width: rem(24);
+				height: rem(4);
+				border-radius: 0;
+				margin: 0 !important;
+				background-color: $c-C6A47D;
+				transition: height $duration $spring;
+				@media (pointer: fine) {
+					&:hover {
+						> span {
+							translate: 0 -50%;
+							opacity: 1;
+						}
+					}
+				}
+				> span {
+					position: absolute;
+					top: 50%;
+					right: rem(32);
+					width: max-content;
+					text-transform: uppercase;
+					font-size: lineScale(14, 12, 480, 1440);
+					line-height: 1;
+					font-weight: $fw-bold;
+					translate: 0 -100%;
+					opacity: 0;
+					transition: all $duration;
+				}
+				&-active {
+					height: rem(6);
+					> span {
+						translate: 0 -50%;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&__slide {
+		counter-increment: item;
+		position: relative;
+		width: 100%;
+		height: rem(920);
+		&:nth-child(n + 10) {
+			.index-services__slide-title::before {
+				content: counter(item);
+			}
+		}
+		&-image-container {
+			position: absolute;
+			z-index: -1;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: brightness(45%);
+		}
+		&-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			align-content: center;
+			gap: rem(16);
+			width: 100%;
+			height: 100%;
+			@include content-width();
+		}
+		&-title {
+			grid-column: span 2;
+			position: relative;
+			text-transform: uppercase;
+			color: $c-FFFFFF;
+			font-size: lineScale(96, 24, 480, 1440);
+			line-height: 1;
+			font-weight: $fw-bold;
+			padding-top: rem(64);
+			&::before {
+				content: "0" counter(item);
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: lineScale(18, 14, 480, 1440);
+				line-height: 1;
+				font-weight: $fw-bold;
+			}
+		}
+		&-desc {
+			color: $c-C2C0C1;
+			font-size: lineScale(18, 14, 480, 1440);
+			max-width: 40ch;
+		}
+	}
+}
+.index-footnote {
+	padding: rem(128) 0;
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: rem(16);
+		text-align: center;
+		padding: {
+			top: rem(96);
+			bottom: rem(96);
+		}
+		@include content-width();
+		&::before,
+		&::after{
+			content:'';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: rem(2);
+			background-color: $c-C6A47D;
+		}
+		&::after {
+			top: auto;
+			bottom: 0;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: lineScale(16,14,480,1440);
+		line-height: 1;
+		font-weight: $fw-bold;
+	}
+	&__desc {
+		color: $c-FFFFFF;
+		font-size: lineScale(40,18,480,1440);
+		line-height: 120%;
+		font-weight: $fw-bold;
 	}
 }

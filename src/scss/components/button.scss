@@ -9,6 +9,12 @@
 	border-radius: 50%;
 	transition: $duration;
 	@include flex-center();
+	&.disable {
+		opacity: .7;
+		border-color: $c-FFFFFF;
+		color: $c-FFFFFF;
+		pointer-events: none;
+	}
 	@media (pointer: fine) {
 		&:hover {
 			border-color: $c-FFFFFF;
@@ -41,6 +47,7 @@
 		overflow: hidden;
 	}
 	&-title {
+		text-transform: uppercase;
 		font-size: lineScale(32, 18, 480, 1440);
 		line-height: 1;
 		font-weight: $fw-bold;
