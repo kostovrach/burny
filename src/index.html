@@ -65,21 +65,31 @@
 				/>
 			</svg>
 		</a>
-		<div class="header__connection js-spoiler-container">
-			<div class="header__location"><i class="header__location--icon icon-map-marker"></i><span>ул. Набережная, д.13</span></div>
+		<div class="header__body js-spoiler-container">
+			<div class="header__location" data-hover-anim><i class="header__location--icon icon-map-marker"></i><span>ул. Набережная, д.13</span></div>
 			<div class="header__links js-spoiler-item">
 				<div class="header__links-title">8 800 600-20-20<i class="header__links-title--icon icon-check-mark"></i></div>
-				<ul class="header__links-wrapper js-spoiler-content">
-					<li class="header__links-item"><a href="tel:8 423 2000 330">8 423 2000 330</a></li>
-					<li class="header__links-item"><a href="https://">Telegram</a></li>
-					<li class="header__links-item"><a href="https://">Whatsapp</a></li>
-					<li class="header__links-item"><a href="mailto:info@burny.ru">info@burny.ru</a></li>
-				</ul>
+				<div class="header__links-wrapper js-spoiler-content">
+					<a class="header__links-item" href="tel:8 423 2000 330" data-hover-anim><span>8 423 2000 330</span></a>
+					<a class="header__links-item" href="https://vk.com" data-hover-anim><span>Telegram</span></a>
+					<a class="header__links-item" href="https://vk.com" data-hover-anim><span>Whatsapp</span></a>
+					<a class="header__links-item" href="mailto:info@burny.ru" data-hover-anim><span>info@burny.ru</span></a>
+				</div>
 			</div>
-		</div>
-		<div class="burger" data-menu-open role="button">
-    <span></span>
+			<div class="burger" data-menu-open role="button">
+    <div class="burger__container">
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+    </div>
 </div>
+		</div>
 	</div>
 </header>
 <dialog id="menu" class="menu">
@@ -178,15 +188,15 @@
 						</p>
 					</div>
 					<ul class="index-about__metrics">
-						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-300" data-duration="2" data-scrub="false">
+						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-300" data-duration="1.2" data-scrub="false">
 							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">3</span> здания</div>
 							<p class="index-about__metrics-text">Объединенных переходами, парковочной зоной и&nbsp;стилобатом</p>
 						</li>
-						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-300" data-duration="2" data-scrub="false">
+						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-400" data-duration="1.2" data-scrub="false">
 							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">32</span> зоны</div>
 							<p class="index-about__metrics-text">Коммерческие зоны, доступные для аренды, включают офисы и торговые площади</p>
 						</li>
-						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-300" data-duration="2" data-scrub="false">
+						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-500" data-duration="1.2" data-scrub="false">
 							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">3500</span> паркомест</div>
 							<p class="index-about__metrics-text">Общее количество парковочных мест на&nbsp;закрытой и&nbsp;открытой парковках</p>
 						</li>

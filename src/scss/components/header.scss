@@ -24,12 +24,12 @@
 						opacity: 1;
 						clip-path: inset(0 0 100% 0);
 						transform: scaleX(1);
-						transition: clip-path $duration $spring, transform $duration $spring, opacity $duration $spring;
+						transition: all calc($duration * 1.5);
 					}
 					&--stroke {
 						opacity: 1;
 						transform: scaleX(1);
-						transition: opacity $duration $spring, transform $duration $spring;
+						transition: all calc($duration * 1.5);
 					}
 				}
 			}
@@ -58,7 +58,7 @@
 			pointer-events: none;
 		}
 	}
-	&__connection {
+	&__body {
 		display: flex;
 		align-items: center;
 		gap: rem(32);
@@ -66,10 +66,12 @@
 		font-weight: $fw-bold;
 	}
 	&__location {
+		cursor: default;
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
 		gap: rem(8);
+		overflow: hidden;
 	}
 	&__links {
 		position: relative;
@@ -77,25 +79,35 @@
 			.header__links-item,
 			.header__links-title {
 				color: $c-C6A47D;
+				&--icon {
+					transform: scaleY(-1);
+				}
 			}
 			.header__links-wrapper {
-				gap: 0;
+				gap: rem(16);
 			}
 		}
 		&-wrapper {
 			position: absolute;
 			display: flex;
 			flex-direction: column;
-			gap: rem(32);
-			transition: gap $duration;
+			gap: rem(64);
+			margin-top: rem(16);
+			transition: all $duration ease;
 		}
 		&-title {
 			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: rem(8);
 			transition: color $duration;
+			&--icon {
+				font-size: rem(14);
+				transition: transform $duration;
+			}
 		}
 		&-item {
 			text-transform: uppercase;
-			padding: rem(8) 0;
 			width: fit-content;
 			transition: color $duration;
 		}

@@ -53,19 +53,19 @@
 				/>
 			</svg>
 		</a>
-		<div class="header__connection js-spoiler-container">
-			<div class="header__location"><i class="header__location--icon icon-map-marker"></i><span>ул. Набережная, д.13</span></div>
+		<div class="header__body js-spoiler-container">
+			<div class="header__location" data-hover-anim><i class="header__location--icon icon-map-marker"></i><span>ул. Набережная, д.13</span></div>
 			<div class="header__links js-spoiler-item">
 				<div class="header__links-title">8 800 600-20-20<i class="header__links-title--icon icon-check-mark"></i></div>
-				<ul class="header__links-wrapper js-spoiler-content">
-					<li class="header__links-item"><a href="tel:8 423 2000 330">8 423 2000 330</a></li>
-					<li class="header__links-item"><a href="https://">Telegram</a></li>
-					<li class="header__links-item"><a href="https://">Whatsapp</a></li>
-					<li class="header__links-item"><a href="mailto:info@burny.ru">info@burny.ru</a></li>
-				</ul>
+				<div class="header__links-wrapper js-spoiler-content">
+					<a class="header__links-item" href="tel:8 423 2000 330" data-hover-anim><span>8 423 2000 330</span></a>
+					<a class="header__links-item" href="https://vk.com" data-hover-anim><span>Telegram</span></a>
+					<a class="header__links-item" href="https://vk.com" data-hover-anim><span>Whatsapp</span></a>
+					<a class="header__links-item" href="mailto:info@burny.ru" data-hover-anim><span>info@burny.ru</span></a>
+				</div>
 			</div>
+			@@include('../components/burger.html')
 		</div>
-		@@include('../components/burger.html')
 	</div>
 </header>
 @@include('../components/modals/modal-menu.html')

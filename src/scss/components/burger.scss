@@ -3,43 +3,117 @@
 .burger {
 	cursor: pointer;
 	position: relative;
-	width: 2rem;
-	height: 1.5rem;
-	display: none;
-	& span {
-		display: block;
-		width: 100%;
-		background-color: $c-FFFFFF;
-		height: rem(3);
-		border-radius: 0.5rem;
-		overflow: hidden;
-		pointer-events: none;
-		&::before,
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 100%;
-			height: rem(3);
-			border-radius: 0.5rem;
-			overflow: hidden;
-			background-color: inherit;
-			pointer-events: none;
+	&.active {
+		.burger__container {
+			rotate: 135deg;
 		}
-		&::after {
-			top: auto;
-			bottom: 0;
+		.burger__item {
+			background-color: $c-C6A47D;
+			&:nth-child(1) {
+				translate: 200% 0;
+			}
+			&:nth-child(2) {
+				translate: 0 100%;
+			}
+			&:nth-child(3) {
+				translate: 0 200%;
+			}
+			&:nth-child(4) {
+				translate: 100% 0;
+			}
+			&:nth-child(6) {
+				translate: -100% 0;
+			}
+			&:nth-child(7) {
+				translate: 0 -200%;
+			}
+			&:nth-child(8) {
+				translate: 0 -100%;
+			}
+			&:nth-child(9) {
+				translate: -200% 0;
+			}
 		}
-		.sticky &,
-		.fill & {
-			background-color: $c-000000;
+		@media (pointer: fine) {
+			&:hover {
+				.burger__container {
+					scale: 1.5;
+				}
+				.burger__item {
+					background-color: $c-FFFFFF;
+					&:nth-child(5) {
+						opacity: 0;
+					}
+				}
+			}
 		}
 	}
-}
-@media (max-width: 1240px) {
-	.burger {
-		@include flex-center();
+	@media (pointer: fine) {
+		&:not(.active):hover {
+			.burger__item {
+				background-color: $c-FFFFFF;
+				&:nth-child(1) {
+					translate: -100% -100%;
+				}
+				&:nth-child(3) {
+					translate: 100% -100%;
+				}
+				&:nth-child(7) {
+					translate: -100% 100%;
+				}
+				&:nth-child(9) {
+					translate: 100% 100%;
+				}
+			}
+		}
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(7, rem(5));
+		grid-template-rows: repeat(7, rem(5));
+		transition: all $duration $spring;
+	}
+	&__item {
+		display: block;
+		width: rem(5);
+		aspect-ratio: 1/1;
+		background-color: $c-C6A47D;
+		transition: all $duration $spring;
+		&:nth-child(1) {
+			grid-column: 2;
+			grid-row: 2;
+		}
+		&:nth-child(2) {
+			grid-column: 4;
+			grid-row: 2;
+		}
+		&:nth-child(3) {
+			grid-column: 6;
+			grid-row: 2;
+		}
+		&:nth-child(4) {
+			grid-column: 2;
+			grid-row: 4;
+		}
+		&:nth-child(5) {
+			grid-column: 4;
+			grid-row: 4;
+		}
+		&:nth-child(6) {
+			grid-column: 6;
+			grid-row: 4;
+		}
+		&:nth-child(7) {
+			grid-column: 2;
+			grid-row: 6;
+		}
+		&:nth-child(8) {
+			grid-column: 4;
+			grid-row: 6;
+		}
+		&:nth-child(9) {
+			grid-column: 6;
+			grid-row: 6;
+		}
 	}
 }

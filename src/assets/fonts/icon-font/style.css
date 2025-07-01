@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?qdw1is');
-  src:  url('fonts/icomoon.eot?qdw1is#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?qdw1is') format('truetype'),
-    url('fonts/icomoon.woff?qdw1is') format('woff'),
-    url('fonts/icomoon.svg?qdw1is#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?8uvsds');
+  src:  url('fonts/icomoon.eot?8uvsds#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?8uvsds') format('truetype'),
+    url('fonts/icomoon.woff?8uvsds') format('woff'),
+    url('fonts/icomoon.svg?8uvsds#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,18 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-zoom:before {
-  content: "\e904";
-}
-.icon-cross:before {
+.icon-vk:before {
   content: "\e903";
 }
-.icon-arrow-short:before {
-  content: "\e902";
+.icon-instagram:before {
+  content: "\e904";
 }
-.icon-mark:before {
-  content: "\e901";
+.icon-telegram:before {
+  content: "\e905";
 }
 .icon-arrow:before {
+  content: "\e902";
+}
+.icon-check-mark:before {
+  content: "\e901";
+}
+.icon-map-marker:before {
   content: "\e900";
 }
