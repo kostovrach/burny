@@ -14,9 +14,11 @@
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
     "@fancyapps/ui": "^5.0.36",
+    "@studio-freight/lenis": "^1.0.42",
     "browser-sync": "^3.0.4",
     "del": "^8.0.0",
     "fast-glob": "^3.3.3",
+    "gsap": "^3.13.0",
     "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",

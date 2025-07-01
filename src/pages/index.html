@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('../components/head.html', { "title": "BURNY - Океан рядом, Город вокруг" })
+	@@include('../components/head.html', { "title": "Burny City" })
 	<body>
 		@@include('../components/header.html')
 		<main>
@@ -76,23 +76,23 @@
 			<section class="index-about">
 				<div class="index-about__container">
 					<div class="index-about__titlebox">
-						<h2 class="index-about__title">С одной стороны — океанский простор, а&nbsp;с&nbsp;другой — центр Владивостока.</h2>
-						<p class="index-about__subtitle">
+						<h2 class="index-about__title" data-parallax>С одной стороны — океанский простор, а&nbsp;с&nbsp;другой — центр Владивостока.</h2>
+						<p class="index-about__subtitle" data-parallax>
 							BURNY CITY — знаковый проект Владивостока, где соединились лучшие возможности для деловой жизни и&nbsp;качественного отдыха.
 							<br /><br />
 							Обосновавшись на мысе Бурном, он с трех сторон окружён заливом, а четвертой выходит на центр города. Вокруг комплекса разбит собственный парк с&nbsp;ландшафтным дизайном в общей стилистике комплекса.
 						</p>
 					</div>
 					<ul class="index-about__metrics">
-						<li class="index-about__metrics-item">
+						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-300" data-duration="2" data-scrub="false">
 							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">3</span> здания</div>
 							<p class="index-about__metrics-text">Объединенных переходами, парковочной зоной и&nbsp;стилобатом</p>
 						</li>
-						<li class="index-about__metrics-item">
+						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-300" data-duration="2" data-scrub="false">
 							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">32</span> зоны</div>
 							<p class="index-about__metrics-text">Коммерческие зоны, доступные для аренды, включают офисы и торговые площади</p>
 						</li>
-						<li class="index-about__metrics-item">
+						<li class="index-about__metrics-item" data-parallax data-axis="x" data-start="-300" data-duration="2" data-scrub="false">
 							<div class="index-about__metrics-value"><span class="index-about__metrics-value-number">3500</span> паркомест</div>
 							<p class="index-about__metrics-text">Общее количество парковочных мест на&nbsp;закрытой и&nbsp;открытой парковках</p>
 						</li>
@@ -106,7 +106,10 @@
 							<picture id="index-buildingModelImage" class="index-demo__building-image-container">
 								<img id="buildingImage" class="index-demo__building-image" src="assets/img/service/building-demo.png" alt="Модель здания" />
 							</picture>
-							<picture class="index-demo__building-cloud-container">
+							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--back"  data-parallax data-start="-600">
+								<img class="index-demo__building-cloud" src="assets/img/service/cloud.svg" alt="" />
+							</picture>
+							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--front"  data-parallax data-start="-600">
 								<img class="index-demo__building-cloud" src="assets/img/service/cloud.svg" alt="" />
 							</picture>
 
@@ -145,7 +148,7 @@
 			<section class="index-services">
 				<div class="index-services__container">
 					<div class="index-services__titlebox">
-						<h2 class="index-services__title">BURNY — это настоящий островок&nbsp; комфорта в&nbsp;самом сердце города</h2>
+						<h2 class="index-services__title" data-parallax>BURNY — это настоящий островок&nbsp; комфорта в&nbsp;самом сердце города</h2>
 					</div>
 					<div class="index-services__body">
 						<div class="index-services__slider swiper">
@@ -268,8 +271,8 @@
 			</section>
 			<section class="index-footnote">
 				<div class="index-footnote__container">
-					<h2 class="index-footnote__title">Что такое Burny?</h2>
-					<p class="index-footnote__desc">Дальневосточный проект «город в городе» предлагает всё необходимое для комфортной жизни и отдыха, включая современные офисы, удобные магазины и&nbsp;развлечения</p>
+					<h2 class="index-footnote__title" data-parallax data-axis="x" data-start="-200">Что такое Burny?</h2>
+					<p class="index-footnote__desc" data-parallax data-axis="x">Дальневосточный проект «город в городе» предлагает всё необходимое для комфортной жизни и отдыха, включая современные офисы, удобные магазины и&nbsp;развлечения</p>
 				</div>
 			</section>
 			<section class="index-advant">

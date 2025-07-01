@@ -40,8 +40,11 @@ const paths = {
   },
   scripts: {
     src: [
+      'node_modules/@studio-freight/lenis/dist/lenis.min.js',
       'node_modules/swiper/swiper-bundle.js', 
       'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
+      'node_modules/gsap/dist/gsap.min.js',
+      'node_modules/gsap/dist/ScrollTrigger.min.js',
       'src/js/**/*.js', 
       '!src/js/main.min.js'
     ],

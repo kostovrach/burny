@@ -12,6 +12,8 @@
 		},
 		autoplay: {
 			delay: 3000,
+			disableOnInteraction: false,
+			//pauseOnMouseEnter: true,
 		},
 		speed: 800,
 		parallax: true,
@@ -19,19 +21,20 @@
 		creativeEffect: {
 			next: {
 				translate: ["100%", 0, 0],
-                opacity: 0.1,
+				opacity: 0.1,
 			},
 			prev: {
 				translate: ["-10%", 0, 0],
-                opacity: 0.1,
+				opacity: 0.1,
 			},
 		},
 		on: {
-			init: function (swiper) {
+			init(swiper) {
 				addTitlesToBullets(swiper);
 				highlightActiveBullet(swiper);
+				setupViewportAutoplay(swiper, sliderEl);
 			},
-			slideChange: function (swiper) {
+			slideChange(swiper) {
 				highlightActiveBullet(swiper);
 			},
 		},
@@ -64,5 +67,25 @@
 		if (activeBullet) {
 			activeBullet.classList.add("is-active");
 		}
+	}
+
+	function setupViewportAutoplay(swiper, targetEl) {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						swiper.autoplay.start();
+					} else {
+						swiper.autoplay.stop();
+					}
+				});
+			},
+			{
+				root: null,
+				threshold: 0.5,
+			}
+		);
+
+		observer.observe(targetEl);
 	}
 })();
