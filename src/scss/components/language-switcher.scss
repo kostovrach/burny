@@ -1,0 +1,50 @@
+@use "../utils/abstracts" as *;
+
+.language {
+	position: fixed;
+	z-index: 5;
+	right: rem(32);
+	bottom: rem(32);
+	user-select: none;
+	padding: 0 1rem;
+	&__current {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		@include icon-hover(vertical);
+		&--icon {
+			font-size: rem(12);
+			pointer-events: none;
+		}
+	}
+	&.open {
+		.language__list {
+			gap: rem(16);
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+	&__list {
+		width: 100%;
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+		padding: rem(16);
+		opacity: 0;
+		transition: all $duration $spring;
+		pointer-events: none;
+		&-item {
+			cursor: pointer;
+            text-transform: uppercase;
+            @media (pointer: fine){
+                &:hover{
+                    color: $c-FFFFFF;
+                }
+            }
+		}
+	}
+}

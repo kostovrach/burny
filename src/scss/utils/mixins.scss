@@ -26,6 +26,117 @@
 	-webkit-text-fill-color: transparent;
 	color: transparent;
 }
+@mixin icon-hover($anim-direction: horizontal, $icon-size: auto, $duration: $duration, $timing: ease-in-out) {
+	&--icon-wrapper {
+		display: inline-block;
+		overflow: hidden;
+		width: $icon-size;
+		height: $icon-size;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&--icon {
+		font-size: $icon-size;
+		line-height: 1;
+		will-change: transform, opacity;
+	}
+	&:hover {
+		i {
+			animation: $anim-direction $duration $timing;
+		}
+	}
+	@keyframes horizontal {
+		0% {
+			translate: 0 0;
+			opacity: 1;
+		}
+		45% {
+			translate: 100% 0;
+			opacity: 0;
+		}
+		55% {
+			translate: -100% 0;
+			opacity: 0;
+		}
+		100% {
+			translate: 0 0;
+			opacity: 1;
+		}
+	}
+	@keyframes horizontal-reverse {
+		0% {
+			translate: 0 0;
+			opacity: 1;
+		}
+		45% {
+			translate: -100% 0;
+			opacity: 0;
+		}
+		55% {
+			translate: 100% 0;
+			opacity: 0;
+		}
+		100% {
+			translate: 0 0;
+			opacity: 1;
+		}
+	}
+	@keyframes vertical {
+		0% {
+			translate: 0 0;
+			opacity: 1;
+		}
+		45% {
+			translate: 0 100%;
+			opacity: 0;
+		}
+		55% {
+			translate: 0 -100%;
+			opacity: 0;
+		}
+		100% {
+			translate: 0 0;
+			opacity: 1;
+		}
+	}
+	@keyframes diagonal {
+		0% {
+			translate: 0 0;
+			opacity: 1;
+		}
+		45% {
+			translate: 100% 100%;
+			opacity: 0;
+		}
+		55% {
+			translate: -100% -100%;
+			opacity: 0;
+		}
+		100% {
+			translate: 0 0;
+			opacity: 1;
+		}
+	}
+	@keyframes diagonal-reverse {
+		0% {
+			translate: 0 0;
+			opacity: 1;
+		}
+		45% {
+			translate: 100% -100%;
+			opacity: 0;
+		}
+		55% {
+			translate: -100% 100%;
+			opacity: 0;
+		}
+		100% {
+			translate: 0 0;
+			opacity: 1;
+		}
+	}
+}
 @mixin hover-underline($bg-color: black) {
 	position: relative;
 	width: fit-content;

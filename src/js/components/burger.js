@@ -1,9 +1,9 @@
-(function () {
-	const burger = document.querySelector(".burger");
+// (function () {
+// 	const burger = document.querySelector(".burger");
 
-	if (!burger) return;
+// 	if (!burger) return;
 
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('active')
-    })
-})();
+//     burger.addEventListener('click', () => {
+//         burger.classList.toggle('active')
+//     })
+// })();

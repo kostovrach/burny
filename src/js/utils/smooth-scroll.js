@@ -5,7 +5,7 @@
 
   const lenis = new Lenis({
     duration: 1.6,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smooth: true,
     smoothTouch: false,
   });
@@ -17,7 +17,6 @@
 
   requestAnimationFrame(raf);
 
-  // Интеграция с ScrollTrigger
   if (typeof ScrollTrigger !== "undefined") {
     lenis.on('scroll', ScrollTrigger.update);
     ScrollTrigger.scrollerProxy(document.body, {

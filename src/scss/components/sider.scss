@@ -2,7 +2,8 @@
 
 .sider {
 	position: fixed;
-	z-index: 2;
+	z-index: 5;
+	top: 0;
 	left: 0;
 	height: 100%;
 	display: grid;
@@ -23,6 +24,7 @@
 		text-orientation: mixed;
 		font-size: rem(32);
 		font-weight: $fw-bold;
+		text-wrap: nowrap;
 		&--stroke {
 			color: transparent;
 			-webkit-text-stroke: rem(1) $c-C6A47D;

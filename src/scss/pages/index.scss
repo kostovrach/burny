@@ -1,6 +1,7 @@
 @use "../utils/abstracts" as *;
 
 .index-hero {
+	position: relative;
 	min-height: 100lvh;
 	overflow: clip;
 	&__background {
@@ -368,6 +369,7 @@
 	&__slider {
 		counter-reset: item;
 		&-pagination {
+			z-index: 2;
 			width: fit-content !important;
 			height: fit-content !important;
 			top: 50% !important;
