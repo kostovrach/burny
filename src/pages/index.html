@@ -2,8 +2,7 @@
 <html lang="ru">
 	@@include('../components/head.html', { "title": "Burny City" })
 	<body>
-		@@include('../components/header.html')
-		@@include('../components/sider.html', { "text": "О комплексе" })
+		@@include('../components/header.html') @@include('../components/sider.html', { "text": "О комплексе" })
 		<main>
 			<section class="index-hero">
 				<div class="index-hero__background">
@@ -277,7 +276,7 @@
 				</div>
 			</section>
 			<section class="index-advant">
-				<div class="index-advant__container">
+				<div class="index-advant__container" data-parallax data-axis="x" data-start="600">
 					<div class="index-advant__slider swiper">
 						<div class="index-advant__slider-wrapper swiper-wrapper">
 							<div class="index-advant__slide swiper-slide">
@@ -288,30 +287,115 @@
 										<path class="index-advant__slide-icon--path" d="M83.6376 83.638L92.3327 92.3332M84.6978 25.3014L92.3327 17.6665M26.0084 26.0088L17.666 17.6665M26.008 83.9912L17.666 92.3332" stroke="#C6A47D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 									<div class="index-advant__slide-content">
-										<h3 class="index-advant__slide-title"></h3>
-										<p class="index-advant__slide-desc"></p>
+										<h3 class="index-advant__slide-title">Впечатляющий вид</h3>
+										<p class="index-advant__slide-desc">С&nbsp;одной стороны&nbsp;— океанский простор, с&nbsp;другой&nbsp;— центр города</p>
 									</div>
 								</div>
 							</div>
 							<div class="index-advant__slide swiper-slide">
 								<div class="index-advant__slide-container">
-									<svg width="89" height="99" viewBox="0 0 89 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg class="index-advant__slide-icon" width="89" height="99" viewBox="0 0 89 99" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<mask id="mask0_9802_790" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="89" height="99">
-											<path d="M33.334 95.3333C33.334 95.3333 1.33398 58 1.33398 34C1.33398 16.3269 15.6609 2 33.334 2C51.0071 2 65.334 16.3269 65.334 34C65.334 58 33.334 95.3333 33.334 95.3333Z" stroke="white" stroke-width="2" />
-											<path d="M54.668 95.3333C54.668 95.3333 22.668 58 22.668 34C22.668 16.3269 36.9948 2 54.668 2C72.341 2 86.668 16.3269 86.668 34C86.668 58 54.668 95.3333 54.668 95.3333Z" fill="black" stroke="black" stroke-width="4" />
-											<path d="M54.668 95.3333C54.668 95.3333 22.668 58 22.668 34C22.668 16.3269 36.9948 2 54.668 2C72.341 2 86.668 16.3269 86.668 34C86.668 58 54.668 95.3333 54.668 95.3333Z" stroke="white" stroke-width="2" />
-											<path d="M54.667 21.6665C61.4784 21.6665 67.0008 27.1881 67.001 33.9995C67.001 40.811 61.4785 46.3335 54.667 46.3335C47.8556 46.3333 42.334 40.8109 42.334 33.9995C42.3342 27.1883 47.8557 21.6667 54.667 21.6665Z" stroke="#C6A47D" stroke-width="2" />
+											<path class="index-advant__slide-icon--path" d="M33.334 95.3333C33.334 95.3333 1.33398 58 1.33398 34C1.33398 16.3269 15.6609 2 33.334 2C51.0071 2 65.334 16.3269 65.334 34C65.334 58 33.334 95.3333 33.334 95.3333Z" stroke="white" stroke-width="2" />
+											<path class="index-advant__slide-icon--path" d="M54.668 95.3333C54.668 95.3333 22.668 58 22.668 34C22.668 16.3269 36.9948 2 54.668 2C72.341 2 86.668 16.3269 86.668 34C86.668 58 54.668 95.3333 54.668 95.3333Z" fill="black" stroke="black" stroke-width="4" />
+											<path class="index-advant__slide-icon--path" d="M54.668 95.3333C54.668 95.3333 22.668 58 22.668 34C22.668 16.3269 36.9948 2 54.668 2C72.341 2 86.668 16.3269 86.668 34C86.668 58 54.668 95.3333 54.668 95.3333Z" stroke="white" stroke-width="2" />
+											<path class="index-advant__slide-icon--path" d="M54.667 21.6665C61.4784 21.6665 67.0008 27.1881 67.001 33.9995C67.001 40.811 61.4785 46.3335 54.667 46.3335C47.8556 46.3333 42.334 40.8109 42.334 33.9995C42.3342 27.1883 47.8557 21.6667 54.667 21.6665Z" stroke="#C6A47D" stroke-width="2" />
 										</mask>
 										<g mask="url(#mask0_9802_790)">
 											<path d="M108 -14H-20V114H108V-14Z" fill="#C6A47D" />
 										</g>
 									</svg>
 									<div class="index-advant__slide-content">
-										<h3 class="index-advant__slide-title"></h3>
-										<p class="index-advant__slide-desc"></p>
+										<h3 class="index-advant__slide-title">Удобная инфраструктура</h3>
+										<p class="index-advant__slide-desc">Быстрое сообщение со всеми важными объектами городской и&nbsp;краевой инфраструктуры</p>
 									</div>
 								</div>
 							</div>
+							<div class="index-advant__slide swiper-slide">
+								<div class="index-advant__slide-container">
+									<svg class="index-advant__slide-icon" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="index-advant__slide-icon--path" d="M79 99V107.667H49V99H79Z" stroke="#C6A47D" stroke-width="2" />
+										<mask id="path-2-inside-1_9871_2479" fill="white">
+											<path d="M80 114H48V116H80V114Z" />
+										</mask>
+										<path class="index-advant__slide-icon--path" d="M48 114V112H46V114H48ZM80 114H82V112H80V114ZM80 116V118H82V116H80ZM48 116H46V118H48V116ZM48 114V116H80V114V112H48V114ZM80 114H78V116H80H82V114H80ZM80 116V114H48V116V118H80V116ZM48 116H50V114H48H46V116H48Z" fill="#C6A47D" mask="url(#path-2-inside-1_9871_2479)" />
+										<path class="index-advant__slide-icon--path" d="M64 90.6667H48V75.7333C38.4533 70.1867 32 59.84 32 48C32 30.3467 46.3467 16 64 16C81.6533 16 96 30.3467 96 48C96 59.84 89.5467 70.1867 80 75.7333V90.6667H64Z" stroke="#C6A47D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<div class="index-advant__slide-content">
+										<h3 class="index-advant__slide-title">Современный и&nbsp;высокотехнологичный</h3>
+										<p class="index-advant__slide-desc">Все что нужно для комфортного отдыха и занятий спортом</p>
+									</div>
+								</div>
+							</div>
+							<div class="index-advant__slide swiper-slide">
+								<div class="index-advant__slide-container">
+									<svg class="index-advant__slide-icon" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="index-advant__slide-icon--path" d="M37.3333 58.6667L64 16L80 21.3333L74.6667 53.3333H112V69.3333L96 106.667H37.3333M37.3333 58.6667H16V106.667H37.3333M37.3333 58.6667V106.667" stroke="#C6A47D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<div class="index-advant__slide-content">
+										<h3 class="index-advant__slide-title">Программа лояльности</h3>
+										<p class="index-advant__slide-desc">Скидки до 50% и различные бонусы от наших партнёров</p>
+										<a class="index-advant__slide-button" href="#">Подробнее <i class="index-advant__slide-button--icon icon-triangle"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-location">
+				<div class="index-location__container">
+					<div class="index-location__titlebox">
+						<h2 class="index-location__title" data-parallax data-axis="x" data-start="-300">Комплекс находится вблизи с&nbsp;главными объектами&nbsp;городской и&nbsp;краевой&nbsp; инфраструктуры</h2>
+					</div>
+					<ul class="index-location__cords" data-parallax>
+						<li class="index-location__cords-item index-location__cords-item--time">
+							<div class="index-location__cords-item-title">Местное время</div>
+							<div class="index-location__cords-item--time-container"></div>
+						</li>
+						<li class="index-location__cords-item index-location__cords-item--cords">
+							<div class="index-location__cords-item--cords-item">43° 4' 7" N</div>
+							<div class="index-location__cords-item--cords-separator icon-star-separator"></div>
+							<span class="index-location__cords-item--cords-item">131° 53' 9" E</span>
+						</li>
+						<li class="index-location__cords-item index-location__cords-item--address">
+							<a class="index-location__cords-item-title" href="">Связаться с нами <i class="index-location__cords-item-title--icon icon-triangle"></i></a>
+							<div class="index-location__cords-item--address-item">Россия, г.&nbsp;Владивосток, ул.&nbsp;Набережная, д.13</div>
+						</li>
+					</ul>
+					<div class="index-location__map-container">
+						<div id="index-map" class="index-location__map"></div>
+						<div class="index-location__info">
+							<ul class="index-location__info-item">
+								<li class="index-location__info-item--title">Транспортная доступность <i class="index-location__info-item--title--icon icon-check-mark"></i></li>
+								<li class="index-location__info-item-point">
+									<div class="index-location__info-item-point-title">Личный транспорт</div>
+									<p class="index-location__info-item-point-text">Cледуйте по главной дороге, пока не увидите указатели на&nbsp;центр города. Через 5 км сверните налево и&nbsp;двигайтесь до конца улицы, где расположено здание.</p>
+								</li>
+								<li class="index-location__info-item-point">
+									<div class="index-location__info-item-point-title">Общественный транспорт</div>
+									<p class="index-location__info-item-point-text">Маршрутки 5 и 12, до конечной остановки "Центральный рынок". Оттуда вам останется пройти всего несколько минут пешком.</p>
+								</li>
+							</ul>
+							<ul class="index-location__info-item">
+								<li class="index-location__info-item--title">Места рядом</li>
+								<li class="index-location__info-item-point">
+									<div class="index-location__info-item-point-title">Рестораны И кафе</div>
+									<p class="index-location__info-item-point-text">Вкусный уголок, Кулинарный рай, Солнечный обед, Морская звезда.</p>
+								</li>
+								<li class="index-location__info-item-point">
+									<div class="index-location__info-item-point-title">Достопримечательности</div>
+									<p class="index-location__info-item-point-text">Мыс Бурный, Птичий остров, Золотой мост, Приморский океанариум, Смотровая площадка на сопке Орлиное гнездо.</p>
+								</li>
+							</ul>
+							<a class="index-location__info-button" href="#">
+								Построить маршрут
+								<div class="index-location__info-button--icon-container">
+									<div class="index-location__info-button--icon-wrapper">
+										<i class="index-location__info-button--icon icon-arrow"></i>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
