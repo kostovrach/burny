@@ -45,6 +45,7 @@ const paths = {
       'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
       'node_modules/gsap/dist/gsap.min.js',
       'node_modules/gsap/dist/ScrollTrigger.min.js',
+      'src/js/libs/*.js',
       'src/js/**/*.js', 
       '!src/js/main.min.js'
     ],

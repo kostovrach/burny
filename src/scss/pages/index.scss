@@ -526,8 +526,6 @@
 	}
 	&__slider {
 		overflow: visible;
-		&-wrapper {
-		}
 	}
 	&__slide {
 		box-sizing: border-box;
@@ -542,8 +540,6 @@
 			flex-direction: column;
 			justify-content: space-between;
 			gap: rem(64);
-		}
-		&-icon {
 		}
 		&-content {
 			display: grid;
@@ -582,8 +578,6 @@
 		gap: rem(128);
 		@include content-width();
 	}
-	&__titlebox {
-	}
 	&__title {
 		color: $c-FFFFFF;
 		font-size: lineScale(64,24,480,1440);
@@ -602,7 +596,7 @@
 			}
 			&--time {
 				&-container {
-					font-size: lineScale(32, 18, 480, 1440);
+					font-size: lineScale(64, 32, 480, 1440);
 					line-height: 1;
 					font-weight: $fw-bold;
 				}
@@ -610,6 +604,7 @@
 			&--cords {
 				display: flex;
 				align-items: center;
+				justify-content: center;
 				gap: rem(32);
 				&-item {
 					font-weight: $fw-bold;

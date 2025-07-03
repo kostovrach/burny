@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"  class="hide-scrollbar">
 	@@include('../components/head.html', { "title": "Burny City" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "О комплексе" })
@@ -351,7 +351,9 @@
 					<ul class="index-location__cords" data-parallax>
 						<li class="index-location__cords-item index-location__cords-item--time">
 							<div class="index-location__cords-item-title">Местное время</div>
-							<div class="index-location__cords-item--time-container"></div>
+							<div class="index-location__cords-item--time-container" data-timezone="Asia/Vladivostok" aria-label="Текущее время во Владивостоке">
+								<span class="index-location__cords-item--time-value">-- : -- : --</span>
+							</div>
 						</li>
 						<li class="index-location__cords-item index-location__cords-item--cords">
 							<div class="index-location__cords-item--cords-item">43° 4' 7" N</div>
@@ -363,43 +365,11 @@
 							<div class="index-location__cords-item--address-item">Россия, г.&nbsp;Владивосток, ул.&nbsp;Набережная, д.13</div>
 						</li>
 					</ul>
-					<div class="index-location__map-container">
-						<div id="index-map" class="index-location__map"></div>
-						<div class="index-location__info">
-							<ul class="index-location__info-item">
-								<li class="index-location__info-item--title">Транспортная доступность <i class="index-location__info-item--title--icon icon-check-mark"></i></li>
-								<li class="index-location__info-item-point">
-									<div class="index-location__info-item-point-title">Личный транспорт</div>
-									<p class="index-location__info-item-point-text">Cледуйте по главной дороге, пока не увидите указатели на&nbsp;центр города. Через 5 км сверните налево и&nbsp;двигайтесь до конца улицы, где расположено здание.</p>
-								</li>
-								<li class="index-location__info-item-point">
-									<div class="index-location__info-item-point-title">Общественный транспорт</div>
-									<p class="index-location__info-item-point-text">Маршрутки 5 и 12, до конечной остановки "Центральный рынок". Оттуда вам останется пройти всего несколько минут пешком.</p>
-								</li>
-							</ul>
-							<ul class="index-location__info-item">
-								<li class="index-location__info-item--title">Места рядом</li>
-								<li class="index-location__info-item-point">
-									<div class="index-location__info-item-point-title">Рестораны И кафе</div>
-									<p class="index-location__info-item-point-text">Вкусный уголок, Кулинарный рай, Солнечный обед, Морская звезда.</p>
-								</li>
-								<li class="index-location__info-item-point">
-									<div class="index-location__info-item-point-title">Достопримечательности</div>
-									<p class="index-location__info-item-point-text">Мыс Бурный, Птичий остров, Золотой мост, Приморский океанариум, Смотровая площадка на сопке Орлиное гнездо.</p>
-								</li>
-							</ul>
-							<a class="index-location__info-button" href="#">
-								Построить маршрут
-								<div class="index-location__info-button--icon-container">
-									<div class="index-location__info-button--icon-wrapper">
-										<i class="index-location__info-button--icon icon-arrow"></i>
-									</div>
-								</div>
-							</a>
-						</div>
+					<div class="index-location__map">
 					</div>
 				</div>
 			</section>
+						@@include('../components/map.html')
 		</main>
 		@@include("../components/footer.html")
 	</body>
