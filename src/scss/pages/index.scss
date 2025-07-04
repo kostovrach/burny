@@ -263,6 +263,7 @@
 			width: rem(20);
 			height: rem(20);
 			aspect-ratio: 1/1;
+			display: block;
 			background: $c-C6A47D;
 			outline: rem(6) solid rgba($c-FFFFFF, 1);
 			border-radius: 50%;
@@ -310,7 +311,7 @@
 			opacity: 1;
 			pointer-events: auto;
 		}
-		&-close-btn {
+		& .close-button {
 			cursor: pointer;
 			position: absolute;
 			top: 1rem;
@@ -329,14 +330,70 @@
 			margin-top: rem(32);
 		}
 		&-image-container {
+			position: relative;
+			display: block;
 			width: 100%;
 			height: rem(160);
 			margin-top: rem(52);
+			@media (pointer: fine) {
+				&:hover {
+					.index-demo__info-panel-image {
+						scale: 1.1;
+					}
+					.index-demo__info-panel-image-icon {
+						width: rem(64);
+						height: rem(64);
+						opacity: 1;
+					}
+				}
+			}
 		}
 		&-image {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			transition: scale $duration;
+		}
+		&-image-icon {
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: 50%;
+			translate: -50% -50%;
+			width: rem(32);
+			height: rem(32);
+			aspect-ratio: 1/1;
+			opacity: 0;
+			pointer-events: none;
+			transition: all $duration;
+			&-corner {
+				position: absolute;
+				display: block;
+				width: rem(16);
+				height: rem(16);
+				aspect-ratio: 1/1;
+				background-color: $c-FFFFFF;
+				clip-path: polygon(100% 0, 100% 100%, 75% 100%, 75% 25%, 0 25%, 0 0);
+				&:nth-child(1) {
+					rotate: -90deg;
+					top: 0;
+					left: 0;
+				}
+				&:nth-child(2) {
+					top: 0;
+					right: 0;
+				}
+				&:nth-child(3) {
+					rotate: -180deg;
+					bottom: 0;
+					left: 0;
+				}
+				&:nth-child(4) {
+					rotate: 90deg;
+					bottom: 0;
+					right: 0;
+				}
+			}
 		}
 	}
 }
@@ -524,51 +581,6 @@
 	&__container {
 		@include content-width();
 	}
-	&__slider {
-		overflow: visible;
-	}
-	&__slide {
-		box-sizing: border-box;
-		max-width: rem(660);
-		aspect-ratio: 1/1;
-		border: rem(2) solid rgba($c-7E9CC0, 0.25);
-		padding: rem(64);
-		&-container {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			gap: rem(64);
-		}
-		&-content {
-			display: grid;
-			grid-template-rows: repeat(3, auto);
-			gap: rem(32);
-		}
-		&-title {
-			font-size: lineScale(32, 18, 480, 1440);
-			line-height: 1;
-			font-weight: $fw-bold;
-		}
-		&-desc {
-			font-size: lineScale(24, 14, 480, 1440);
-			line-height: 1;
-		}
-		&-button {
-			display: flex;
-			align-items: center;
-			text-transform: uppercase;
-			font-size: rem(14);
-			line-height: 1;
-			transition: color $duration;
-			@media (pointer: fine) {
-				&:hover {
-					color: $c-FFFFFF;
-				}
-			}
-		}
-	}
 }
 .index-location {
 	padding: rem(128) 0;
@@ -580,7 +592,7 @@
 	}
 	&__title {
 		color: $c-FFFFFF;
-		font-size: lineScale(64,24,480,1440);
+		font-size: lineScale(64, 24, 480, 1440);
 		line-height: 1;
 		font-weight: $fw-bold;
 	}
@@ -620,6 +632,68 @@
 					line-height: 1;
 					font-weight: $fw-bold;
 				}
+			}
+		}
+	}
+}
+.index-gallery {
+	position: relative;
+	padding: rem(128) 0;
+	overflow-x: clip;
+	// &::before,
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	z-index: 2;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: rem(140);
+	// 	height: 100%;
+	// 	backdrop-filter: blur(2px);
+	// 	transform: scaleY(1.2);
+	// 	transform-origin: center;
+	// 	mix-blend-mode: overlay;
+	// }
+	// &::after{
+	// 	left: auto;
+	// 	right: 0;
+	// }
+
+	&__container {
+		@include content-width();
+	}
+	&__body {
+		margin-top: rem(64);
+	}
+}
+.index-news {
+	padding: rem(128) 0;
+	&__container {
+		@include content-width();
+	}
+	&__titlebox {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: rem(32);
+	}
+	&__title {
+		color: $c-FFFFFF;
+		font-size: lineScale(64, 24, 480, 1440);
+		line-height: 1;
+		font-weight: $fw-bold;
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		font-size: lineScale(28, 14, 480, 1440);
+		@include icon-hover(diagonal-reverse, lineScale(20, 12, 480, 1440));
+		&--icon-wrapper {
+			padding: {
+				top: rem(12);
+				right: rem(12);
 			}
 		}
 	}

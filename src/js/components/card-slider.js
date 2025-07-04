@@ -1,5 +1,5 @@
 (function () {
-    const slider = document.querySelector(".index-advant__slider");
+    const slider = document.querySelector(".card-slider");
 
     if (!slider) return;
 

@@ -1,0 +1,133 @@
+@use "../utils/abstracts" as *;
+
+.gallery-slider {
+	overflow: visible;
+	&__titlebox {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: rem(50);
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			translate: -50% 0;
+			width: rem(128);
+			height: rem(2);
+			background-color: $c-C6A47D;
+		}
+	}
+	&__title {
+		max-width: 40ch;
+		font-size: lineScale(32, 24, 480, 1440);
+		line-height: 1;
+		text-align: center;
+	}
+	&__slide {
+		width: fit-content;
+		&-image-container {
+			outline: none;
+			display: block;
+			width: rem(850);
+			height: rem(460);
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__desc {
+		font-size: lineScale(18, 14, 480, 1440);
+		line-height: 1;
+		text-align: center;
+		text-wrap: balance;
+		margin-top: rem(40);
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(64);
+		margin-top: rem(40);
+	}
+	&__button {
+		position: static;
+		font-size: rem(24);
+		line-height: 1;
+		color: inherit;
+		margin: 0;
+		&::after {
+			display: none;
+		}
+		&--prev {
+			i {
+				rotate: -135deg;
+			}
+		}
+		&--next {
+			i {
+				rotate: 45deg;
+			}
+		}
+	}
+	&__pagination-container {
+		position: relative;
+		transition: all $duration;
+	}
+	&__pagination {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(16);
+		font-size: rem(16);
+		font-weight: $fw-bold;
+		width: rem(128);
+		height: rem(32);
+		transition: all $duration;
+		&-item {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			translate: -50% -50%;
+			opacity: 0;
+			transition: all $duration;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				translate: -50% 0;
+				width: 0;
+				height: rem(2);
+				background-color: $c-C6A47D;
+				transition: all $duration;
+			}
+			&.active {
+				opacity: 1;
+				&::before {
+					width: rem(16);
+				}
+			}
+			&[data-index-offset="-1"] {
+				translate: calc(-50% - 40px) -50%;
+				opacity: 0.5;
+			}
+			&[data-index-offset="-2"] {
+				translate: calc(-50% - 80px) -50%;
+				opacity: 0.5;
+			}
+			&[data-index-offset="1"] {
+				translate: calc(-50% + 40px) -50%;
+				opacity: 0.5;
+			}
+			&[data-index-offset="2"] {
+				translate: calc(-50% + 80px) -50%;
+				opacity: 0.5;
+			}
+		}
+	}
+}

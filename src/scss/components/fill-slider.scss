@@ -1,0 +1,92 @@
+@use "../utils/abstracts" as *;
+
+.fill-slider {
+    &__container {
+        position: relative;
+        margin-top: rem(96);
+    }
+	&__button {
+		top: 50%;
+		translate: 0 -50%;
+		color: inherit;
+		font-size: rem(32);
+		margin: 0;
+		&::after {
+			display: none;
+		}
+		&--prev {
+			left: -10%;
+			i {
+				rotate: -135deg;
+			}
+		}
+		&--next {
+			right: -10%;
+			i {
+				rotate: 45deg;
+			}
+		}
+	}
+
+	&__slide {
+		position: relative;
+		box-sizing: border-box;
+		width: rem(424);
+		height: rem(200);
+		border: 0 solid $c-C6A47D;
+		border-top-width: rem(6);
+		border-bottom-width: rem(2);
+		@media (pointer: fine) {
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 0;
+				background-color: $c-C6A47D;
+				transition: height $duration;
+			}
+			&:hover {
+				&::before {
+					height: 100%;
+				}
+				.index-news__slide-container {
+					color: $c-FFFFFF;
+					translate: 10% 0;
+					.index-news__slide-tag {
+						border-color: $c-FFFFFF;
+					}
+				}
+			}
+		}
+		&-container {
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: rem(32) 0;
+			padding-right: rem(64);
+			transition: all $duration;
+		}
+		&-tagsbox {
+			display: flex;
+			flex-wrap: wrap;
+			gap: rem(4);
+		}
+		&-tag {
+			font-size: lineScale(14, 12, 480, 1440);
+			line-height: 1;
+			padding: rem(2.5) rem(24);
+			border: rem(1) solid $c-C6A47D;
+			border-radius: 2rem;
+			transition: border-color $duration;
+		}
+		&-desc {
+			font-size: lineScale(24, 16, 480, 1440);
+			line-height: 1;
+			margin-top: rem(16);
+			@include lineClamp(3);
+		}
+	}
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru"  class="hide-scrollbar">
+<html lang="ru" class="hide-scrollbar">
 	<head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -362,34 +362,22 @@
 							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--front" data-parallax data-start="-600">
 								<img class="index-demo__building-cloud" src="assets/img/service/cloud.svg" alt="" />
 							</picture>
-
-							<div id="index-building-point" class="index-demo__building-point" data-point="point-restaurant" style="top: 60%; left: 35%">
-								<img class="index-demo__building-point-image" src="assets/img/content/building-points/restaurant.jpg" alt="#" />
-							</div>
-							<div id="index-building-point" class="index-demo__building-point" data-point="point-lobby" style="top: 55%; left: 45%">
-								<img class="index-demo__building-point-image" src="assets/img/content/building-points/lobby.jpg" alt="#" />
-							</div>
-							<div id="index-building-point" class="index-demo__building-point" data-point="point-pool" style="top: 60%; left: 60%">
-								<img class="index-demo__building-point-image" src="assets/img/content/building-points/pool.jpg" alt="#" />
-							</div>
-							<div id="index-building-point" class="index-demo__building-point" data-point="point-fitness" style="top: 50%; left: 50%">
-								<img class="index-demo__building-point-image" src="assets/img/content/building-points/fitness.jpg" alt="#" />
-							</div>
-							<div id="index-building-point" class="index-demo__building-point" data-point="point-conference" style="top: 50%; left: 80%">
-								<img class="index-demo__building-point-image" src="assets/img/content/building-points/conference.jpg" alt="#" />
-							</div>
-							<div id="index-building-point" class="index-demo__building-point" data-point="point-spa" style="top: 70%; left: 30%">
-								<img class="index-demo__building-point-image" src="assets/img/content/building-points/spa.jpg" alt="#" />
-							</div>
-							<div id="index-building-point" class="index-demo__building-point" data-point="point-suite" style="top: 35%; left: 30%">
-								<img class="index-demo__building-point-image" src="assets/img/content/building-points/suite.jpg" alt="#" />
-							</div>
 						</div>
 					</div>
 					<div id="index-building-infoPanel" class="index-demo__info-panel">
 						<div class="index-demo__info-panel-container">
 							<div id="index-building-panelTitle" class="index-demo__info-panel-title">Информация</div>
-							<button id="index-building-closeBtn" class="index-demo__info-panel-close-btn">&times;</button>
+							<button class="close-button" role="button" aria-label="Закрыть" id="index-building-closeBtn">
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
 							<div id="index-building-panelContent" class="index-demo__info-panel-content"></div>
 						</div>
 					</div>
@@ -626,24 +614,24 @@
 			</section>
 			<section class="index-advant">
 				<div class="index-advant__container" data-parallax data-axis="x" data-start="600">
-					<div class="index-advant__slider swiper">
-						<div class="index-advant__slider-wrapper swiper-wrapper">
-							<div class="index-advant__slide swiper-slide">
-								<div class="index-advant__slide-container">
-									<svg class="index-advant__slide-icon" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<div class="index-advant__slider card-slider swiper">
+						<div class="index-advant__slider-wrapper card-slider__wrapper swiper-wrapper">
+							<div class="index-advant__slide card-slider__slide swiper-slide">
+								<div class="index-advant__slide-container card-slider__slide-container">
+									<svg class="index-advant__slide-icon card-slider__slide-icon" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="index-advant__slide-icon--path" d="M54.9987 28.333C69.7187 28.333 81.6654 40.2797 81.6654 54.9997C81.6654 69.7197 69.7187 81.6663 54.9987 81.6663C40.2787 81.6663 28.332 69.7197 28.332 54.9997C28.332 40.2797 40.2787 28.333 54.9987 28.333Z" stroke="#C6A47D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 										<path class="index-advant__slide-icon--path" d="M54.9993 91.4995L54.9994 108.333M89.999 54.9998L108.333 54.9998M54.9993 19.4995L54.9994 1.6665M16.499 54.9998L1.66602 54.9998" stroke="#C6A47D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 										<path class="index-advant__slide-icon--path" d="M83.6376 83.638L92.3327 92.3332M84.6978 25.3014L92.3327 17.6665M26.0084 26.0088L17.666 17.6665M26.008 83.9912L17.666 92.3332" stroke="#C6A47D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
-									<div class="index-advant__slide-content">
-										<h3 class="index-advant__slide-title">Впечатляющий вид</h3>
-										<p class="index-advant__slide-desc">С&nbsp;одной стороны&nbsp;— океанский простор, с&nbsp;другой&nbsp;— центр города</p>
+									<div class="index-advant__slide-content card-slider__slide-content">
+										<h3 class="index-advant__slide-title card-slider__slide-title">Впечатляющий вид</h3>
+										<p class="index-advant__slide-desc card-slider__slide-desc">С&nbsp;одной стороны&nbsp;— океанский простор, с&nbsp;другой&nbsp;— центр города</p>
 									</div>
 								</div>
 							</div>
-							<div class="index-advant__slide swiper-slide">
-								<div class="index-advant__slide-container">
-									<svg class="index-advant__slide-icon" width="89" height="99" viewBox="0 0 89 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<div class="index-advant__slide card-slider__slide swiper-slide">
+								<div class="index-advant__slide-container card-slider__slide-container">
+									<svg class="index-advant__slide-icon card-slider__slide-icon" width="89" height="99" viewBox="0 0 89 99" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<mask id="mask0_9802_790" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="89" height="99">
 											<path class="index-advant__slide-icon--path" d="M33.334 95.3333C33.334 95.3333 1.33398 58 1.33398 34C1.33398 16.3269 15.6609 2 33.334 2C51.0071 2 65.334 16.3269 65.334 34C65.334 58 33.334 95.3333 33.334 95.3333Z" stroke="white" stroke-width="2" />
 											<path class="index-advant__slide-icon--path" d="M54.668 95.3333C54.668 95.3333 22.668 58 22.668 34C22.668 16.3269 36.9948 2 54.668 2C72.341 2 86.668 16.3269 86.668 34C86.668 58 54.668 95.3333 54.668 95.3333Z" fill="black" stroke="black" stroke-width="4" />
@@ -654,15 +642,15 @@
 											<path d="M108 -14H-20V114H108V-14Z" fill="#C6A47D" />
 										</g>
 									</svg>
-									<div class="index-advant__slide-content">
-										<h3 class="index-advant__slide-title">Удобная инфраструктура</h3>
-										<p class="index-advant__slide-desc">Быстрое сообщение со всеми важными объектами городской и&nbsp;краевой инфраструктуры</p>
+									<div class="index-advant__slide-content card-slider__slide-content">
+										<h3 class="index-advant__slide-title card-slider__slide-title">Удобная инфраструктура</h3>
+										<p class="index-advant__slide-desc card-slider__slide-desc">Быстрое сообщение со всеми важными объектами городской и&nbsp;краевой инфраструктуры</p>
 									</div>
 								</div>
 							</div>
-							<div class="index-advant__slide swiper-slide">
-								<div class="index-advant__slide-container">
-									<svg class="index-advant__slide-icon" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<div class="index-advant__slide card-slider__slide swiper-slide">
+								<div class="index-advant__slide-container card-slider__slide-container">
+									<svg class="index-advant__slide-icon card-slider__slide-icon" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="index-advant__slide-icon--path" d="M79 99V107.667H49V99H79Z" stroke="#C6A47D" stroke-width="2" />
 										<mask id="path-2-inside-1_9871_2479" fill="white">
 											<path d="M80 114H48V116H80V114Z" />
@@ -670,21 +658,21 @@
 										<path class="index-advant__slide-icon--path" d="M48 114V112H46V114H48ZM80 114H82V112H80V114ZM80 116V118H82V116H80ZM48 116H46V118H48V116ZM48 114V116H80V114V112H48V114ZM80 114H78V116H80H82V114H80ZM80 116V114H48V116V118H80V116ZM48 116H50V114H48H46V116H48Z" fill="#C6A47D" mask="url(#path-2-inside-1_9871_2479)" />
 										<path class="index-advant__slide-icon--path" d="M64 90.6667H48V75.7333C38.4533 70.1867 32 59.84 32 48C32 30.3467 46.3467 16 64 16C81.6533 16 96 30.3467 96 48C96 59.84 89.5467 70.1867 80 75.7333V90.6667H64Z" stroke="#C6A47D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
-									<div class="index-advant__slide-content">
-										<h3 class="index-advant__slide-title">Современный и&nbsp;высокотехнологичный</h3>
-										<p class="index-advant__slide-desc">Все что нужно для комфортного отдыха и занятий спортом</p>
+									<div class="index-advant__slide-content card-slider__slide-content">
+										<h3 class="index-advant__slide-title card-slider__slide-title">Современный и&nbsp;высокотехнологичный</h3>
+										<p class="index-advant__slide-desc card-slider__slide-desc">Все что нужно для комфортного отдыха и занятий спортом</p>
 									</div>
 								</div>
 							</div>
-							<div class="index-advant__slide swiper-slide">
-								<div class="index-advant__slide-container">
-									<svg class="index-advant__slide-icon" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<div class="index-advant__slide card-slider__slide swiper-slide">
+								<div class="index-advant__slide-container card-slider__slide-container">
+									<svg class="index-advant__slide-icon card-slider__slide-icon" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="index-advant__slide-icon--path" d="M37.3333 58.6667L64 16L80 21.3333L74.6667 53.3333H112V69.3333L96 106.667H37.3333M37.3333 58.6667H16V106.667H37.3333M37.3333 58.6667V106.667" stroke="#C6A47D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
-									<div class="index-advant__slide-content">
-										<h3 class="index-advant__slide-title">Программа лояльности</h3>
-										<p class="index-advant__slide-desc">Скидки до 50% и различные бонусы от наших партнёров</p>
-										<a class="index-advant__slide-button" href="#">Подробнее <i class="index-advant__slide-button--icon icon-triangle"></i></a>
+									<div class="index-advant__slide-content card-slider__slide-content">
+										<h3 class="index-advant__slide-title card-slider__slide-title">Программа лояльности</h3>
+										<p class="index-advant__slide-desc card-slider__slide-desc">Скидки до 50% и различные бонусы от наших партнёров</p>
+										<a class="index-advant__slide-button card-slider__slide-button" href="#">Подробнее <i class="index-advant__slide-button--icon card-slider__slide-button--icon icon-triangle"></i></a>
 									</div>
 								</div>
 							</div>
@@ -714,11 +702,10 @@
 							<div class="index-location__cords-item--address-item">Россия, г.&nbsp;Владивосток, ул.&nbsp;Набережная, д.13</div>
 						</li>
 					</ul>
-					<div class="index-location__map">
-					</div>
+					<div class="index-location__map"></div>
 				</div>
 			</section>
-						<section class="map">
+			<section class="index-map"><div class="map">
 	<div id="map" class="map__container"></div>
 	<div class="map__info" data-parallax data-start="-100">
 		<div class="map__info-content">
@@ -758,8 +745,112 @@
 			</div>
 		</a>
 	</div>
+</div>
 </section>
-
+			<section class="index-gallery">
+				<div class="index-gallery__container">
+					<div class="index-gallery__titlebox gallery-slider__titlebox">
+						<h2 class="index-gallery__title gallery-slider__title" data-parallax data-start="-200">Уникальное пространство, создающее атмосферу уюта и&nbsp;благополучия</h2>
+					</div>
+					<div class="index-gallery__body" data-parallax>
+						<div class="index-gallery__slider gallery-slider swiper">
+							<div class="index-gallery__slider-wrapper gallery-slider__wrapper swiper-wrapper">
+								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example.jpg" data-fancybox="index-gallery">
+										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example1.jpg" data-fancybox="index-gallery">
+										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example1.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example3.jpg" data-fancybox="index-gallery">
+										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example3.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example4.jpg" data-fancybox="index-gallery">
+										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example4.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example5.jpg" data-fancybox="index-gallery">
+										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example5.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example6.jpg" data-fancybox="index-gallery">
+										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example6.jpg" alt="#" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="index-gallery__desc gallery-slider__desc">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+						<ul class="index-gallery__footer gallery-slider__footer">
+							<li class="index-gallery__button index-gallery__button--prev gallery-slider__button gallery-slider__button--prev swiper-button-prev"><i class="index-gallery__button-icon gallery-slider__button--icon icon-arrow"></i></li>
+							<li class="index-gallery__pagination-container gallery-slider__pagination-container"><div class="index-gallery__pagination gallery-slider__pagination hide-scrollbar"></div></li>
+							<li class="index-gallery__button index-gallery__button--next gallery-slider__button gallery-slider__button--next swiper-button-next"><i class="index-gallery__button-icon gallery-slider__button--icon icon-arrow"></i></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="index-news">
+				<div class="index-news__container">
+					<div class="index-news__titlebox">
+						<h2 class="index-news__title" data-parallax data-axis="x" data-start="-200">Последние новости</h2>
+						<a class="index-news__button" href="news.html" data-parallax data-axis="x" data-start="200">
+							<span>Пресс-центр</span>
+							<div class="index-news__button--icon-container">
+								<div class="index-news__button--icon-wrapper">
+									<i class="index-news__button--icon icon-arrow"></i>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="index-news__body fill-slider__container">
+						<div class="index-news__slider fill-slider swiper">
+							<div class="index-news__slider-wrapper fill-slider__wrapper swiper-wrapper">
+								<div class="index-news__slide swiper-slide fill-slider__slide">
+									<a class="index-news__slide-container fill-slider__slide-container" href="article.html">
+										<ul class="index-news__slide-tagsbox fill-slider__slide-tagsbox">
+											<li class="index-news__slide-tag fill-slider__slide-tag">СМИ</li>
+										</ul>
+										<p class="index-news__slide-desc fill-slider__slide-desc">В новом районе города открылся культурный центр с&nbsp;мероприятиями для всех</p>
+									</a>
+								</div>
+								<div class="index-news__slide swiper-slide fill-slider__slide">
+									<a class="index-news__slide-container fill-slider__slide-container" href="article.html">
+										<ul class="index-news__slide-tagsbox fill-slider__slide-tagsbox">
+											<li class="index-news__slide-tag fill-slider__slide-tag">СМИ</li>
+										</ul>
+										<p class="index-news__slide-desc fill-slider__slide-desc">В новом районе города открылся культурный центр с&nbsp;мероприятиями для всех</p>
+									</a>
+								</div>
+								<div class="index-news__slide swiper-slide fill-slider__slide">
+									<a class="index-news__slide-container fill-slider__slide-container" href="article.html">
+										<ul class="index-news__slide-tagsbox fill-slider__slide-tagsbox">
+											<li class="index-news__slide-tag fill-slider__slide-tag">СМИ</li>
+										</ul>
+										<p class="index-news__slide-desc fill-slider__slide-desc">В новом районе города открылся культурный центр с&nbsp;мероприятиями для всех</p>
+									</a>
+								</div>
+								<div class="index-news__slide swiper-slide fill-slider__slide">
+									<a class="index-news__slide-container fill-slider__slide-container" href="article.html">
+										<ul class="index-news__slide-tagsbox fill-slider__slide-tagsbox">
+											<li class="index-news__slide-tag fill-slider__slide-tag">СМИ</li>
+										</ul>
+										<p class="index-news__slide-desc fill-slider__slide-desc">В новом районе города открылся культурный центр с&nbsp;мероприятиями для всех</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="index-news__slider-button index-news__slider-button--prev fill-slider__button fill-slider__button--prev swiper-button-prev"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+						<div class="index-news__slider-button index-news__slider-button--next fill-slider__button fill-slider__button--next swiper-button-next"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 	<div class="footer__container">

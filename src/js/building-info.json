@@ -3,42 +3,70 @@
     "id": "point-lobby",
     "title": "Главное лобби",
     "description": "Просторное и светлое лобби с зоной ожидания, ресепшеном и живыми растениями. Гостей встречает уютная атмосфера и профессиональный персонал.",
-    "image": "assets/img/content/building-points/lobby.jpg"
+    "image": "assets/img/content/building-points/lobby.jpg",
+    "position": {
+      "top": "55%",
+      "left": "45%"
+    }
   },
   {
     "id": "point-restaurant",
     "title": "Ресторан \"Золотая Лаванда\"",
     "description": "Элегантный ресторан с авторской кухней и видом на сад. Предлагает завтрак-буфет, обеденное и вечернее меню с сезонными ингредиентами.",
-    "image": "assets/img/content/building-points/restaurant.jpg"
+    "image": "assets/img/content/building-points/restaurant.jpg",
+    "position": {
+      "top": "60%",
+      "left": "35%"
+    }
   },
   {
     "id": "point-pool",
     "title": "Бассейн и зона отдыха",
     "description": "Открытый подогреваемый бассейн с шезлонгами и зонтиками. Идеальное место для отдыха с видом на горы и баром у воды.",
-    "image": "assets/img/content/building-points/pool.jpg"
+    "image": "assets/img/content/building-points/pool.jpg",
+    "position": {
+      "top": "60%",
+      "left": "60%"
+    }
   },
   {
     "id": "point-conference",
     "title": "Конференц-зал «Альфа»",
     "description": "Современное пространство для бизнес-встреч, семинаров и презентаций. Оборудовано мультимедийной системой и регулируемым освещением.",
-    "image": "assets/img/content/building-points/conference.jpg"
+    "image": "assets/img/content/building-points/conference.jpg",
+    "position": {
+      "top": "50%",
+      "left": "80%"
+    }
   },
   {
     "id": "point-suite",
     "title": "Президентский люкс",
     "description": "Роскошный двухкомнатный номер с панорамным остеклением, отдельной спальней, зоной отдыха и джакузи. Предназначен для особых гостей.",
-    "image": "assets/img/content/building-points/suite.jpg"
+    "image": "assets/img/content/building-points/suite.jpg",
+    "position": {
+      "top": "35%",
+      "left": "30%"
+    }
   },
   {
     "id": "point-fitness",
     "title": "Фитнес-центр",
     "description": "Оснащённый современными тренажёрами, зал для групповых тренировок и зона для релаксации. Доступен всем гостям отеля.",
-    "image": "assets/img/content/building-points/fitness.jpg"
+    "image": "assets/img/content/building-points/fitness.jpg",
+    "position": {
+      "top": "50%",
+      "left": "50%"
+    }
   },
   {
     "id": "point-spa",
     "title": "SPA-комплекс",
     "description": "Уютный SPA с массажными кабинетами, сауной, хаммамом и зоной релакса. Идеальное место для восстановления и ухода за собой.",
-    "image": "assets/img/content/building-points/spa.jpg"
+    "image": "assets/img/content/building-points/spa.jpg",
+    "position": {
+      "top": "70%",
+      "left": "30%"
+    }
   }
 ]

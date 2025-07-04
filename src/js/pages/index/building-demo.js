@@ -8,7 +8,6 @@
 			this.panelTitle = document.getElementById("index-building-panelTitle");
 			this.panelContent = document.getElementById("index-building-panelContent");
 			this.closeBtn = document.getElementById("index-building-closeBtn");
-			this.points = document.querySelectorAll(".index-demo__building-point");
 
 			this.activePoint = null;
 			this.isMouseInside = false;
@@ -16,6 +15,7 @@
 			this.maxOffset = 10;
 
 			this.pointsData = {};
+			this.points = [];
 
 			this.init();
 		}
@@ -31,23 +31,49 @@
 				const response = await fetch("/js/building-info.json");
 				const json = await response.json();
 
-				// Индексация по id
+				// Индексация по id и генерация точек
 				json.forEach((item) => {
 					if (item.id) {
 						this.pointsData[item.id] = item;
+						this.generatePoint(item);
 					}
 				});
+
+				this.points = document.querySelectorAll(".index-demo__building-point");
 			} catch (error) {
-				console.error("Ошибка загрузки данных:", error);
+				console.error(error);
 			}
 		}
 
+		generatePoint(data) {
+			if (!data.position || !data.position.top || !data.position.left) {
+				console.warn(`Missing position data for point: ${data.id}`);
+				return;
+			}
+
+			const point = document.createElement('a');
+			point.id = data.id;
+			point.className = 'index-demo__building-point';
+			point.setAttribute('data-point', data.id);
+			point.style.top = data.position.top;
+			point.style.left = data.position.left;
+
+			const img = document.createElement('img');
+			img.className = 'index-demo__building-point-image';
+			img.src = data.image;
+			img.alt = '#';
+
+			point.appendChild(img);
+			this.model.appendChild(point);
+		}
+
 		bindEvents() {
-			this.points.forEach((point) => {
-				point.addEventListener("click", (e) => {
+			this.model.addEventListener("click", (e) => {
+				const point = e.target.closest(".index-demo__building-point");
+				if (point) {
 					e.stopPropagation();
 					this.handlePointClick(point);
-				});
+				}
 			});
 
 			this.closeBtn.addEventListener("click", () => this.closePanel());
@@ -105,7 +131,6 @@
 
 		resetParallax() {
 			this.parallaxOffset = { x: 0, y: 0 };
-			//this.modelImage.style.transform = "translate(0, 0)";
 		}
 
 		handlePointClick(point) {
@@ -135,9 +160,15 @@
 				this.panelTitle.textContent = data.title;
 				this.panelContent.innerHTML = `
 					<div class="index-demo__info-panel-text">${data.description}</div>
-					<picture class="index-demo__info-panel-image-container">
+					<a class="index-demo__info-panel-image-container" data-fancybox="index-demo" href="${data.image}">
 						<img src="${data.image}" alt="${data.title}" class="index-demo__info-panel-image">
-					</picture>
+						<div class="index-demo__info-panel-image-icon">
+							<span class="index-demo__info-panel-image-icon-corner"></span>
+							<span class="index-demo__info-panel-image-icon-corner"></span>
+							<span class="index-demo__info-panel-image-icon-corner"></span>
+							<span class="index-demo__info-panel-image-icon-corner"></span>
+						</div>
+					</a>
 				`;
 			}
 
