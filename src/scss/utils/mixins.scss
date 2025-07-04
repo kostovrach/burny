@@ -137,6 +137,42 @@
 		}
 	}
 }
+@mixin flowing-fill() {
+	position: relative;
+	overflow: hidden;
+	transition: $duration;
+	& > * {
+		position: relative;
+	}
+	@media (pointer: fine) {
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			top: -50%;
+			left: 0;
+			translate: 0 50%;
+			width: rem(32);
+			height: rem(32);
+			background-color: $c-FFFFFF;
+			border-radius: 50%;
+			transition: $duration;
+			will-change: scale;
+		}
+		&:hover {
+			&::before {
+				scale: 35;
+			}
+		}
+		&:not(:hover)::before {
+			scale: 0;
+			top: auto;
+			left: auto;
+			bottom: 0;
+			right: 0;
+		}
+	}
+}
 @mixin hover-underline($bg-color: black) {
 	position: relative;
 	width: fit-content;

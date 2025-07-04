@@ -1,6 +1,6 @@
 <section class="map">
 	<div id="map" class="map__container"></div>
-	<div class="map__info">
+	<div class="map__info" data-parallax data-start="-100">
 		<div class="map__info-content">
 			<ul class="map__info-item">
 				<li class="map__info-item-title">Транспортная доступность <i class="map__info-item-title--icon icon-check-mark"></i></li>
@@ -16,8 +16,8 @@
 				</li>
 			</ul>
 			<ul class="map__info-item">
-				<li class="map__info-item-title">Места рядом <i class="map__info-item-title--icon icon-check-mark"></i></li>
-				<li class="map__info-item-content">
+				<li class="map__info-item-title active">Места рядом <i class="map__info-item-title--icon icon-check-mark"></i></li>
+				<li class="map__info-item-content active">
 					<div class="map__info-item-point">
 						<div class="map__info-item-point-title">Рестораны И кафе</div>
 						<p class="map__info-item-point-text">Вкусный уголок, Кулинарный рай, Солнечный обед, Морская звезда.</p>
@@ -30,7 +30,7 @@
 			</ul>
 		</div>
 		<a class="map__info-button" href="#">
-			Построить маршрут
+			<span>Построить маршрут</span>
 			<div class="map__info-button--icon-container">
 				<div class="map__info-button--icon-wrapper">
 					<i class="map__info-button--icon icon-arrow"></i>

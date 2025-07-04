@@ -4,7 +4,7 @@
 	.liquid-item {
 		position: relative;
 		transition: $duration ease-in;
-		&:hover {
+		&:hover > *{
 			color: $main-color;
 			transform: scaleX(0.99);
 		}
@@ -13,7 +13,7 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-		width: 120%;
+		width: 110%;
 		height: 100%;
 		background-color: $c-C6A47D;
 		z-index: -1;
