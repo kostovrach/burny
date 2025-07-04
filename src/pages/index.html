@@ -348,6 +348,10 @@
 			</section>
 			<section class="index-map">@@include('../components/map.html')</section>
 			<section class="index-gallery">
+				<div class="gallery-slider__distortion">
+					<canvas class="gallery-slider__distortion-mask gallery-slider__distortion-mask--left"></canvas>
+					<canvas class="gallery-slider__distortion-mask gallery-slider__distortion-mask--right"></canvas>
+				</div>
 				<div class="index-gallery__container">
 					<div class="index-gallery__titlebox gallery-slider__titlebox">
 						<h2 class="index-gallery__title gallery-slider__title" data-parallax data-start="-200">Уникальное пространство, создающее атмосферу уюта и&nbsp;благополучия</h2>
@@ -390,7 +394,11 @@
 						<div class="index-gallery__desc gallery-slider__desc">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
 						<ul class="index-gallery__footer gallery-slider__footer">
 							<li class="index-gallery__button index-gallery__button--prev gallery-slider__button gallery-slider__button--prev swiper-button-prev"><i class="index-gallery__button-icon gallery-slider__button--icon icon-arrow"></i></li>
-							<li class="index-gallery__pagination-container gallery-slider__pagination-container"><div class="index-gallery__pagination gallery-slider__pagination hide-scrollbar"></div></li>
+							<li class="index-gallery__pagination-container gallery-slider__pagination-container">
+								<div class="index-gallery__pagination gallery-slider__pagination swiper">
+									<ul class="index-gallery__pagination-wrapper gallery-slider__pagination-wrapper swiper-wrapper"></ul>
+								</div>
+							</li>
 							<li class="index-gallery__button index-gallery__button--next gallery-slider__button gallery-slider__button--next swiper-button-next"><i class="index-gallery__button-icon gallery-slider__button--icon icon-arrow"></i></li>
 						</ul>
 					</div>
@@ -448,6 +456,30 @@
 						</div>
 						<div class="index-news__slider-button index-news__slider-button--prev fill-slider__button fill-slider__button--prev swiper-button-prev"><i class="index-news__slider-button--icon icon-arrow"></i></div>
 						<div class="index-news__slider-button index-news__slider-button--next fill-slider__button fill-slider__button--next swiper-button-next"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+					</div>
+				</div>
+			</section>
+			<section class="index-frames">
+				<div class="index-frames__container">
+					<div class="index-frames__anim">@@include('../components/frames.html')</div>
+					<div class="index-frames__body" data-parallax>
+						<div class="index-frames__content">
+							<h2 class="index-frames__title">Сотрудничество с&nbsp;BURNY</h2>
+							<ul class="index-frames__list">
+								<li class="index-frames__list-item--title">Мы создали идеальное место для&nbsp;вашего бизнеса:</li>
+								<li class="index-frames__list-item">современные офисные пространства,</li>
+								<li class="index-frames__list-item">возможности сетевого взаимодействия с другими компаниями,</li>
+								<li class="index-frames__list-item">комфортные зоны для отдыха и&nbsp;работы</li>
+							</ul>
+						</div>
+						<button class="index-frames__button">
+							<span>Связаться с нами</span>
+							<div class="index-frames__button--icon-container">
+								<div class="index-frames__button--icon-wrapper">
+									<i class="index-frames__button--icon icon-arrow"></i>
+								</div>
+							</div>
+						</button>
 					</div>
 				</div>
 			</section>
