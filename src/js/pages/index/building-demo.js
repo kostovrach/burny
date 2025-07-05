@@ -28,7 +28,7 @@
 
 		async loadPointsData() {
 			try {
-				const response = await fetch("/js/building-info.json");
+				const response = await fetch("./js/building-info.json");
 				const json = await response.json();
 
 				// Индексация по id и генерация точек
