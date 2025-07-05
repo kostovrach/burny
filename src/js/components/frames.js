@@ -4,7 +4,7 @@
 			this.config = {
 				canvasId: "building-frames",
 				frameCount: 29,
-				framePath: "../assets/img/service/frames/",
+				framePath: "./assets/img/service/frames/",
 				frameFormat: "jpg",
 				dragSensitivity: 0.3,
 				scrollTriggerConfig: {
