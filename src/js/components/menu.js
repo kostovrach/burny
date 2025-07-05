@@ -118,3 +118,92 @@
 		}, 100);
 	}
 })();
+
+(function () {
+	class CursorFollower {
+		constructor() {
+			this.elements = document.querySelectorAll(".soon");
+			this.activeMarkers = new Map();
+			this.animationFrames = new Map();
+			this.init();
+		}
+
+		init() {
+			if (this.elements.length === 0) return;
+
+			this.elements.forEach((element) => {
+				element.addEventListener("mouseenter", this.handleMouseEnter.bind(this));
+				element.addEventListener("mouseleave", this.handleMouseLeave.bind(this));
+			});
+		}
+
+		handleMouseEnter(e) {
+			const element = e.currentTarget;
+			const marker = this.createMarker();
+
+			element.appendChild(marker);
+			this.activeMarkers.set(element, marker);
+
+			const rect = element.getBoundingClientRect();
+			const x = e.clientX - rect.left;
+			const y = e.clientY - rect.top;
+			this.updateMarkerPosition(marker, x, y, element);
+
+			const mouseMoveHandler = (e) => this.handleMouseMove(e, element, marker);
+			element.addEventListener("mousemove", mouseMoveHandler);
+
+			marker._mouseMoveHandler = mouseMoveHandler;
+		}
+
+		handleMouseLeave(e) {
+			const element = e.currentTarget;
+			const marker = this.activeMarkers.get(element);
+
+			if (marker) {
+				element.removeEventListener("mousemove", marker._mouseMoveHandler);
+
+				const animationId = this.animationFrames.get(element);
+				if (animationId) {
+					cancelAnimationFrame(animationId);
+					this.animationFrames.delete(element);
+				}
+
+				marker.remove();
+				this.activeMarkers.delete(element);
+			}
+		}
+
+		handleMouseMove(e, element, marker) {
+			const prevAnimationId = this.animationFrames.get(element);
+			if (prevAnimationId) {
+				cancelAnimationFrame(prevAnimationId);
+			}
+
+			const animationId = requestAnimationFrame(() => {
+				const rect = element.getBoundingClientRect();
+				const x = e.clientX - rect.left;
+				const y = e.clientY - rect.top;
+				this.updateMarkerPosition(marker, x, y, element);
+				this.animationFrames.delete(element);
+			});
+
+			this.animationFrames.set(element, animationId);
+		}
+
+		createMarker() {
+			const marker = document.createElement("div");
+			marker.className = "soon__marker";
+			marker.textContent = "Открытие в\u00A02025";
+			return marker;
+		}
+
+		updateMarkerPosition(marker, x, y, element) {
+			marker.style.left = `${x}px`;
+			marker.style.top = `${y}px`;
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		new CursorFollower();
+	});
+})();

@@ -3,7 +3,7 @@
 	@@include('../components/head.html', { "title": "Burny City" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "О комплексе" })
-		<main>
+		<main id="start">
 			<section class="index-hero">
 				<div class="index-hero__background">
 					<div class="index-hero__background-container swiper">
@@ -69,7 +69,9 @@
 					<div class="index-hero__titlebox">
 						<h1 class="index-hero__title" data-parallax>Океан рядом, Город вокруг — BURNY</h1>
 						<p class="index-hero__subtitle" data-parallax>это первый дальневосточный проект, построенный по&nbsp;концепции <span class="index-hero__subtitle--accent">город в&nbsp;городе</span>, собравший под одной крышей все, что нужно современному деловому&nbsp;человеку.</p>
-						<div class="index-hero__button-container">@@include('../components/button.html', { "title": "Смотреть", "text": "Фильм о нас", "href": "#" })</div>
+						<div class="index-hero__button-container" data-parallax>
+							<div class="index-hero__button">@@include('../components/button.html', { "title": "Смотреть", "text": "Фильм о нас", "href": "#" })</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -348,10 +350,6 @@
 			</section>
 			<section class="index-map">@@include('../components/map.html')</section>
 			<section class="index-gallery">
-				<div class="gallery-slider__distortion">
-					<canvas class="gallery-slider__distortion-mask gallery-slider__distortion-mask--left"></canvas>
-					<canvas class="gallery-slider__distortion-mask gallery-slider__distortion-mask--right"></canvas>
-				</div>
 				<div class="index-gallery__container">
 					<div class="index-gallery__titlebox gallery-slider__titlebox">
 						<h2 class="index-gallery__title gallery-slider__title" data-parallax data-start="-200">Уникальное пространство, создающее атмосферу уюта и&nbsp;благополучия</h2>
@@ -454,8 +452,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="index-news__slider-button index-news__slider-button--prev fill-slider__button fill-slider__button--prev swiper-button-prev"><i class="index-news__slider-button--icon icon-arrow"></i></div>
-						<div class="index-news__slider-button index-news__slider-button--next fill-slider__button fill-slider__button--next swiper-button-next"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+						<div class="index-news__footer fill-slider__footer">
+							<div class="index-news__slider-button index-news__slider-button--prev fill-slider__button fill-slider__button--prev swiper-button-prev"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+							<div class="index-news__slider-button index-news__slider-button--next fill-slider__button fill-slider__button--next swiper-button-next"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -481,6 +481,55 @@
 							</div>
 						</button>
 					</div>
+				</div>
+			</section>
+			<section class="index-stocks">
+				<div class="index-stocks__container">
+					<div class="index-stocks__body">
+						<div class="index-stocks__slider swiper">
+							<div class="index-stocks__slider-wrapper swiper-wrapper">
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example1.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example2.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example1.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example2.jpg" alt="#" />
+									</picture>
+								</a>
+							</div>
+						</div>
+					</div>
+					<ul class="index-stocks__footer" data-parallax data-start="100">
+						<li class="index-stocks__button index-stocks__button--prev swiper-button-prev"><i class="index-stocks__button-icon icon-arrow"></i></li>
+						<li class="index-stocks__pagination-container">
+							<div class="index-stocks__pagination swiper">
+								<ul class="index-stocks__pagination-wrapper swiper-wrapper"></ul>
+							</div>
+						</li>
+						<li class="index-stocks__button index-stocks__button--next swiper-button-next"><i class="index-stocks__button-icon icon-arrow"></i></li>
+					</ul>
 				</div>
 			</section>
 		</main>

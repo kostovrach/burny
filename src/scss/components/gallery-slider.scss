@@ -1,28 +1,36 @@
 @use "../utils/abstracts" as *;
 
 .gallery-slider {
+	perspective: 1200px;
 	overflow: visible;
 	position: relative;
-	&__distortion {
+	&::before,
+	&::after {
+		content: "";
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		top: 0;
+		z-index: 2;
+		top: 50%;
+		left: 0;
+		translate: 0 -50%;
+		width: rem(180);
+		height: 150%;
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
 		pointer-events: none;
-		&-mask {
-			position: absolute;
-			top: 0;
-			width: rem(140);
-			height: 100%;
-			//background-color: red;
-			&--left {
-				left: 0;
-			}
-			&--right {
-				right: 0;
-			}
-		}
+	}
+	&::before {
+		-webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+		mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+	}
+	&::after {
+		left: auto;
+		right: 0;
+		-webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+		mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 	}
 	&__titlebox {
 		position: relative;
@@ -30,6 +38,7 @@
 		flex-direction: column;
 		align-items: center;
 		padding-bottom: rem(50);
+		@include content-width();
 		&::before {
 			content: "";
 			position: absolute;
@@ -48,12 +57,16 @@
 		text-align: center;
 	}
 	&__slide {
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
+		transition: transform 0.6s ease;
 		width: fit-content;
 		&-image-container {
 			outline: none;
 			display: block;
-			width: rem(850);
-			height: rem(460);
+			max-width: rem(850);
+			max-height: rem(460);
+			aspect-ratio: 1.5/1;
 		}
 		&-image {
 			width: 100%;
@@ -66,14 +79,16 @@
 		line-height: 1;
 		text-align: center;
 		text-wrap: balance;
+		@include content-width();
 		margin-top: rem(40);
+		margin-bottom: rem(40);
 	}
 	&__footer {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: rem(64);
-		margin-top: rem(40);
+		@include content-width();
 	}
 	&__button {
 		position: static;
@@ -99,6 +114,24 @@
 		width: rem(256);
 		position: relative;
 		transition: all $duration;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			width: rem(64);
+			height: 100%;
+			pointer-events: none;
+		}
+		&::before {
+			left: 0;
+			background: linear-gradient(to left, rgba($main-color, 0.1) 0%, rgba($main-color, 1) 100%);
+		}
+		&::after {
+			right: 0;
+			background: linear-gradient(to right, rgba($main-color, 0.1) 0%, rgba($main-color, 1) 100%);
+		}
 	}
 	&__pagination {
 		&-item {
@@ -127,6 +160,33 @@
 					}
 				}
 			}
+			@media (pointer: fine) {
+				&:hover {
+					& > span {
+						&::before {
+							width: rem(16);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.gallery-slider {
+		&::before,
+		&::after {
+			display: none;
+		}
+		&__footer {
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			gap: rem(16);
+			justify-items: center;
+		}
+		&__pagination-container {
+			grid-column: span 2;
+			grid-row: 1;
 		}
 	}
 }

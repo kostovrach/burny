@@ -108,6 +108,12 @@
 </div>
 
 <div id="menu" class="menu" role="dialog" aria-hidden="true">
+	<div class="menu__sider">
+		<div class="menu__sider-label">Выбор раздела</div>
+		<div class="menu__sider-icon-container">
+			<div class="menu__sider-icon"></div>
+		</div>
+	</div>
 	<div class="menu__container hide-scrollbar">
 		<ul class="menu__body" role="navigation">
 			<li class="menu__item-container liquid-item">
@@ -197,7 +203,7 @@
 					</div>
 				</a>
 			</li>
-			<li class="menu__item-container disabled liquid-item">
+			<li class="menu__item-container soon liquid-item">
 				<div class="liquid-fill"></div>
 				<a class="menu__item" href="#">
 					<div class="menu__item-title">Фитнес-центр</div>
@@ -208,7 +214,7 @@
 					</div>
 				</a>
 			</li>
-			<li class="menu__item-container disabled liquid-item">
+			<li class="menu__item-container soon liquid-item">
 				<div class="liquid-fill"></div>
 				<a class="menu__item" href="#">
 					<div class="menu__item-title">Клуб здоровья и&nbsp;долголетия</div>
@@ -219,7 +225,7 @@
 					</div>
 				</a>
 			</li>
-			<li class="menu__item-container disabled liquid-item">
+			<li class="menu__item-container soon liquid-item">
 				<div class="liquid-fill"></div>
 				<a class="menu__item" href="#">
 					<div class="menu__item-title">Торговая галерея</div>
@@ -244,7 +250,7 @@
 	</div>
 </div>
 
-		<main>
+		<main id="start">
 			<section class="index-hero">
 				<div class="index-hero__background">
 					<div class="index-hero__background-container swiper">
@@ -310,7 +316,8 @@
 					<div class="index-hero__titlebox">
 						<h1 class="index-hero__title" data-parallax>Океан рядом, Город вокруг — BURNY</h1>
 						<p class="index-hero__subtitle" data-parallax>это первый дальневосточный проект, построенный по&nbsp;концепции <span class="index-hero__subtitle--accent">город в&nbsp;городе</span>, собравший под одной крышей все, что нужно современному деловому&nbsp;человеку.</p>
-						<div class="index-hero__button-container"><a class="button " href="#" @@attr>
+						<div class="index-hero__button-container" data-parallax>
+							<div class="index-hero__button"><a class="button " href="#" @@attr>
 	<span class="button-content">
 		<span class="button-title">Смотреть</span>
 		<span class="button-text">Фильм о нас</span>
@@ -320,6 +327,7 @@
 	</span>
 </a>
 </div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -748,10 +756,6 @@
 </div>
 </section>
 			<section class="index-gallery">
-				<div class="gallery-slider__distortion">
-					<canvas class="gallery-slider__distortion-mask gallery-slider__distortion-mask--left"></canvas>
-					<canvas class="gallery-slider__distortion-mask gallery-slider__distortion-mask--right"></canvas>
-				</div>
 				<div class="index-gallery__container">
 					<div class="index-gallery__titlebox gallery-slider__titlebox">
 						<h2 class="index-gallery__title gallery-slider__title" data-parallax data-start="-200">Уникальное пространство, создающее атмосферу уюта и&nbsp;благополучия</h2>
@@ -854,8 +858,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="index-news__slider-button index-news__slider-button--prev fill-slider__button fill-slider__button--prev swiper-button-prev"><i class="index-news__slider-button--icon icon-arrow"></i></div>
-						<div class="index-news__slider-button index-news__slider-button--next fill-slider__button fill-slider__button--next swiper-button-next"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+						<div class="index-news__footer fill-slider__footer">
+							<div class="index-news__slider-button index-news__slider-button--prev fill-slider__button fill-slider__button--prev swiper-button-prev"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+							<div class="index-news__slider-button index-news__slider-button--next fill-slider__button fill-slider__button--next swiper-button-next"><i class="index-news__slider-button--icon icon-arrow"></i></div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -886,10 +892,130 @@
 					</div>
 				</div>
 			</section>
+			<section class="index-stocks">
+				<div class="index-stocks__container">
+					<div class="index-stocks__body">
+						<div class="index-stocks__slider swiper">
+							<div class="index-stocks__slider-wrapper swiper-wrapper">
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example1.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example2.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example1.jpg" alt="#" />
+									</picture>
+								</a>
+								<a class="index-stocks__slide swiper-slide" href="#">
+									<picture class="index-stocks__slide-image-container">
+										<img class="index-stocks__slide-image" src="assets/img/content/certificates/example2.jpg" alt="#" />
+									</picture>
+								</a>
+							</div>
+						</div>
+					</div>
+					<ul class="index-stocks__footer" data-parallax data-start="100">
+						<li class="index-stocks__button index-stocks__button--prev swiper-button-prev"><i class="index-stocks__button-icon icon-arrow"></i></li>
+						<li class="index-stocks__pagination-container">
+							<div class="index-stocks__pagination swiper">
+								<ul class="index-stocks__pagination-wrapper swiper-wrapper"></ul>
+							</div>
+						</li>
+						<li class="index-stocks__button index-stocks__button--next swiper-button-next"><i class="index-stocks__button-icon icon-arrow"></i></li>
+					</ul>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 	<div class="footer__container">
-		
+		<div class="footer__head">
+			<a class="footer__logo" href="index.html" data-parallax>
+				<picture class="footer__logo-image-container">
+					<img class="footer__logo-image" src="assets/img/service/logo/logo-full.svg" alt="Логотип" />
+				</picture>
+			</a>
+			<ul class="footer__desc" data-parallax>
+				<li class="footer__desc-item">В самом центре города.</li>
+				<li class="footer__desc-item">С панорамным видом на&nbsp;океан.</li>
+				<li class="footer__desc-item">Только лучшее.</li>
+			</ul>
+		</div>
+		<div class="footer__body">
+			<div class="footer__list footer__list--map" role="list">
+				<p class="footer__list-item--title">Карта сайта</p>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>О комплексе</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Галерея</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Пресс-центр</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Контакты</span></a>
+			</div>
+			<div class="footer__list footer__list--infrastructure" role="list">
+				<p class="footer__list-item--title">Инфраструктура</p>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Аренда офисов</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Конференц-залы</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Апарт-отель 5★</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Рестораны</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Вертолётная площадка</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Парковка</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Фитнес-центр</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Клуб здоровья и долголетия</span></a>
+				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Торговая галерея</span></a>
+			</div>
+			<ul class="footer__list footer__list--contacts">
+				<li class="footer__list-item--title">Контакты</li>
+				<li class="footer__list-item--number"><a href="tel:8 800 600-20-00">8 800 600-20-00</a></li>
+				<li class="footer__list-item--mail"><a href="mailto:hello@burny.ru">hello@burny.ru</a></li>
+			</ul>
+			<ul class="footer__list footer__list--address">
+				<li class="footer__list-item--title">Адрес</li>
+				<li class="footer__list-item--address">г. Владивосток, ул. Набережная, д.13</li>
+				<li class="footer__list-item--time">Пн-Пт: <span class="footer__list-item--time--accent">с 10 до 22</span>, Сб-Вс: <span class="footer__list-item--time--accent">с 10 до 23</span></li>
+			</ul>
+			<div class="footer__socials">
+				<a class="footer__socials-item footer__socials-item--vk" href="#"><i class="footer__socials-item--icon icon-vk"></i></a>
+				<a class="footer__socials-item footer__socials-item--insta" href="#"><i class="footer__socials-item--icon icon-instagram"></i></a>
+				<a class="footer__socials-item footer__socials-item--tg" href="#"><i class="footer__socials-item--icon icon-telegram"></i></a>
+			</div>
+			<div class="footer__button-container">
+				<a class="footer__button" href="#start">
+					<div class="footer__button--icon-container">
+						<div class="footer__button--icon-wrapper">
+							<i class="footer__button--icon icon-arrow"></i>
+						</div>
+					</div>
+					<picture class="footer__button-overlay-container">
+						<img class="footer__button-overlay" src="assets/img/service/button-overlay.svg" alt="#" />
+					</picture>
+				</a>
+			</div>
+			<ul class="footer__legal">
+				<li class="footer__legal-privacy" role="button" data-privacy-open>Правовая информация</li>
+				<li class="footer__legal-info">2025 &copy; BURNY City. All rights reserved</li>
+			</ul>
+		</div>
+		<div class="footer__label">
+			<a class="footer__label-container" href="https://intheplace.ru">
+				<picture class="footer__label-image-container">
+					<img class="footer__label-image" src="assets/root/theplace.svg" alt="ThePlace" />
+				</picture>
+				<div class="footer__label-desc">— разработка и поддержка сайта</div>
+			</a>
+		</div>
 	</div>
 </footer>
 <script src="./js/main.min.js"></script>

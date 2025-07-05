@@ -210,3 +210,26 @@
 		}
 	}
 }
+@media (max-width: 1024px) {
+	.map {
+		&__info {
+			display: none;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.map {
+		&__container {
+			height: 70lvh;
+			min-height: initial;
+			.leaflet-top.leaflet-right {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 612px) {
+	.map {
+		display: none;
+	}
+}

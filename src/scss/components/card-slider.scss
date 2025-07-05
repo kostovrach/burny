@@ -16,6 +16,9 @@
 			justify-content: space-between;
 			gap: rem(64);
 		}
+		&-icon {
+			width: rem(96);
+		}
 		&-content {
 			display: grid;
 			grid-template-rows: repeat(3, auto);
@@ -42,6 +45,14 @@
 					color: $c-FFFFFF;
 				}
 			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.card-slider {
+		&__slide {
+			max-width: rem(400);
+			padding: rem(32);
 		}
 	}
 }

@@ -4,6 +4,7 @@
 	cursor: pointer;
 	position: relative;
 	width: rem(256);
+	height: rem(256);
 	aspect-ratio: 1/1;
 	border: rem(2) solid $c-C6A47D;
 	border-radius: 50%;
@@ -48,14 +49,14 @@
 	}
 	&-title {
 		text-transform: uppercase;
-		font-size: lineScale(32, 18, 480, 1440);
+		font-size: lineScale(32, 16, 480, 1440);
 		line-height: 1;
 		font-weight: $fw-bold;
 		transition: $duration;
 	}
 	&-text {
 		text-transform: uppercase;
-		font-size: lineScale(16, 14, 480, 1440);
+		font-size: lineScale(16, 12, 480, 1440);
 		line-height: 1;
 		transition: $duration;
 	}
@@ -92,5 +93,17 @@
 				rotate: -45deg;
 			}
 		}
+	}
+}
+@media (max-width: 1024px) {
+	.button {
+		width: rem(220);
+		height: rem(220);
+	}
+}
+@media (max-width: 768px) {
+	.button {
+		width: rem(180);
+		height: rem(180);
 	}
 }

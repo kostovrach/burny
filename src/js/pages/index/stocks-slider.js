@@ -1,10 +1,10 @@
 (function () {
-	const slider = document.querySelector(".gallery-slider");
+	const slider = document.querySelector(".index-stocks__slider");
 
 	if (!slider) return;
 
-	const paginationWrapper = document.querySelector(".gallery-slider__pagination-wrapper");
-	const totalSlides = slider.querySelectorAll(".gallery-slider__slide").length;
+	const paginationWrapper = document.querySelector(".index-stocks__pagination-wrapper");
+	const totalSlides = slider.querySelectorAll(".index-stocks__slide").length;
 
 	function generatePaginationNumbers() {
 		if (!paginationWrapper) return;
@@ -13,7 +13,7 @@
 
 		for (let i = 1; i <= totalSlides; i++) {
 			const slide = document.createElement("li");
-			slide.className = "index-gallery__pagination-item gallery-slider__pagination-item swiper-slide";
+			slide.className = "index-stocks__pagination-item swiper-slide";
 			slide.innerHTML = `<span>${i}</span>`;
 			paginationWrapper.appendChild(slide);
 		}
@@ -22,8 +22,8 @@
 	generatePaginationNumbers();
 
 	let paginationSwiper = null;
-	if (document.querySelector(".gallery-slider__pagination")) {
-		paginationSwiper = new Swiper(".gallery-slider__pagination", {
+	if (document.querySelector(".index-stocks__pagination")) {
+		paginationSwiper = new Swiper(".index-stocks__pagination", {
 			slidesPerView: 5,
 			spaceBetween: 24,
 			speed: 300,
@@ -36,27 +36,13 @@
 	const sliderParams = {
 		slidesPerView: "auto",
 		spaceBetween: 16,
+		initialSlide: 1,
 		centeredSlides: true,
 		speed: 800,
-		grabCursor: true,
+        freeMode: true,
 		navigation: {
-			nextEl: ".gallery-slider__button--next",
-			prevEl: ".gallery-slider__button--prev",
-		},
-		effect: "creative",
-		creativeEffect: {
-			limitProgress: 2,
-			perspective: true,
-			prev: {
-				translate: ["-105%", 0, -20],
-				rotate: [0, 15, 0],
-				origin: "right",
-			},
-			next: {
-				translate: ["105%", 0, -20],
-				rotate: [0, -15, 0],
-				origin: "left",
-			},
+			nextEl: ".index-stocks__button--next",
+			prevEl: ".index-stocks__button--prev",
 		},
 		on: {
 			init: function () {
@@ -73,7 +59,7 @@
 	function updatePaginationActive(activeIndex) {
 		if (!paginationWrapper) return;
 
-		const paginationSlides = paginationWrapper.querySelectorAll(".gallery-slider__pagination-item");
+		const paginationSlides = paginationWrapper.querySelectorAll(".index-stocks__pagination-item");
 
 		paginationSlides.forEach((slide, index) => {
 			if (index === activeIndex) {
@@ -94,9 +80,9 @@
 
 	if (paginationWrapper) {
 		paginationWrapper.addEventListener("click", function (e) {
-			const numberElement = e.target.closest(".gallery-slider__pagination-item");
+			const numberElement = e.target.closest(".index-stocks__pagination-item");
 			if (numberElement) {
-				const slideElement = numberElement.closest(".gallery-slider__pagination-item");
+				const slideElement = numberElement.closest(".index-stocks__pagination-item");
 				const slideIndex = Array.from(slideElement.parentNode.children).indexOf(slideElement);
 				mainSwiper.slideTo(slideIndex);
 			}

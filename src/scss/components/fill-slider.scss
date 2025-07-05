@@ -89,4 +89,18 @@
 			@include lineClamp(3);
 		}
 	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		margin-top: rem(64);
+	}
+}
+@media (max-width: 1024px) {
+	.fill-slider {
+		&__button {
+			position: static;
+			translate: 0 0;
+		}
+	}
 }
