@@ -1,5 +1,5 @@
 (function () {
-  // if (window.innerWidth <= 768) return;
+  if (window.innerWidth <= 768) return;
   
   if (typeof Lenis === "undefined") return;
 
@@ -9,6 +9,8 @@
     smooth: true,
     smoothTouch: false,
   });
+  
+  window.lenis = lenis;
 
   function raf(time) {
     lenis.raf(time);

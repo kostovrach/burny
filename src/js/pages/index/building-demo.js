@@ -31,7 +31,6 @@
 				const response = await fetch("./js/building-info.json");
 				const json = await response.json();
 
-				// Индексация по id и генерация точек
 				json.forEach((item) => {
 					if (item.id) {
 						this.pointsData[item.id] = item;
@@ -46,10 +45,7 @@
 		}
 
 		generatePoint(data) {
-			if (!data.position || !data.position.top || !data.position.left) {
-				console.warn(`Missing position data for point: ${data.id}`);
-				return;
-			}
+			if (!data.position || !data.position.top || !data.position.left) return;
 
 			const point = document.createElement('a');
 			point.id = data.id;
@@ -185,6 +181,7 @@
 	}
 
 	document.addEventListener("DOMContentLoaded", () => {
+		if (!document.getElementById("index-buildingContainer")) return;
 		new BuildingModel();
 	});
 })();

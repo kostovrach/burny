@@ -1,5 +1,5 @@
 (function () {
-  // if (window.innerWidth <= 768) return;
+  if (window.innerWidth <= 768) return;
 
   if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 

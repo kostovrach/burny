@@ -1,4 +1,6 @@
 (function () {
+	if (!document.getElementById('map')) return;
+
 	const map = L.map("map", {
 		center: [43.113632, 131.86954],
 		zoom: 15,
@@ -8,8 +10,6 @@
 		touchZoom: true,
 		dragging: true,
 	});
-
-	if (!map) return;
 
 	map.panBy([-200, 0], { animate: false });
 
