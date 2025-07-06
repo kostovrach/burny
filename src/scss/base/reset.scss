@@ -54,10 +54,12 @@ body {
 	main {
 		transition: 0.8s;
 	}
-	&.lock {
-		main,
-		footer {
-			translate: -100% 0;
+	@media (min-width: 768px) {
+		&.lock {
+			main,
+			footer {
+				translate: -100% 0;
+			}
 		}
 	}
 }

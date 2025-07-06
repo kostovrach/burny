@@ -2,6 +2,9 @@
 
 .card-slider {
 	overflow: visible;
+	&__wrapper {
+		height: max-content;
+	}
 	&__slide {
 		box-sizing: border-box;
 		max-width: rem(660);
@@ -17,7 +20,7 @@
 			gap: rem(64);
 		}
 		&-icon {
-			width: rem(96);
+			max-width: rem(96);
 		}
 		&-content {
 			display: grid;
@@ -51,6 +54,8 @@
 @media (max-width: 768px) {
 	.card-slider {
 		&__slide {
+			aspect-ratio: auto;
+			height: 100%;
 			max-width: rem(400);
 			padding: rem(32);
 		}

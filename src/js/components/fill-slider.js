@@ -13,7 +13,7 @@
 		// 	paused: false,
 		// 	pauseOnMouseEnter: true,
 		// },
-		freeMode: true,
+		// freeMode: true,
 		navigation: {
 			nextEl: ".fill-slider__button--next",
 			prevEl: ".fill-slider__button--prev",

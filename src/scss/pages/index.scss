@@ -84,7 +84,7 @@
 	&__title {
 		grid-column: span 2;
 		text-transform: uppercase;
-		font-size: lineScale(96, 40, 480, 1440);
+		font-size: lineScale(96, 30, 480, 1440);
 		line-height: 1;
 		font-weight: $fw-bold;
 	}
@@ -92,7 +92,7 @@
 		grid-row: 2;
 		position: relative;
 		text-transform: lowercase;
-		font-size: lineScale(22, 18, 480, 1440);
+		font-size: lineScale(22, 16, 480, 1440);
 		line-height: 150%;
 		padding-left: rem(32);
 		&::before {
@@ -579,8 +579,8 @@
 	}
 	&__desc {
 		color: $c-FFFFFF;
-		font-size: lineScale(40, 18, 480, 1440);
-		line-height: 120%;
+		font-size: lineScale(40, 16, 480, 1440);
+		line-height: 150%;
 		font-weight: $fw-bold;
 	}
 }

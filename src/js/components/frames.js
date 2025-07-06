@@ -8,8 +8,8 @@
 				frameFormat: "jpg",
 				dragSensitivity: 0.3,
 				scrollTriggerConfig: {
-					start: "35% bottom",
-					end: "bottom bottom",
+					start: "50% bottom",
+					end: "120% bottom",
 					scrub: true,
 					markers: false,
 				},

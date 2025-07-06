@@ -17,17 +17,18 @@
 		},
 		speed: 800,
 		parallax: true,
-		effect: "creative",
-		creativeEffect: {
-			next: {
-				translate: ["100%", 0, 0],
-				opacity: 0.1,
-			},
-			prev: {
-				translate: ["-10%", 0, 0],
-				opacity: 0.1,
-			},
-		},
+		effect: "fade",
+		// effect: "creative",
+		// creativeEffect: {
+		// 	next: {
+		// 		translate: ["100%", 0, 0],
+		// 		opacity: 0.1,
+		// 	},
+		// 	prev: {
+		// 		translate: ["-10%", 0, 0],
+		// 		opacity: 0.1,
+		// 	},
+		// },
 		on: {
 			init(swiper) {
 				addTitlesToBullets(swiper);

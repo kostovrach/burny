@@ -178,9 +178,16 @@
 		&::after {
 			display: none;
 		}
+		&__slide {
+			&-image-container {
+				max-width: rem(600);
+				max-height: rem(400);
+				aspect-ratio: 1.5/1;
+			}
+		}
 		&__footer {
 			display: grid;
-			grid-template-columns: repeat(2,1fr);
+			grid-template-columns: repeat(2, 1fr);
 			gap: rem(16);
 			justify-items: center;
 		}

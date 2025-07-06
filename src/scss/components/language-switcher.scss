@@ -6,7 +6,6 @@
 	right: rem(32);
 	bottom: rem(32);
 	user-select: none;
-	padding: 0 1rem;
 	&__current {
 		cursor: pointer;
 		display: flex;
@@ -46,5 +45,10 @@
                 }
             }
 		}
+	}
+}
+@media (max-width: 1024px){
+	.language {
+		right: rem(16);
 	}
 }

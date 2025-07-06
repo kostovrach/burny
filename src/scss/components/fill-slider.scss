@@ -31,7 +31,7 @@
 	&__slide {
 		position: relative;
 		box-sizing: border-box;
-		width: rem(424);
+		max-width: rem(424);
 		height: rem(200);
 		border: 0 solid $c-C6A47D;
 		border-top-width: rem(6);

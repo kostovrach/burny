@@ -129,7 +129,7 @@
 		}
 
 		init() {
-			if (this.elements.length === 0) return;
+			if (this.elements.length === 0 || window.innerWidth <= 768) return;
 
 			this.elements.forEach((element) => {
 				element.addEventListener("mouseenter", this.handleMouseEnter.bind(this));
