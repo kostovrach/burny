@@ -1,21 +1,31 @@
 (function () {
 	class FrameAnimation {
+		static instances = new Map();
+
 		constructor(options = {}) {
+			const required = ['canvasId', 'frameCount', 'framePath', 'frameFormat', 'scrollTriggerConfig'];
+			const missing = required.filter(param => !(param in options));
+			
+			if (missing.length > 0) {
+				throw new Error(`Missing required parameters: ${missing.join(', ')}`);
+			}
+
+			if (FrameAnimation.instances.has(options.canvasId)) {
+				return FrameAnimation.instances.get(options.canvasId);
+			}
+
 			this.config = {
-				canvasId: "building-frames",
-				frameCount: 29,
-				framePath: "./assets/img/service/frames/",
-				frameFormat: "jpg",
 				dragSensitivity: 0.3,
+				preloadStrategy: "progressive", // 'all' | 'progressive' | 'lazy'
+				qualityMode: "high", // 'auto' | 'high' | 'low'
+				...options,
 				scrollTriggerConfig: {
 					start: "50% bottom",
 					end: "120% bottom",
 					scrub: true,
 					markers: false,
-				},
-				preloadStrategy: "progressive", // 'all' | 'progressive' | 'lazy'
-				qualityMode: "higt", // 'auto' | 'high' | 'low'
-				...options,
+					...options.scrollTriggerConfig
+				}
 			};
 
 			this.canvas = null;
@@ -34,12 +44,17 @@
 
 			this.intersectionObserver = null;
 
+			FrameAnimation.instances.set(this.config.canvasId, this);
+
 			this.init();
 		}
 
 		init() {
 			this.canvas = document.getElementById(this.config.canvasId);
-			if (!this.canvas) return;
+			if (!this.canvas) {
+				FrameAnimation.instances.delete(this.config.canvasId);
+				return;
+			}
 
 			this.ctx = this.canvas.getContext("2d");
 			this.setupCanvas();
@@ -168,7 +183,7 @@
 				};
 
 				img.onerror = () => {
-					console.error(`Ошибка загрузки кадра ${index}`);
+					console.error(`Error loading frame ${index} for canvas "${this.config.canvasId}"`);
 					reject(new Error(`Failed to load frame ${index}`));
 				};
 			});
@@ -306,16 +321,51 @@
 
 			window.removeEventListener("resize", this.resizeThrottled);
 
-			this.canvas.removeEventListener("pointerdown", this.handlePointerDown);
-			this.canvas.removeEventListener("pointermove", this.handlePointerMove);
-			this.canvas.removeEventListener("pointerup", this.handlePointerEnd);
-			this.canvas.removeEventListener("pointerleave", this.handlePointerEnd);
-			this.canvas.removeEventListener("pointercancel", this.handlePointerEnd);
+			if (this.canvas) {
+				this.canvas.removeEventListener("pointerdown", this.handlePointerDown);
+				this.canvas.removeEventListener("pointermove", this.handlePointerMove);
+				this.canvas.removeEventListener("pointerup", this.handlePointerEnd);
+				this.canvas.removeEventListener("pointerleave", this.handlePointerEnd);
+				this.canvas.removeEventListener("pointercancel", this.handlePointerEnd);
+			}
 
 			this.images.clear();
 			this.loadingPromises.clear();
+
+			FrameAnimation.instances.delete(this.config.canvasId);
+		}
+
+		static getAllInstances() {
+			return Array.from(FrameAnimation.instances.values());
+		}
+
+		static destroyAll() {
+			FrameAnimation.instances.forEach(instance => instance.destroy());
+			FrameAnimation.instances.clear();
 		}
 	}
 
-	new FrameAnimation();
+	window.FrameAnimation = FrameAnimation;
+
+	new FrameAnimation({
+		canvasId: "building-static",
+		frameCount: 29,
+		framePath: "./assets/img/service/building/",
+		frameFormat: "jpg",
+		scrollTriggerConfig: {
+			start: "50% bottom",
+			end: "120% bottom"
+		}
+	});
+
+	new FrameAnimation({
+		canvasId: "building-sticky",
+		frameCount: 70,
+		framePath: "./assets/img/service/office/",
+		frameFormat: "jpg",
+		scrollTriggerConfig: {
+			start: "bottom bottom",
+			end: "bottom top"
+		}
+	});
 })();

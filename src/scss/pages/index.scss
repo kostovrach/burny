@@ -119,7 +119,7 @@
 	}
 }
 .index-about {
-	padding: rem(128) 0;
+	@include block-padding();
 	&__container {
 		@include content-width();
 	}
@@ -199,7 +199,7 @@
 	}
 }
 .index-demo {
-	padding: rem(64) 0;
+	@include block-padding($default: rem(64));
 	&__container {
 		max-width: 1920px;
 		margin: 0 auto;
@@ -406,7 +406,7 @@
 	}
 }
 .index-services {
-	padding: rem(128) 0;
+	@include block-padding();
 	&__titlebox {
 		@include content-width();
 	}
@@ -541,49 +541,6 @@
 		}
 	}
 }
-.index-footnote {
-	padding: rem(128) 0;
-	&__container {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: rem(16);
-		text-align: center;
-		padding: {
-			top: rem(96);
-			bottom: rem(96);
-		}
-		@include content-width();
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: rem(2);
-			background-color: $c-C6A47D;
-		}
-		&::after {
-			top: auto;
-			bottom: 0;
-		}
-	}
-	&__title {
-		text-transform: uppercase;
-		font-size: lineScale(16, 14, 480, 1440);
-		line-height: 1;
-		font-weight: $fw-bold;
-	}
-	&__desc {
-		color: $c-FFFFFF;
-		font-size: lineScale(40, 16, 480, 1440);
-		line-height: 150%;
-		font-weight: $fw-bold;
-	}
-}
 .index-advant {
 	overflow-x: clip;
 	&__container {
@@ -591,7 +548,7 @@
 	}
 }
 .index-location {
-	padding: rem(128) 0;
+	@include block-padding();
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -604,57 +561,17 @@
 		line-height: 1;
 		font-weight: $fw-bold;
 	}
-	&__cords {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: rem(32);
-		&-item {
-			&-title {
-				text-transform: uppercase;
-				font-size: rem(14);
-				font-weight: $fw-bold;
-			}
-			&--time {
-				&-container {
-					text-wrap: nowrap;
-					font-size: lineScale(64, 32, 480, 1440);
-					line-height: 1;
-					font-weight: $fw-bold;
-				}
-			}
-			&--cords {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: rem(32);
-				&-item {
-					font-weight: $fw-bold;
-				}
-				&-separator {
-					font-size: rem(24);
-				}
-			}
-			&--address {
-				text-align: right;
-				&-item {
-					font-size: lineScale(32, 18, 480, 1440);
-					line-height: 1;
-					font-weight: $fw-bold;
-				}
-			}
-		}
-	}
 }
 .index-gallery {
 	position: relative;
-	padding: rem(128) 0;
 	overflow-x: clip;
+	@include block-padding();
 	&__body {
 		margin-top: rem(64);
 	}
 }
 .index-news {
-	padding: rem(128) 0;
+	@include block-padding();
 	&__container {
 		@include content-width();
 	}
@@ -686,8 +603,8 @@
 	}
 }
 .index-frames {
-	padding: rem(128) 0;
 	background: linear-gradient(0deg, rgba($main-color, 0.7) 0%, rgba($main-color, 0.9) 5%, rgba($main-color, 0.9) 50%, rgba($main-color, 0.9) 95%, rgba($main-color, 0.7) 100%);
+	@include block-padding();
 	&__container {
 		position: relative;
 	}
@@ -749,7 +666,7 @@
 	}
 }
 .index-stocks {
-	padding: rem(128) 0;
+	@include block-padding();
 	&__container {
 		@include content-width();
 	}
@@ -866,6 +783,9 @@
 		}
 	}
 	.index-location {
+		&__container {
+			gap: rem(32);
+		}
 		&__cords {
 			display: flex;
 			flex-direction: column;
@@ -919,6 +839,7 @@
 		}
 		&__button {
 			position: static;
+			align-self: flex-end;
 		}
 	}
 	.index-about {

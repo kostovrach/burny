@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru" class="hide-scrollbar">
+	@@include('../components/head.html', { "title": "Burny City - Бизнес центр" })
+	<body>
+		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Аренда офисов" })
+		<main id="start">
+			<section class="offices-hero">
+				<div class="offices-hero__container">
+					<h1 class="offices-hero__title" data-parallax>Бизнес-центр класса «А»</h1>
+					<a class="offices-hero__video-container" href="assets/video/office.mp4" data-fancybox="office-video">
+						<video class="offices-hero__video" muted autoplay playsinline loop>
+							<source src="assets/video/office.mp4" type="video/mp4" />
+						</video>
+					</a>
+					<div class="offices-hero__button">@@include('../components/button.html', { "title": "Выбрать", "text": "Офис", "href": "#offices-select" })</div>
+					<h2 class="offices-hero__subtitle" data-parallax data-start="100">деловой центр ВО&nbsp;владивостоке</h2>
+				</div>
+			</section>
+			<section class="offices-about">
+				<div class="offices-about__container">
+					<div class="offices-about__content">
+						<ul class="offices-about__item" data-parallax data-axis="x" data-start="-300" data-duration="1.2" data-scrub="true">
+							<li class="offices-about__item-value"><span class="offices-about__item-value--number">1-2</span> этаж</li>
+							<li class="offices-about__item-desc">Объединенных переходами, парковочной зоной и&nbsp;стилобатом</li>
+						</ul>
+						<ul class="offices-about__item" data-parallax data-axis="x" data-start="-300" data-duration="1.2" data-scrub="true">
+							<li class="offices-about__item-value"><span class="offices-about__item-value--number">3-8</span> этаж</li>
+							<li class="offices-about__item-desc">Коммерческие зоны, доступные для аренды, включают офисы и торговые площади</li>
+						</ul>
+						<ul class="offices-about__item" data-parallax data-axis="x" data-start="-300" data-duration="1.2" data-scrub="true">
+							<li class="offices-about__item-value"><span class="offices-about__item-value--number">9</span> этаж</li>
+							<li class="offices-about__item-desc">Ряд малых конференц-залов — переговорных, которые можно трансформировать в более вместительные помещения</li>
+						</ul>
+					</div>
+					<div class="offices-about__anim-container">
+						<div class="offices-about__anim">@@include('../components/building-sticky.html')</div>
+					</div>
+				</div>
+			</section>
+			<section class="offices-advant">
+				<div class="offices-advant__container">
+					<div class="offices-advant__titlebox">
+						<h2 class="offices-advant__title">Комплекс находится вблизи с&nbsp;главными объектами&nbsp;городской и&nbsp;краевой&nbsp; инфраструктуры</h2>
+					</div>
+					<div class="offices-advant__body" data-parallax data-axis="x" data-start="600">
+						<div class="offices-advant__slider card-slider swiper">
+							<div class="offices-advant__slider-wrapper card-slider__wrapper swiper-wrapper">
+								<div class="offices-advant__slide card-slider__slide swiper-slide">
+									<div class="offices-advant__slide-container card-slider__slide-container">
+										<svg class="offices-advant__slide-icon card-slider__slide-icon" width="94" height="57" viewBox="0 0 94 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M39 0.833008C40.6315 0.833008 41.9285 1.16915 42.9551 1.7666C44.0424 2.39821 44.9767 3.27944 45.7549 4.4375L47 6.29004L48.2451 4.4375C49.0233 3.27944 49.9566 2.39821 51.0439 1.7666C52.0705 1.16915 53.3685 0.833008 55 0.833008H79C81.6263 0.833008 83.7695 1.71299 85.5283 3.47168C87.2871 5.23054 88.167 7.37459 88.167 10.001V23.1816L88.9795 23.6006C90.4309 24.3486 91.5293 25.4569 92.2969 26.9678L92.2988 26.9697C93.1295 28.5987 93.5 30.0474 93.5 31.334V56.501H91.167V45.834H2.83301V56.501H0.5V31.334C0.5 30.0474 0.870509 28.5987 1.70117 26.9697C2.47271 25.4568 3.57312 24.3486 5.02148 23.6006L5.83301 23.1807V10.001C5.83301 7.37459 6.71293 5.23054 8.47168 3.47168C10.2305 1.71299 12.3737 0.833008 15 0.833008H39ZM9.66699 24.501C7.77731 24.501 6.12243 25.1572 4.80664 26.4775C3.49409 27.7948 2.83754 29.446 2.83301 31.3301V43.501H91.167V31.334C91.167 29.4445 90.5095 27.7903 89.1895 26.4746C87.8721 25.1618 86.2213 24.5054 84.3369 24.501H9.66699ZM15 3.16699C13.1104 3.16699 11.4564 3.8243 10.1406 5.14453C8.828 6.46185 8.17145 8.11283 8.16699 9.99707V22.167H45.833V10.001C45.833 8.11141 45.1766 6.45637 43.8564 5.14062C42.5392 3.82791 40.8881 3.17152 39.0039 3.16699H15ZM55 3.16699C53.1104 3.16699 51.4564 3.8243 50.1406 5.14453C48.828 6.46185 48.1714 8.11283 48.167 9.99707V22.167H85.833V10.001C85.833 8.11141 85.1766 6.45637 83.8564 5.14062C82.5392 3.82791 80.8881 3.17152 79.0039 3.16699H55Z"
+												fill="#C6A47D"
+											/>
+										</svg>
+										<div class="offices-advant__slide-content card-slider__slide-content">
+											<h3 class="offices-advant__slide-title card-slider__slide-title">Отель ★★★★★</h3>
+											<p class="offices-advant__slide-desc card-slider__slide-desc">104 апартамента и безупречный сервис</p>
+											<a class="offices-advant__slide-button card-slider__slide-button" href="#">Подробнее <i class="offices-advant__slide-button--icon card-slider__slide-button--icon icon-triangle"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="offices-advant__slide card-slider__slide swiper-slide">
+									<div class="offices-advant__slide-container card-slider__slide-container">
+										<svg class="offices-advant__slide-icon card-slider__slide-icon" width="78" height="86" viewBox="0 0 78 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M73.6084 0.833968C74.6336 0.834072 75.4356 1.15907 76.1064 1.80272C76.7581 2.42817 77.0898 3.19467 77.0898 4.21385C77.0898 4.59331 77.0105 4.98508 76.833 5.39744C76.6436 5.83752 76.403 6.20864 76.1152 6.52147L76.1064 6.53026L76.0977 6.54002L40.167 46.9668V83.501H63C63.3794 83.5011 63.6234 83.6122 63.835 83.8252C64.0509 84.0428 64.1652 84.2945 64.167 84.6797C64.1687 85.0535 64.0591 85.2924 63.8457 85.5029C63.622 85.7235 63.3716 85.8339 63 85.834H15C14.6208 85.8339 14.3775 85.7215 14.166 85.5088C13.9501 85.2912 13.8359 85.0401 13.834 84.6553C13.8322 84.2811 13.9417 84.0416 14.1553 83.831C14.3789 83.6106 14.6285 83.5011 15 83.501H37.834V46.9668L1.90332 6.54002L1.88184 6.51659C1.66583 6.28348 1.47518 6.01945 1.3125 5.72069L1.15918 5.40916C0.989295 5.01793 0.910244 4.63715 0.910156 4.25682C0.910156 3.21346 1.24755 2.43488 1.89941 1.80467C2.56921 1.15715 3.36837 0.831451 4.39355 0.833968H73.6084ZM16.1309 19.167L39 44.7861L61.8701 19.167H16.1309ZM1.76562 3.16698L14.0654 16.834H63.9355L76.2354 3.16698H1.76562Z"
+												fill="#C6A47D"
+											/>
+										</svg>
+
+										<div class="offices-advant__slide-content card-slider__slide-content">
+											<h3 class="offices-advant__slide-title card-slider__slide-title">Рестораны</h3>
+											<p class="offices-advant__slide-desc card-slider__slide-desc">Организация деловых и светских мероприятий, кейтеринг и доставка</p>
+											<a class="offices-advant__slide-button card-slider__slide-button" href="restaurants.html">Список ресторанов <i class="offices-advant__slide-button--icon card-slider__slide-button--icon icon-triangle"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="offices-advant__slide card-slider__slide swiper-slide">
+									<div class="offices-advant__slide-container card-slider__slide-container">
+										<svg class="offices-advant__slide-icon card-slider__slide-icon" width="84" height="73" viewBox="0 0 84 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M17.5684 40.292C18.8368 40.292 19.8666 40.7152 20.7441 41.582L20.7451 41.583C21.6165 42.4411 22.042 43.4557 22.042 44.7178C22.0419 45.9904 21.618 47.0207 20.752 47.8975C19.8942 48.7658 18.8797 49.1904 17.6162 49.1904C16.3436 49.1903 15.3084 48.768 14.4326 47.9082C13.5669 47.0481 13.1436 46.0312 13.1436 44.7656C13.1436 43.4957 13.564 42.4661 14.4229 41.5898C15.2843 40.7179 16.302 40.2921 17.5684 40.292Z"
+												fill="#C6A47D"
+											/>
+											<path
+												d="M66.3896 40.292C67.658 40.292 68.6879 40.7152 69.5654 41.582C70.4337 42.4397 70.8584 43.4544 70.8584 44.7178C70.8583 45.9911 70.4352 47.0214 69.5732 47.8975C68.7156 48.7657 67.7018 49.1903 66.4385 49.1904C65.1626 49.1904 64.1302 48.7684 63.2539 47.9082C62.3882 47.0481 61.9649 46.0312 61.9648 44.7656C61.9648 43.4958 62.3853 42.4661 63.2441 41.5898C64.1056 40.7179 65.1233 40.2921 66.3896 40.292Z"
+												fill="#C6A47D"
+											/>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M67.0781 0.5C68.6083 0.500026 69.9685 0.936091 71.2021 1.81934C72.4391 2.705 73.2709 3.83226 73.7344 5.23145L73.7441 5.2627L82.8389 30.8447C82.9663 31.227 83.0494 31.6065 83.0908 31.9844L83.0918 31.9951C83.142 32.4253 83.167 32.8528 83.167 33.2773V70.3867C83.167 70.9003 83.0044 71.2923 82.6494 71.6484C82.2956 72.0002 81.8992 72.167 81.3711 72.167C80.8515 72.1669 80.4644 72.0023 80.1182 71.6523L80.1152 71.6494L79.9932 71.5156C79.7277 71.1984 79.6016 70.842 79.6016 70.3867V61.5H4.39355V70.3867C4.39354 70.9014 4.23011 71.2904 3.87598 71.6426L3.87305 71.6465C3.51751 72.0019 3.12347 72.167 2.60352 72.167C2.08365 72.167 1.69593 72.0025 1.34961 71.6523C0.99669 71.2955 0.833996 70.9017 0.833984 70.3867V33.2822C0.834002 32.8579 0.858982 32.4309 0.90918 32.001L0.910156 31.9902C0.941184 31.7068 0.996133 31.4224 1.0752 31.1367L1.16211 30.8506L10.2568 5.27344L10.2617 5.25879L10.2666 5.24512C10.7338 3.84349 11.5665 2.71494 12.8008 1.8291C13.9542 1.00133 15.2228 0.56241 16.6426 0.505859L16.9287 0.5H67.0781ZM3.16699 30.3213V59.167H80.834V30.3213H3.16699ZM17.0996 2.83301C16.0883 2.83301 15.1343 3.08947 14.3076 3.65918C13.4855 4.21971 12.8986 5.00216 12.5273 5.93262L12.5156 5.96094L12.5059 5.99023L4.76855 27.9883H79.2393L71.4951 5.99023L71.4863 5.96387L71.4766 5.93848L71.3281 5.5957C70.9587 4.81311 70.4214 4.15156 69.7012 3.66016C68.8705 3.0921 67.9158 2.83307 66.9023 2.83301H17.0996Z"
+												fill="#C6A47D"
+											/>
+										</svg>
+
+										<div class="offices-advant__slide-content card-slider__slide-content">
+											<h3 class="offices-advant__slide-title card-slider__slide-title">Паркинг</h3>
+											<p class="offices-advant__slide-desc card-slider__slide-desc">на 304 м/м с переходом в бизнес-центр и&nbsp;закрытая отапливаемая парковка на 54 м/м</p>
+										</div>
+									</div>
+								</div>
+								<div class="offices-advant__slide card-slider__slide swiper-slide">
+									<div class="offices-advant__slide-container card-slider__slide-container">
+										<svg class="offices-advant__slide-icon card-slider__slide-icon" width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M60.7949 10.3799L60.7607 10.416L66.6494 16.3047L66.6846 16.2695L82.7344 32.3193L82.7012 32.3555L88.4502 38.1045L88.4854 38.0703L98.0469 47.6318L81.8076 63.8701L65.8408 47.9775L47 66.8115L62.9941 82.7734L46.7393 98.8486L0.154297 52.2598L16.2256 36.0049L32.1885 52L51.0283 33.1602L35.1289 17.1914L51.3682 0.953125L60.7949 10.3799ZM3.38867 52.2646L46.7354 95.6113L59.6318 82.6758L16.3242 39.3682L3.38867 52.2646ZM33.8711 53.6865L45.3193 65.1279L64.1562 46.3154L52.6846 34.8428L33.8711 53.6865ZM38.4678 17.1895L81.8105 60.5322L94.6094 47.7334L51.2666 4.39062L38.4678 17.1895Z"
+												fill="#C6A47D"
+											/>
+											<path d="M11.2158 67.6709L6.3623 72.4863L26.5137 92.6426L31.3291 87.7881L33.0107 89.4678L26.541 95.9424L3.06152 72.4629L9.5332 65.9883L11.2158 67.6709Z" fill="#C6A47D" />
+											<path d="M95.1924 27.3906L88.5176 33.8604L86.9268 32.2695L91.7148 27.25L71.7559 7.29004L66.7344 12.0771L65.0059 10.3486L71.4795 3.67773L95.1924 27.3906Z" fill="#C6A47D" />
+										</svg>
+
+										<div class="offices-advant__slide-content card-slider__slide-content">
+											<h3 class="offices-advant__slide-title card-slider__slide-title">Фитнес-клуб</h3>
+											<p class="offices-advant__slide-desc card-slider__slide-desc">Фитнес-центр премиального уровня: акватермальный комплекс, клиника превентивной медицины и СПА-комплекс</p>
+											<a class="offices-advant__slide-button card-slider__slide-button" href="#">Подробнее <i class="offices-advant__slide-button--icon card-slider__slide-button--icon icon-triangle"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="offices-advant__slide card-slider__slide swiper-slide">
+									<div class="offices-advant__slide-container card-slider__slide-container">
+										<svg class="offices-advant__slide-icon card-slider__slide-icon" width="99" height="94" viewBox="0 0 99 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M61.1318 0.499994C65.9028 0.499994 69.7347 2.281 72.7451 5.88183C75.7801 9.51202 77.0624 13.7006 76.5996 18.543L76.1934 21.833H98.9258L90.1621 93.5H17.7861L18.0537 91.167H88.1934L88.3428 89.9502L88.3545 89.9521V89.9502L88.3555 89.9512L91.0215 68.416L91.0225 68.4131L92.9805 52.2783L96.4287 24.1982H76.0762L74.0752 40.167H71.7627L73.7305 24.1982H44.0762L42.0713 40.167H39.7305L41.6982 24.1982H25.2744L25.5469 21.833H41.96L42.4141 17.8457C43.0946 12.187 45.0504 7.952 48.1631 4.98144C51.2424 2.0428 55.5041 0.496648 61.1318 0.499994ZM60.4131 2.833C55.9246 2.833 52.2194 4.07972 49.501 6.74511C46.8251 9.36895 45.2908 13.0071 44.7686 17.4932L44.7676 17.4971L44.2734 21.833H73.915L74.2803 18.874L74.2832 18.8535L74.2852 18.832C74.685 14.617 73.5303 10.8683 70.8311 7.68359C68.1191 4.46909 64.6101 2.83304 60.4131 2.833Z"
+												fill="#C6A47D"
+											/>
+											<path d="M21.9746 71.8867L21.3916 74.2197H0.589844L1.17285 71.8867H21.9746Z" fill="#C6A47D" />
+											<path d="M37.9746 51.7803L37.3916 54.1133H11.2568L11.8398 51.7803H37.9746Z" fill="#C6A47D" />
+										</svg>
+
+										<div class="offices-advant__slide-content card-slider__slide-content">
+											<h3 class="offices-advant__slide-title card-slider__slide-title">Торговая галерея</h3>
+											<p class="offices-advant__slide-desc card-slider__slide-desc">Скидки до 50% и различные бонусы от наших партнёров</p>
+											<a class="offices-advant__slide-button card-slider__slide-button" href="#">Подробнее <i class="offices-advant__slide-button--icon card-slider__slide-button--icon icon-triangle"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="offices-gallery">
+				<div class="offices-gallery__container">
+					<div class="offices-gallery__titlebox gallery-slider__titlebox">
+						<h2 class="offices-gallery__title gallery-slider__title" data-parallax data-start="-200">Создайте свой успешный бизнес в&nbsp;комфортной и&nbsp;технологичной среде!</h2>
+					</div>
+					<div class="offices-gallery__body" data-parallax>
+						<div class="offices-gallery__slider gallery-slider swiper">
+							<div class="offices-gallery__slider-wrapper gallery-slider__wrapper swiper-wrapper">
+								<div class="offices-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="offices-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example.jpg" data-fancybox="gallery">
+										<img class="offices-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="offices-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="offices-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example1.jpg" data-fancybox="gallery">
+										<img class="offices-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example1.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="offices-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="offices-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example3.jpg" data-fancybox="gallery">
+										<img class="offices-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example3.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="offices-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="offices-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example4.jpg" data-fancybox="gallery">
+										<img class="offices-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example4.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="offices-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="offices-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example5.jpg" data-fancybox="gallery">
+										<img class="offices-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example5.jpg" alt="#" />
+									</a>
+								</div>
+								<div class="offices-gallery__slide gallery-slider__slide swiper-slide">
+									<a class="offices-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example6.jpg" data-fancybox="gallery">
+										<img class="offices-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example6.jpg" alt="#" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="offices-gallery__desc gallery-slider__desc">
+							<div class="offices-gallery__desc-inner gallery-slider__desc-inner">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+						</div>
+						<ul class="offices-gallery__footer gallery-slider__footer">
+							<li class="offices-gallery__button offices-gallery__button--prev gallery-slider__button gallery-slider__button--prev swiper-button-prev"><i class="offices-gallery__button-icon gallery-slider__button--icon icon-arrow"></i></li>
+							<li class="offices-gallery__pagination-container gallery-slider__pagination-container">
+								<div class="offices-gallery__pagination gallery-slider__pagination swiper">
+									<ul class="offices-gallery__pagination-wrapper gallery-slider__pagination-wrapper swiper-wrapper"></ul>
+								</div>
+							</li>
+							<li class="offices-gallery__button offices-gallery__button--next gallery-slider__button gallery-slider__button--next swiper-button-next"><i class="offices-gallery__button-icon gallery-slider__button--icon icon-arrow"></i></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			@@include('../components/footnote.html', { 'title': 'наша Философия', 'text': 'Успех достигается через сотрудничество и&nbsp;инновации. Мы&nbsp;создаём пространство, где идеи могут расти и&nbsp;развиваться, обеспечивая поддержку каждому предпринимателю' })
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

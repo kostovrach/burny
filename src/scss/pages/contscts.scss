@@ -1,0 +1,211 @@
+@use "../utils/abstracts" as *;
+
+.contacts-hero {
+	@include block-padding($break: rem(128));
+	&__container {
+		display: grid;
+		grid-template-columns: 60% auto;
+        gap: rem(128) rem(64);
+		@include content-width();
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: rem(96);
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		&-title {
+			text-transform: uppercase;
+			font-size: lineScale(14, 12, 480, 1440);
+			line-height: 1;
+			font-weight: $fw-bold;
+			color: $c-C2C0C1;
+		}
+		&-item {
+			position: relative;
+			width: fit-content;
+			font-size: lineScale(64, 32, 480, 1440);
+			line-height: 1;
+			font-weight: $fw-bold;
+            text-wrap: nowrap;
+			transition: color $duration;
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				left: 0;
+				top: 0;
+				width: 0;
+				height: 100%;
+				background-color: $c-C6A47D;
+				transition: width $duration $spring;
+			}
+			@media (pointer: fine) {
+				&:hover {
+					color: $c-FFFFFF;
+					&::before {
+						width: 100%;
+					}
+				}
+			}
+			&--main {
+				font-size: lineScale(96, 40, 480, 1440);
+			}
+		}
+	}
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		&-item {
+			width: rem(80);
+			height: rem(80);
+			aspect-ratio: 1/1;
+			border: rem(2) solid rgba($c-7E9CC0, 0.25);
+			border-radius: 50%;
+			font-size: rem(32);
+			@include flex-center();
+			@media (pointer: fine) {
+				&:hover {
+					color: $c-FFFFFF;
+                    border-color: $main-color;
+				}
+				&--vk {
+					@include vk-hover();
+				}
+				&--instagram {
+					@include insta-hover();
+				}
+				&--telegram {
+					@include tg-hover();
+				}
+			}
+		}
+	}
+	&__poster {
+		&-wrapper {
+			position: relative;
+			max-width: rem(473);
+            min-width: rem(473);
+			max-height: rem(654);
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				inset: 0;
+				border: rem(2) solid $c-C6A47D;
+				translate: -1rem -1rem;
+				opacity: 0.25;
+			}
+		}
+		&-content {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+            gap: rem(128);
+			padding: rem(32);
+		}
+		&-image-container {
+			position: absolute;
+			z-index: -1;
+			inset: 0;
+			filter: brightness(70%);
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+        &-logo-container {
+            width: 100%;
+            height: auto;
+            max-width: rem(400);
+        }
+        &-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &-slogan {
+            display: flex;
+            flex-direction: column;
+            gap: rem(8);
+            text-transform: uppercase;
+            font-size: lineScale(24,18,480,1440);
+            line-height: 1;
+            color: $c-FFFFFF;
+            margin-top: rem(32);
+        }
+        &-body {
+            color: $c-FFFFFF;
+        }
+        &-title {
+            color: $c-FFFFFF;
+            font-size: lineScale(32,24,480,1440);
+            line-height: 1;
+            font-weight: $fw-bold;
+        }
+        &-desc {
+            font-size: lineScale(16,14,480,1440);
+            line-height: 150%;
+            margin-top: rem(16);
+            opacity: 0.8
+        }
+        &-button {
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: rem(8);
+            text-transform: uppercase;
+            font-size: lineScale(24,16,480,1440);
+            line-height: 1;
+            border: rem(2) solid $c-C6A47D;
+            padding: rem(18) 0;
+            margin-top: rem(64);
+            @include flowing-fill($anim-color: $c-C6A47D);
+            @include icon-hover(diagonal-reverse, lineScale(20,16,480,1440));
+            @media (pointer: fine){
+                &:hover{
+                    color: $main-color;
+                }
+            }
+            &--icon {
+                font-size: rem(24);
+                padding: {
+                    top: rem(12);
+                    right: rem(12);
+                };
+            }
+        }
+	}
+}
+.contacts-location {
+	@include block-padding();
+	&__container {
+		@include content-width();
+	}
+}
+@media (max-width: 1200px){
+    .contacts-hero {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__content {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &__poster-wrapper {
+            max-width: initial;
+            min-width: initial;
+        }
+    }
+}

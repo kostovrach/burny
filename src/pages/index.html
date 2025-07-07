@@ -140,7 +140,7 @@
 									<div class="index-services__slide-container">
 										<h3 class="index-services__slide-title" data-swiper-parallax="-600" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Аренда офисов</h3>
 										<p class="index-services__slide-desc" data-swiper-parallax="1000" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Бизнес-центр класса «А» с современными офисами, инженерией, инфраструктурой и впечатляющими видовыми характеристиками.</p>
-										@@include('../components/button.html', { 'title': 'Открыть', 'text': 'Раздел', 'href': '#', 'attr': 'data-swiper-parallax-scale="0.5"' })
+										@@include('../components/button.html', { 'title': 'Открыть', 'text': 'Раздел', 'href': 'offices.html', 'attr': 'data-swiper-parallax-scale="0.5"' })
 									</div>
 								</div>
 								<div class="index-services__slide swiper-slide">
@@ -249,12 +249,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="index-footnote">
-				<div class="index-footnote__container">
-					<h2 class="index-footnote__title" data-parallax data-axis="x" data-start="-200">Что такое Burny?</h2>
-					<p class="index-footnote__desc" data-parallax data-axis="x">Дальневосточный проект «город в городе» предлагает всё необходимое для комфортной жизни и отдыха, включая современные офисы, удобные магазины и&nbsp;развлечения</p>
-				</div>
-			</section>
+			@@include('../components/footnote.html', { 'title': 'Что такое Burny?', 'text': 'Дальневосточный проект «город в городе» предлагает всё необходимое для комфортной жизни и отдыха, включая современные офисы, удобные магазины и&nbsp;развлечения' })
 			<section class="index-advant">
 				<div class="index-advant__container" data-parallax data-axis="x" data-start="600">
 					<div class="index-advant__slider card-slider swiper">
@@ -328,24 +323,7 @@
 					<div class="index-location__titlebox">
 						<h2 class="index-location__title" data-parallax data-axis="x" data-start="-300">Комплекс находится вблизи с&nbsp;главными объектами&nbsp;городской и&nbsp;краевой&nbsp; инфраструктуры</h2>
 					</div>
-					<ul class="index-location__cords" data-parallax>
-						<li class="index-location__cords-item index-location__cords-item--time">
-							<div class="index-location__cords-item-title">Местное время</div>
-							<div class="index-location__cords-item--time-container" data-timezone="Asia/Vladivostok" aria-label="Текущее время во Владивостоке">
-								<span class="index-location__cords-item--time-value">-- : -- : --</span>
-							</div>
-						</li>
-						<li class="index-location__cords-item index-location__cords-item--cords">
-							<div class="index-location__cords-item--cords-item">43° 4' 7" N</div>
-							<div class="index-location__cords-item--cords-separator icon-star-separator"></div>
-							<span class="index-location__cords-item--cords-item">131° 53' 9" E</span>
-						</li>
-						<li class="index-location__cords-item index-location__cords-item--address">
-							<a class="index-location__cords-item-title" href="">Связаться с нами <i class="index-location__cords-item-title--icon icon-triangle"></i></a>
-							<div class="index-location__cords-item--address-item">Россия, г.&nbsp;Владивосток, ул.&nbsp;Набережная, д.13</div>
-						</li>
-					</ul>
-					<div class="index-location__map"></div>
+					@@include('../components/location.html')
 				</div>
 			</section>
 			<section class="index-map">@@include('../components/map.html')</section>
@@ -358,38 +336,40 @@
 						<div class="index-gallery__slider gallery-slider swiper">
 							<div class="index-gallery__slider-wrapper gallery-slider__wrapper swiper-wrapper">
 								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
-									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example.jpg" data-fancybox="index-gallery">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example.jpg" data-fancybox="gallery">
 										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example.jpg" alt="#" />
 									</a>
 								</div>
 								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
-									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example1.jpg" data-fancybox="index-gallery">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example1.jpg" data-fancybox="gallery">
 										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example1.jpg" alt="#" />
 									</a>
 								</div>
 								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
-									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example3.jpg" data-fancybox="index-gallery">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example3.jpg" data-fancybox="gallery">
 										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example3.jpg" alt="#" />
 									</a>
 								</div>
 								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
-									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example4.jpg" data-fancybox="index-gallery">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example4.jpg" data-fancybox="gallery">
 										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example4.jpg" alt="#" />
 									</a>
 								</div>
 								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
-									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example5.jpg" data-fancybox="index-gallery">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example5.jpg" data-fancybox="gallery">
 										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example5.jpg" alt="#" />
 									</a>
 								</div>
 								<div class="index-gallery__slide gallery-slider__slide swiper-slide">
-									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example6.jpg" data-fancybox="index-gallery">
+									<a class="index-gallery__slide-image-container gallery-slider__slide-image-container" href="assets/img/content/services/example6.jpg" data-fancybox="gallery">
 										<img class="index-gallery__slide-image gallery-slider__slide-image" src="assets/img/content/services/example6.jpg" alt="#" />
 									</a>
 								</div>
 							</div>
 						</div>
-						<div class="index-gallery__desc gallery-slider__desc">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+						<div class="index-gallery__desc gallery-slider__desc">
+							<div class="index-gallery__desc-inner gallery-slider__desc-inner">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+						</div>
 						<ul class="index-gallery__footer gallery-slider__footer">
 							<li class="index-gallery__button index-gallery__button--prev gallery-slider__button gallery-slider__button--prev swiper-button-prev"><i class="index-gallery__button-icon gallery-slider__button--icon icon-arrow"></i></li>
 							<li class="index-gallery__pagination-container gallery-slider__pagination-container">
@@ -406,7 +386,7 @@
 				<div class="index-news__container">
 					<div class="index-news__titlebox">
 						<h2 class="index-news__title" data-parallax data-axis="x" data-start="-200">Последние новости</h2>
-						<a class="index-news__button" href="news.html" data-parallax data-axis="x" data-start="200">
+						<a class="index-news__button" href="blog.html" data-parallax data-axis="x" data-start="200">
 							<span>Пресс-центр</span>
 							<div class="index-news__button--icon-container">
 								<div class="index-news__button--icon-wrapper">
@@ -461,7 +441,7 @@
 			</section>
 			<section class="index-frames">
 				<div class="index-frames__container">
-					<div class="index-frames__anim">@@include('../components/frames.html')</div>
+					<div class="index-frames__anim">@@include('../components/building-static.html')</div>
 					<div class="index-frames__body" data-parallax>
 						<div class="index-frames__content">
 							<h2 class="index-frames__title">Сотрудничество с&nbsp;BURNY</h2>

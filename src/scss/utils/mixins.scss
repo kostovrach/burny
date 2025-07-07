@@ -2,7 +2,7 @@
 @use "functions" as *;
 
 @mixin content-width() {
-	max-width: 1440px;
+	max-width: 1500px;
 	margin: 0 auto;
 	padding-left: rem(128);
 	padding-right: rem(128);
@@ -12,6 +12,12 @@
 	}
 	@media (max-width: 768px) {
 		padding-right: rem(32);
+	}
+}
+@mixin block-padding($default: rem(128), $break: rem(64)) {
+	padding: $default 0;
+	@media (max-width: 768px){
+		padding: $break 0;
 	}
 }
 @mixin flex-center() {
@@ -158,7 +164,7 @@
 		}
 	}
 }
-@mixin flowing-fill() {
+@mixin flowing-fill($anim-color: $c-FFFFFF) {
 	position: relative;
 	overflow: hidden;
 	transition: $duration;
@@ -175,7 +181,7 @@
 			translate: 0 50%;
 			width: rem(32);
 			height: rem(32);
-			background-color: $c-FFFFFF;
+			background-color: $anim-color;
 			border-radius: 50%;
 			transition: $duration;
 			will-change: scale;

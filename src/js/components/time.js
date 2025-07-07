@@ -1,8 +1,8 @@
 (function () {
-	const container = document.querySelector(".index-location__cords-item--time-container");
+	const container = document.querySelector(".location");
 	if (!container) return;
 
-	const output = container.querySelector(".index-location__cords-item--time-value");
+	const output = container.querySelector(".location__item--time-value");
 	const timezone = container.dataset.timezone || "Asia/Vladivostok";
 
 	const hasIntl = typeof Intl === "object" && typeof Intl.DateTimeFormat === "function";
