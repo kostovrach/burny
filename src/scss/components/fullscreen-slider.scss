@@ -40,7 +40,7 @@
 		&-tag {
 			width: fit-content;
 			text-transform: uppercase;
-			font-size: rem(14);
+			font-size: lineScale(14,12,480,1440);
 			line-height: 1;
 			font-weight: $fw-bold;
 			padding: rem(4) rem(24);

@@ -11,6 +11,7 @@
 		});
 	}
 
-	initGallery("index-gallery");
+	initGallery("gallery");
 	initGallery("index-demo");
+	initGallery("office-video");
 })();

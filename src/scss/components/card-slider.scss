@@ -37,6 +37,7 @@
 			line-height: 1;
 		}
 		&-button {
+			width: fit-content;
 			display: flex;
 			align-items: center;
 			text-transform: uppercase;
@@ -55,8 +56,8 @@
 	.card-slider {
 		&__slide {
 			aspect-ratio: auto;
-			height: 100%;
 			max-width: rem(400);
+			min-height: rem(450);
 			padding: rem(32);
 		}
 	}

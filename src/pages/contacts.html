@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" class="hide-scrollbar">
+	@@include('../components/head.html', { "title": "Burny City - Контакты" })
+	<body>
+		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Контакты" })
+		<main id="start">
+			<section class="contacts-hero">
+				<div class="contacts-hero__container">
+					<div class="contacts-hero__content">
+						<div class="contacts-hero__list">
+							<h2 class="contacts-hero__list-title">Горячая линия 24/7</h2>
+							<a class="contacts-hero__list-item contacts-hero__list-item--main" href="tel:8 423 2000 330">8 423 2000 330</a>
+						</div>
+						<div class="contacts-hero__list">
+							<h2 class="contacts-hero__list-title">Отдел продаж</h2>
+							<a class="contacts-hero__list-item" href="tel:8 800 600-20-20">8 800 600-20-20</a>
+							<a class="contacts-hero__list-item" href="maito:info@burny.ru">info@burny.ru</a>
+						</div>
+						<div class="contacts-hero__list">
+							<h2 class="contacts-hero__list-title">Мы в соцсетях</h2>
+                            <div class="contacts-hero__socials">
+                                <a class="contacts-hero__socials-item contacts-hero__socials-item--vk" href="#"><i class="icon-vk"></i></a>
+                                <a class="contacts-hero__socials-item contacts-hero__socials-item--instagram" href="#"><i class="icon-instagram"></i></a>
+                                <a class="contacts-hero__socials-item contacts-hero__socials-item--telegram" href="#"><i class="icon-telegram"></i></a>
+                            </div>
+						</div>
+					</div>
+					<div class="contacts-hero__poster">
+						<div class="contacts-hero__poster-wrapper">
+							<div class="contacts-hero__poster-content" data-parallax data-end="-50">
+								<picture class="contacts-hero__poster-image-container">
+									<img class="contacts-hero__poster-image" src="assets/img/backgrounds/index-hero-slider/bg2.jpg" alt="#" />
+								</picture>
+								<div class="contacts-hero__poster-titlebox">
+									<picture class="contacts-hero__poster-logo-container">
+										<img class="contacts-hero__poster-logo" src="assets/img/service/logo/logo-main.svg" alt="Логотип" />
+									</picture>
+									<ul class="contacts-hero__poster-slogan">
+										<li class="contacts-hero__poster-slogan-item">business</li>
+										<li class="contacts-hero__poster-slogan-item">RESIDENCES</li>
+										<li class="contacts-hero__poster-slogan-item">wellness</li>
+									</ul>
+								</div>
+								<div class="contacts-hero__poster-body">
+									<h2 class="contacts-hero__poster-title">Про МФК «BURNY»</h2>
+									<p class="contacts-hero__poster-desc">Всю подробную информацию об оснащении и услугах многофункционального комплекса мы собрали в&nbsp;удобную брошюру</p>
+									<button class="contacts-hero__poster-button">
+										<span>СКАЧАТЬ</span>
+										<div class="contacts-hero__poster-button--icon-container">
+											<div class="contacts-hero__poster-button--icon-wrapper">
+												<i class="contacts-hero__poster-button--icon icon-arrow"></i>
+											</div>
+										</div>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contacts-map">@@include('../components/map.html')</section>
+			<section class="contacts-location">
+				<div class="contacts-location__container">@@include('../components/location.html')</div>
+			</section>
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

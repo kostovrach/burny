@@ -64,8 +64,8 @@
 		&-image-container {
 			outline: none;
 			display: block;
-			max-width: rem(850);
-			max-height: rem(460);
+			width: rem(850);
+			height: rem(460);
 			aspect-ratio: 1.5/1;
 		}
 		&-image {
@@ -80,8 +80,10 @@
 		text-align: center;
 		text-wrap: balance;
 		@include content-width();
-		margin-top: rem(40);
-		margin-bottom: rem(40);
+		&-inner {
+			padding-top: rem(40);
+			padding-bottom: rem(40);
+		}
 	}
 	&__footer {
 		display: flex;
@@ -180,9 +182,9 @@
 		}
 		&__slide {
 			&-image-container {
-				max-width: rem(600);
-				max-height: rem(400);
-				aspect-ratio: 1.5/1;
+				width: rem(400);
+				height: rem(350);
+				aspect-ratio: auto;
 			}
 		}
 		&__footer {

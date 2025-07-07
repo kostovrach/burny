@@ -1,0 +1,112 @@
+@use "../utils/abstracts" as *;
+
+.offices-hero {
+	@include block-padding();
+	&__container {
+		display: grid;
+		grid-template-columns: auto 1fr 1fr;
+		grid-template-areas:
+			"title title title"
+			"video video video"
+			"button subtitle subtitle";
+		gap: rem(32) rem(0);
+		@include content-width();
+	}
+	&__title,
+	&__subtitle {
+		text-transform: uppercase;
+		font-size: lineScale(96, 30, 480, 1440);
+		line-height: 1;
+		color: $c-FFFFFF;
+		font-weight: $fw-bold;
+		text-wrap: balance;
+	}
+	&__title {
+		grid-area: title;
+	}
+	&__subtitle {
+		grid-area: subtitle;
+		text-align: right;
+	}
+	&__video-container {
+		grid-area: video;
+		width: 100%;
+		height: rem(220);
+		overflow: hidden;
+		filter: brightness(60%);
+		@include flex-center();
+	}
+	&__video {
+		width: 100%;
+		height: auto;
+	}
+	&__button {
+		grid-area: button;
+		position: relative;
+		.button {
+			position: absolute;
+            z-index: 1;
+			bottom: 0;
+			left: -2rem;
+		}
+	}
+}
+.offices-about {
+    @include block-padding();
+	&__container {
+        display: grid;
+        grid-template-columns: auto 70%;
+        margin-left: 15vw;
+	}
+	&__anim-container {
+        position: relative;
+        height: 100%;
+	}
+	&__anim {
+        position: sticky;
+        top: rem(64);
+	}
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: rem(290) rem(0);
+    }
+	&__item {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+		&-value {
+            color: $c-FFFFFF;
+            font-size: lineScale(32,18,480,1440);
+            line-height: 1;
+            font-weight: $fw-bold;
+			&--number {
+                font-size: lineScale(128,32,480,1440);
+			}
+		}
+		&-desc {
+            font-size: lineScale(24,14,480,1440);
+            line-height: 120%;
+		}
+	}
+}
+.offices-advant {
+    @include block-padding();
+    &__container {
+        @include content-width();
+    }
+    &__title {
+        color: $c-FFFFFF;
+        font-size: lineScale(64,24,480,1440);
+        line-height: 1;
+        font-weight: $fw-bold;
+    }
+    &__body {
+        margin-top: rem(128);
+    }
+}
+.offices-gallery {
+	position: relative;
+	overflow-x: clip;
+    @include block-padding();
+}

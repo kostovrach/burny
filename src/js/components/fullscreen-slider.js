@@ -96,7 +96,7 @@
 	});
 
 	function animateSlideTitle(slide) {
-		const titleEl = slide.querySelector('.fullscreen-slider__slide-title');
+		const titleEl = slide.querySelector('.text-anim');
 		if (!titleEl) return;
 		
 		const originalText = titleEl.textContent.trim();
