@@ -104,7 +104,7 @@
 		}
 
 		positionTooltipRightOfMarker(marker) {
-			const planContainer = marker.closest(".building-plan__plan");
+			const planContainer = marker.closest("path");
 			if (!planContainer) return;
 
 			const markerRightEdge = this.getMarkerRightEdge(marker);
@@ -119,7 +119,7 @@
 		bindEvents() {
 			if (!this.elements.marker) return;
 
-			const markers = this.elements.marker.querySelectorAll(".building-plan__marker");
+			const markers = this.elements.marker.querySelectorAll("path");
 
 			markers.forEach((marker) => {
 				marker.addEventListener("mouseenter", (e) => this.handleMouseEnter(e));
@@ -220,6 +220,11 @@
 	new InteractiveBuilding({
 		baseId: "building-plan-conference",
 		jsonPath: "./js/conference-plan.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "floor-parking",
+		jsonPath: "./js/parking-plan.json"
 	});
 
 	

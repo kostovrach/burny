@@ -1,0 +1,15 @@
+@use "../utils/abstracts" as *;
+
+.parking-advant {
+	overflow-x: clip;
+    @include block-padding();
+	&__container {
+		@include content-width();
+	}
+}
+.parking-floor {
+    @include block-padding();
+    &__container {
+        @include content-width();
+    }
+}
