@@ -3,7 +3,7 @@
 .building-plan {
 	position: relative;
 	width: 100%;
-	padding-bottom: rem(128);
+	// padding-bottom: rem(128);
 	&::before {
 		content: "";
 		position: absolute;
@@ -16,6 +16,71 @@
 	}
 	&__container {
 		position: relative;
+	}
+	&__titlebox {
+		position: absolute;
+		z-index: 2;
+		top: 25%;
+		left: 15%;
+	}
+	&__title {
+		text-transform: uppercase;
+		color: $c-FFFFFF;
+		font-size: lineScale(28, 20, 480, 1440);
+		line-height: 1;
+		font-weight: $fw-bold;
+	}
+	&__button {
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		text-transform: uppercase;
+		color: $c-FFFFFF;
+		font-size: rem(14);
+		line-height: 1;
+		font-weight: $fw-bold;
+		padding: rem(6) rem(24);
+		border: rem(1.5) solid $c-C6A47D;
+		border-radius: rem(32);
+		margin-top: rem(32);
+		@media (pointer: fine) {
+			@include flowing-fill($anim-color: $c-C6A47D);
+			&:hover {
+				color: $main-color;
+			}
+		}
+		&--icon {
+			font-size: rem(12);
+			rotate: 45deg;
+		}
+	}
+	&__hint {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 15%;
+		color: $c-FFFFFF;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			// z-index: 2;
+			top: 50%;
+			translate: 0 -50%;
+			background-color: $c-C6A47D;
+		}
+		&::before {
+			left: 120%;
+			width: rem(128);
+			height: rem(1);
+		}
+		&::after {
+			left: calc(120% + rem(128));
+			width: rem(4);
+			height: rem(4);
+			border-radius: 50%;
+		}
 	}
 	&__plan {
 		position: relative;
@@ -111,27 +176,33 @@
 		position: absolute;
 		left: 50%;
 		bottom: rem(96);
-		translate: -50% 0;
-        max-width: rem(1440);
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        border: rem(2) solid rgba($c-7E9CC0, 0.25);
-        &-item {
-            text-align: center;
-            text-wrap: nowrap;
-            color: $c-FFFFFF;
-            font-weight: $fw-bold;
-            padding: rem(32) rem(128);
-            flex-direction: column;
-            gap: rem(16);
-            @include flex-center();
-            &-label {
-                text-transform: uppercase;
-                font-size: lineScale(18,16,480,1440);
-            }
-            &-number {
-                font-size: lineScale(40,24,480,1440);
-            }
-        }
+		translate: -50% 50%;
+		max-width: rem(1440);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		border: rem(2) solid rgba($c-7E9CC0, 0.25);
+		opacity: 0;
+		transition: all $duration $spring;
+		&.show {
+			translate: -50% 0;
+			opacity: 1;
+		}
+		&-item {
+			text-align: center;
+			text-wrap: nowrap;
+			color: $c-FFFFFF;
+			font-weight: $fw-bold;
+			padding: rem(32) rem(128);
+			flex-direction: column;
+			gap: rem(16);
+			@include flex-center();
+			&-label {
+				text-transform: uppercase;
+				font-size: lineScale(18, 16, 480, 1440);
+			}
+			&-number {
+				font-size: lineScale(40, 24, 480, 1440);
+			}
+		}
 	}
 }

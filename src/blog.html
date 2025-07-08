@@ -146,7 +146,7 @@
 			</li>
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="conference.html">
 					<div class="menu__item-title">Конференц-залы</div>
 					<div class="menu__item-button">
 						<div class="menu__item-button--icon-wrapper">
@@ -157,7 +157,7 @@
 			</li>
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="hotel.html">
 					<div class="menu__item-title">Апарт-отель</div>
 					<ul class="menu__item-tagsbox">
 						<li class="menu__item-tag">Выбор Апартаментов</li>
@@ -254,12 +254,13 @@
 			<section class="blog-main">
 				<div class="blog-main__container">
 					<div class="blog-main__titlebox">
-						<h1 class="blog-main__title">Пресс-центр</h1>
+						<h1 class="blog-main__title" data-parallax>Пресс-центр</h1>
 						<ul class="blog-main__filterbox">
-							<li class="blog-main__filter" role="button" tabindex="0" data-type="news"><span>Новости</span></li>
-							<li class="blog-main__filter" role="button" tabindex="0" data-type="media"><span>сми</span></li>
-							<li class="blog-main__filter" role="button" tabindex="0" data-type="burny"><span>BURNY</span></li>
-							<li class="blog-main__filter" role="button" tabindex="0" data-type="events"><span>мероприятия</span></li>
+							<li class="blog-main__filter js-filter active" role="button" tabindex="0" data-type="all"><span>Все</span></li>
+							<li class="blog-main__filter js-filter" role="button" tabindex="0" data-type="news"><span>Новости</span></li>
+							<li class="blog-main__filter js-filter" role="button" tabindex="0" data-type="media"><span>сми</span></li>
+							<li class="blog-main__filter js-filter" role="button" tabindex="0" data-type="burny"><span>BURNY</span></li>
+							<li class="blog-main__filter js-filter" role="button" tabindex="0" data-type="events"><span>мероприятия</span></li>
 						</ul>
 					</div>
 					<div class="blog-main__body">
@@ -267,62 +268,157 @@
 							<a class="blog-main__item-wrapper" href="article.html">
 								<h2 class="blog-main__item-title">Торговый центр будущего: умные контракты на&nbsp;службе у клиентов</h2>
 								<div class="blog-main__item-footer">
-									<a class="blog-main__item-button" href="article.html">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></a>
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
 									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
 								</div>
 							</a>
 						</div>
-						<div class="blog-main__item" data-type="media">
+						<div class="blog-main__item js-filtering-item" data-type="media">
 							<a class="blog-main__item-wrapper" href="article.html">
 								<h2 class="blog-main__item-title">Умные контракты: новый взгляд на сделки в&nbsp;торговле</h2>
 								<div class="blog-main__item-footer">
-									<a class="blog-main__item-button" href="article.html">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></a>
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
 									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
 								</div>
 							</a>
 						</div>
-						<div class="blog-main__item" data-type="news">
+						<div class="blog-main__item js-filtering-item" data-type="news">
 							<picture class="blog-main__item-image-container">
 								<img class="blog-main__item-image" src="assets/img/content/services/example5.jpg" width="" alt="" />
 							</picture>
 							<a class="blog-main__item-wrapper" href="article.html">
 								<h2 class="blog-main__item-title">Как умные контракты упрощают шопинг в&nbsp;торговых центрах</h2>
 								<div class="blog-main__item-footer">
-									<a class="blog-main__item-button" href="article.html">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></a>
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
 									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
 								</div>
 							</a>
 						</div>
-						<div class="blog-main__item" data-type="burny">
+						<div class="blog-main__item js-filtering-item" data-type="burny">
 							<a class="blog-main__item-wrapper" href="article.html">
 								<h2 class="blog-main__item-title">Будущее торговли: как умные контракты меняют правила игры</h2>
 								<div class="blog-main__item-footer">
-									<a class="blog-main__item-button" href="article.html">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></a>
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
 									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
 								</div>
 							</a>
 						</div>
-						<div class="blog-main__item" data-type="events">
+						<div class="blog-main__item js-filtering-item" data-type="events">
 							<a class="blog-main__item-wrapper" href="article.html">
 								<h2 class="blog-main__item-title">Технологии, которые изменят ваш шопинг: умные контракты</h2>
 								<div class="blog-main__item-footer">
-									<a class="blog-main__item-button" href="article.html">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></a>
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
 									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
 								</div>
 							</a>
 						</div>
-						<div class="blog-main__item" data-type="news">
+						<div class="blog-main__item js-filtering-item" data-type="news">
 							<picture class="blog-main__item-image-container">
 								<img class="blog-main__item-image" src="assets/img/content/services/example5.jpg" width="" alt="" />
 							</picture>
 							<a class="blog-main__item-wrapper" href="article.html">
 								<h2 class="blog-main__item-title">Умные контракты: ключ к эффективной торговле в&nbsp;21 веке</h2>
 								<div class="blog-main__item-footer">
-									<a class="blog-main__item-button" href="article.html">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></a>
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
 									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
 								</div>
 							</a>
 						</div>
+						<div class="blog-main__item" data-type="burny">
+							<a class="blog-main__item-wrapper" href="article.html">
+								<h2 class="blog-main__item-title">Торговый центр будущего: умные контракты на&nbsp;службе у клиентов</h2>
+								<div class="blog-main__item-footer">
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
+									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
+								</div>
+							</a>
+						</div>
+						<div class="blog-main__item js-filtering-item" data-type="media">
+							<a class="blog-main__item-wrapper" href="article.html">
+								<h2 class="blog-main__item-title">Умные контракты: новый взгляд на сделки в&nbsp;торговле</h2>
+								<div class="blog-main__item-footer">
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
+									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
+								</div>
+							</a>
+						</div>
+						<div class="blog-main__item js-filtering-item" data-type="news">
+							<picture class="blog-main__item-image-container">
+								<img class="blog-main__item-image" src="assets/img/content/services/example5.jpg" width="" alt="" />
+							</picture>
+							<a class="blog-main__item-wrapper" href="article.html">
+								<h2 class="blog-main__item-title">Как умные контракты упрощают шопинг в&nbsp;торговых центрах</h2>
+								<div class="blog-main__item-footer">
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
+									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
+								</div>
+							</a>
+						</div>
+						<div class="blog-main__item js-filtering-item" data-type="burny">
+							<a class="blog-main__item-wrapper" href="article.html">
+								<h2 class="blog-main__item-title">Будущее торговли: как умные контракты меняют правила игры</h2>
+								<div class="blog-main__item-footer">
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
+									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
+								</div>
+							</a>
+						</div>
+						<div class="blog-main__item js-filtering-item" data-type="events">
+							<a class="blog-main__item-wrapper" href="article.html">
+								<h2 class="blog-main__item-title">Технологии, которые изменят ваш шопинг: умные контракты</h2>
+								<div class="blog-main__item-footer">
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
+									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
+								</div>
+							</a>
+						</div>
+						<div class="blog-main__item js-filtering-item" data-type="news">
+							<picture class="blog-main__item-image-container">
+								<img class="blog-main__item-image" src="assets/img/content/services/example5.jpg" width="" alt="" />
+							</picture>
+							<a class="blog-main__item-wrapper" href="article.html">
+								<h2 class="blog-main__item-title">Умные контракты: ключ к эффективной торговле в&nbsp;21 веке</h2>
+								<div class="blog-main__item-footer">
+									<div class="blog-main__item-button">ЧИТАТЬ<i class="blog-main__item-button--icon icon-arrow"></i></div>
+									<time class="blog-main__item-date" datetime="07-15">15 июля</time>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="blog-subscribe">
+				<div class="blog-subscribe__container">
+					<div class="blog-subscribe__content">
+						<div class="blog-subscribe__titlebox" data-parallax data-start="100">
+							<h2 class="blog-subscribe__title">Подпишитесь на новости</h2>
+							<p class="blog-subscribe__desc">Подпишитесь на обновления, чтобы быть в курсе новостей МФК&nbsp;«BURNY»</p>
+						</div>
+						<form class="blog-subscribe__form" action="" method="post">
+							<div class="blog-subscribe__form-input"><div class="input__inputbox">
+	<label class="input__label" for="blog-subscribe-email">E-mail</label>
+	<input id="blog-subscribe-email" class="input__input" type="email" placeholder="Ваш E-mail:" required />
+</div>
+</div>
+							<div class="blog-subscribe__form-agreement">
+								<div class="blog-subscribe__form-checkbox checkbox">
+									<input id="blog-subscribe-checkbox" class="blog-subscribe__form-checkbox-input" type="checkbox" required />
+								</div>
+								<label class="blog-subscribe__form-agreement-desc" for="blog-subscribe-checkbox">
+									Согласен 
+									<span class="blog-subscribe__form-agreement-button" role="button" data-privacy-open>с&nbsp;обработкой данных</span>
+									<span class="blog-subscribe__form-agreement-button" role="button" data-privacy-open>и&nbsp;политикой конфиденциальности</span>
+								</label>
+							</div>
+							<button class="blog-subscribe__form-button" type="submit">
+								<span>Подписаться</span>
+								<div class="blog-subscribe__form-button--icon-container">
+									<div class="blog-subscribe__form-button--icon-wrapper">
+										<i class="blog-subscribe__form-button--icon icon-arrow"></i>
+									</div>
+								</div>
+							</button>
+						</form>
 					</div>
 				</div>
 			</section>
@@ -352,8 +448,8 @@
 			<div class="footer__list footer__list--infrastructure" role="list">
 				<p class="footer__list-item--title">Инфраструктура</p>
 				<a class="footer__list-item" href="offices.html" role="listitem" data-hover-anim><span>Аренда офисов</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Конференц-залы</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Апарт-отель 5★</span></a>
+				<a class="footer__list-item" href="conference.html" role="listitem" data-hover-anim><span>Конференц-залы</span></a>
+				<a class="footer__list-item" href="hotel.html" role="listitem" data-hover-anim><span>Апарт-отель 5★</span></a>
 				<a class="footer__list-item" href="restaurants.html" role="listitem" data-hover-anim><span>Рестораны</span></a>
 				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Вертолётная площадка</span></a>
 				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Парковка</span></a>

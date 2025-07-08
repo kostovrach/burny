@@ -13,5 +13,5 @@
 
 	initGallery("gallery");
 	initGallery("index-demo");
-	initGallery("office-video");
+	initGallery("booking-hero-video");
 })();

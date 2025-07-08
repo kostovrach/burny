@@ -1,0 +1,18 @@
+@use "../utils/abstracts" as *;
+
+.not-found {
+	min-height: 100lvh;
+	@include block-padding($break: rem(128));
+	&__container {
+		@include content-width();
+	}
+	&__title {
+		// font-size: lineScale(640,180,480,1440);
+		// line-height: 1;
+		// font-weight: $fw-bold;
+		// color: transparent;
+		// background: url('../assets/video/view.mp4');
+		// background-size: cover;
+		// background-clip: text;
+	}
+}

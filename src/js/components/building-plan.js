@@ -1,48 +1,73 @@
 (function () {
 	class InteractiveBuilding {
-		constructor() {
-			this.tooltip = document.getElementById("building-plan-tooltip");
-			this.infoPanel = document.getElementById("building-plan-info");
-			this.activeFloor = null;
+		static instances = new Map();
 
-			this.floorData = {
-				9: {
-					area: "1283.83",
-					offices: "12",
-					floor: "24",
-				},
-				8: {
-					area: "1456.22",
-					offices: "15",
-					floor: "30",
-				},
-				7: {
-					area: "1502.15",
-					offices: "18",
-					floor: "36",
-				},
-				3: {
-					area: "1445.67",
-					offices: "16",
-					floor: "32",
-				},
-				2: {
-					area: "1389.45",
-					offices: "14",
-					floor: "28",
-				},
+		static fallbackData = {
+			area: "-",
+			count: "-",
+			floor: "-",
+		};
+
+		constructor(options = {}) {
+			const required = ['jsonPath', 'baseId'];
+			const missing = required.filter(param => !(param in options));
+			
+			if (missing.length > 0) {
+				throw new Error(`Missing required parameters: ${missing.join(', ')}`);
+			}
+
+			if (InteractiveBuilding.instances.has(options.baseId)) {
+				console.warn(`InteractiveBuilding with baseId "${options.baseId}" already exists. Ignoring new instance creation.`);
+				return InteractiveBuilding.instances.get(options.baseId);
+			}
+
+			this.config = {
+				...options
 			};
+
+			this.elements = {
+				container: document.getElementById(this.config.baseId),
+				tooltip: document.getElementById(`${this.config.baseId}-tooltip`),
+				infoPanel: document.getElementById(`${this.config.baseId}-info`),
+				area: document.getElementById(`${this.config.baseId}-area`),
+				count: document.getElementById(`${this.config.baseId}-count`),
+				floor: document.getElementById(`${this.config.baseId}-floor`),
+				marker: document.getElementById(`${this.config.baseId}-marker`)
+			};
+
+			if (!this.elements.tooltip || !this.elements.infoPanel || !this.elements.marker) return;
+
+			this.activeFloor = null;
+			this.floorData = {};
+
+			InteractiveBuilding.instances.set(this.config.baseId, this);
 
 			this.init();
 		}
 
-		init() {
+		async init() {
+			await this.loadFloorData();
 			this.bindEvents();
-			this.showInfoPanel();
+		}
+
+		async loadFloorData() {
+			try {
+				const response = await fetch(this.config.jsonPath);
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
+				}
+				this.floorData = await response.json();
+				console.log(`Floor data loaded successfully for ${this.config.baseId}`);
+			} catch (error) {
+				console.warn(`Failed to load floor data from ${this.config.jsonPath}. Using fallback data.`, error);
+				this.floorData = InteractiveBuilding.fallbackData;
+			}
 		}
 
 		adjustMarkerPosition(markerId, deltaX, deltaY) {
-			const marker = document.querySelector(`[data-floor="${markerId}"]`);
+			const marker = this.elements.marker.querySelector(`[data-floor="${markerId}"]`);
+			if (!marker) return;
+
 			const currentTransform = marker.getAttribute("transform") || "translate(0, 0)";
 
 			const match = currentTransform.match(/translate\(([^,]+),\s*([^)]+)\)/);
@@ -52,50 +77,49 @@
 			marker.setAttribute("transform", `translate(${currentX + deltaX}, ${currentY + deltaY})`);
 		}
 
-		// Функция для получения центра маркера
 		getMarkerCenter(marker) {
-			const svg = marker.closest('svg');
+			const svg = marker.closest("svg");
+			if (!svg) return { x: 0, y: 0 };
+
 			const rect = marker.getBoundingClientRect();
 			const svgRect = svg.getBoundingClientRect();
-			
-			// Получаем центр маркера относительно SVG
+
 			const centerX = rect.left + rect.width / 2 - svgRect.left;
 			const centerY = rect.top + rect.height / 2 - svgRect.top;
-			
+
 			return { x: centerX, y: centerY };
 		}
 
-		// Функция для получения правой границы маркера
 		getMarkerRightEdge(marker) {
-			const svg = marker.closest('svg');
+			const svg = marker.closest("svg");
+			if (!svg) return { x: 0, y: 0 };
+
 			const rect = marker.getBoundingClientRect();
 			const svgRect = svg.getBoundingClientRect();
-			
-			// Получаем правую границу маркера относительно SVG
+
 			const rightEdge = rect.right - svgRect.left;
 			const centerY = rect.top + rect.height / 2 - svgRect.top;
-			
+
 			return { x: rightEdge, y: centerY };
 		}
 
-		// Функция для позиционирования тултипа справа от маркера
 		positionTooltipRightOfMarker(marker) {
-			const planContainer = marker.closest('.building-plan__plan');
-			const planRect = planContainer.getBoundingClientRect();
-			
-			// Получаем правую границу маркера
+			const planContainer = marker.closest(".building-plan__plan");
+			if (!planContainer) return;
+
 			const markerRightEdge = this.getMarkerRightEdge(marker);
-			
-			// Вычисляем позицию тултипа относительно контейнера плана
-			const tooltipX = markerRightEdge.x + 100; // 60px отступ справа
-			const tooltipY = markerRightEdge.y - 32; // Центрируем по вертикали (-20px для компенсации высоты тултипа)
-			
-			this.tooltip.style.left = `${tooltipX}px`;
-			this.tooltip.style.top = `${tooltipY}px`;
+
+			const tooltipX = markerRightEdge.x + 100; // <----- 
+			const tooltipY = markerRightEdge.y - 32; // <----- 
+
+			this.elements.tooltip.style.left = `${tooltipX}px`;
+			this.elements.tooltip.style.top = `${tooltipY}px`;
 		}
 
 		bindEvents() {
-			const markers = document.querySelectorAll(".building-plan__marker");
+			if (!this.elements.marker) return;
+
+			const markers = this.elements.marker.querySelectorAll(".building-plan__marker");
 
 			markers.forEach((marker) => {
 				marker.addEventListener("mouseenter", (e) => this.handleMouseEnter(e));
@@ -106,66 +130,114 @@
 
 		handleMouseEnter(e) {
 			const floor = e.target.dataset.floor;
-			const data = this.floorData[floor];
+			const data = this.floorData[floor] || InteractiveBuilding.fallbackData;
 
-			if (data) {
-				this.showTooltip(floor);
-				this.positionTooltipRightOfMarker(e.target);
-				this.updateInfoPanel(data);
-				this.activeFloor = floor;
-			}
+			this.showTooltip(floor);
+			this.positionTooltipRightOfMarker(e.target);
+			this.updateInfoPanel(data);
+			this.activeFloor = floor;
+			this.showInfoPanel();
 		}
 
 		handleMouseLeave(e) {
 			this.hideTooltip();
+			this.hideInfoPanel();
 			this.activeFloor = null;
 		}
 
-
 		handleClick(e) {
 			const floor = e.target.dataset.floor;
-			const data = this.floorData[floor];
+			const data = this.floorData[floor] || InteractiveBuilding.fallbackData;
 		}
 
 		showTooltip(floor) {
-			this.tooltip.textContent = floor;
-			this.tooltip.classList.add("show");
+			this.elements.tooltip.textContent = floor;
+			this.elements.tooltip.classList.add("show");
 		}
 
 		hideTooltip() {
-			this.tooltip.classList.remove("show");
+			this.elements.tooltip.classList.remove("show");
 		}
 
 		updateInfoPanel(data) {
-			document.getElementById("building-plan-area").textContent = data.area;
-			document.getElementById("building-plan-offices").textContent = data.offices;
-			document.getElementById("building-plan-floor").textContent = data.floor;
+			if (this.elements.area) {
+				this.elements.area.textContent = data.area;
+			}
+			if (this.elements.count) {
+				this.elements.count.textContent = data.count;
+			}
+			if (this.elements.floor) {
+				this.elements.floor.textContent = data.floor;
+			}
 		}
 
 		showInfoPanel() {
-			this.infoPanel.classList.add("show");
+			this.elements.infoPanel.classList.add("show");
 		}
 
-		// showModal(data) {
-		// 	document.getElementById("modal-title").textContent = data.title;
-		// 	document.getElementById("modal-description").textContent = data.description;
+		hideInfoPanel() {
+			this.elements.infoPanel.classList.remove("show");
+		}
 
-		// 	const featuresList = document.getElementById("modal-features");
-		// 	featuresList.innerHTML = "";
+		getFloorData(floor) {
+			return this.floorData[floor] || null;
+		}
 
-		// 	data.features.forEach((feature) => {
-		// 		const li = document.createElement("li");
-		// 		li.textContent = feature;
-		// 		featuresList.appendChild(li);
-		// 	});
+		getAllFloors() {
+			return Object.keys(this.floorData);
+		}
 
-		// 	this.modal.classList.add("show");
-		// }
+		destroy() {
+			if (this.elements.marker) {
+				const markers = this.elements.marker.querySelectorAll(".building-plan__marker");
+				markers.forEach((marker) => {
+					marker.removeEventListener("mouseenter", this.handleMouseEnter);
+					marker.removeEventListener("mouseleave", this.handleMouseLeave);
+					marker.removeEventListener("click", this.handleClick);
+				});
+			}
 
-		// hideModal() {
-		// 	this.modal.classList.remove("show");
-		// }
+			InteractiveBuilding.instances.delete(this.config.baseId);
+		}
+
+		static getAllInstances() {
+			return Array.from(InteractiveBuilding.instances.values());
+		}
+
+		static destroyAll() {
+			InteractiveBuilding.instances.forEach(instance => instance.destroy());
+			InteractiveBuilding.instances.clear();
+		}
 	}
 
-	new InteractiveBuilding();
+	window.InteractiveBuilding = InteractiveBuilding;
+
+	new InteractiveBuilding({
+		baseId: "building-plan-offices",
+		jsonPath: "./js/offices-plan.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "building-plan-conference",
+		jsonPath: "./js/conference-plan.json"
+	});
+
+	
+	// Ожидаемая HTML структура:
+	// <div id="building-plan-offices">
+	// 	<div class="building-plan__plan">
+	// 		<svg id="building-plan-offices-marker">
+	// 			<g class="building-plan__marker" data-floor="9">...</g>
+	// 			<g class="building-plan__marker" data-floor="8">...</g>
+	// 			<!-- ... -->
+	// 		</svg>
+	// 	</div>
+	// 	<div id="building-plan-offices-tooltip"></div>
+	// 	<div id="building-plan-offices-info">
+	// 		<span id="building-plan-offices-area"></span>
+	// 		<span id="building-plan-offices-count"></span>
+	// 		<span id="building-plan-offices-floor"></span>
+	// 	</div>
+	// </div>
+	
 })();

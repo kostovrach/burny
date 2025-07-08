@@ -146,7 +146,7 @@
 			</li>
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="conference.html">
 					<div class="menu__item-title">Конференц-залы</div>
 					<div class="menu__item-button">
 						<div class="menu__item-button--icon-wrapper">
@@ -157,7 +157,7 @@
 			</li>
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="hotel.html">
 					<div class="menu__item-title">Апарт-отель</div>
 					<ul class="menu__item-tagsbox">
 						<li class="menu__item-tag">Выбор Апартаментов</li>
@@ -251,15 +251,15 @@
 </div>
 
 		<main id="start">
-			<section class="offices-hero">
-				<div class="offices-hero__container">
-					<h1 class="offices-hero__title" data-parallax>Бизнес-центр класса «А»</h1>
-					<a class="offices-hero__video-container" href="assets/video/office.mp4" data-fancybox="office-video">
-						<video class="offices-hero__video" muted autoplay playsinline loop>
-							<source src="assets/video/office.mp4" type="video/mp4" />
-						</video>
-					</a>
-					<div class="offices-hero__button"><a class="button " href="#offices-select" @@attr>
+			<section class="booking-hero">
+	<div class="booking-hero__container">
+		<h1 class="booking-hero__title" data-parallax>Бизнес-центр класса «А»</h1>
+		<a class="booking-hero__media-container" href="assets/video/office.mp4" data-fancybox="booking-hero-video">
+			<video class="booking-hero__video" muted autoplay playsinline loop>
+				<source src="assets/video/office.mp4" type="video/mp4" />
+			</video>
+		</a>
+		<div class="booking-hero__button"><a class="button " href="#offices-select" @@attr>
 	<span class="button-content">
 		<span class="button-title">Выбрать</span>
 		<span class="button-text">Офис</span>
@@ -269,9 +269,10 @@
 	</span>
 </a>
 </div>
-					<h2 class="offices-hero__subtitle" data-parallax data-start="100">деловой центр ВО&nbsp;владивостоке</h2>
-				</div>
-			</section>
+		<h2 class="booking-hero__subtitle" data-parallax data-start="100">деловой центр ВО&nbsp;владивостоке</h2>
+	</div>
+</section>
+
 			<section class="offices-about">
 				<div class="offices-about__container">
 					<div class="offices-about__content">
@@ -471,9 +472,14 @@
 	</div>
 </section>
 
-			<section class="offices-plan">
-				<div class="building-plan">
+			<section id="offices-select" class="offices-plan">
+				<div id="building-plan-offices" class="building-plan">
 					<div class="building-plan__container">
+						<div class="building-plan__titlebox">
+							<h2 class="building-plan__title">ВЫБОР ОФИСА</h2>
+							<a class="building-plan__button" href="#"><span>Списком</span><i class="building-plan__button--icon icon-arrow"></i></a>
+						</div>
+						<div class="building-plan__hint">Выберите этаж</div>
 						<picture class="building-plan__cloud-container" data-parallax>
 							<img class="building-plan__cloud" src="assets/img/service/cloud.svg" alt="" />
 						</picture>
@@ -483,7 +489,7 @@
 							</picture>
 
 							<div class="building-plan__overlay">
-								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+								<svg id="building-plan-offices-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
 									<path class="building-plan__marker" data-floor="2" transform="translate(-50, -60)" data-floor-open d="M439 675L439 675L782 670L878 673L912 670L918 669L938 668L1076 668L1088 668L1094 669L1094 710L938 710L918 710L912 710L878 710L787 712L439 715L439 675 z"></path>
 
 									<path class="building-plan__marker" data-floor="3" transform="translate(-50, -60)" data-floor-open d="M470 650L470 650L491 648L507 647L724 643L826 641L912 629L918 627L937 626L1076 625L1088 625L1094 626L1094 669L1088 668L1076 668L938 668L918 669L912 670L878 673L789 670L439 675L439 664L470 661L470 650 z"></path>
@@ -494,23 +500,23 @@
 
 									<path class="building-plan__marker" data-floor="9" transform="translate(3, -15)" data-floor-open d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
 								</svg>
-								<div class="building-plan__tooltip" id="building-plan-tooltip"></div>
+								<div id="building-plan-offices-tooltip" class="building-plan__tooltip"></div>
 							</div>
 						</div>
 
-						<div class="building-plan__info" id="building-plan-info">
-								<ul class="building-plan__info-item">
-									<li class="building-plan__info-item-label">Площадь, м²</li>
-									<li id="building-plan-area" class="building-plan__info-item-number">—</li>
-								</ul>
-								<ul class="building-plan__info-item">
-									<li class="building-plan__info-item-label">Офисов</li>
-									<li id="building-plan-offices" class="building-plan__info-item-number">—</li>
-								</ul>
-								<ul class="building-plan__info-item">
-									<li class="building-plan__info-item-label">Парковка</li>
-									<li id="building-plan-floor" class="building-plan__info-item-number">—</li>
-								</ul>
+						<div id="building-plan-offices-info" class="building-plan__info">
+							<ul class="building-plan__info-item">
+								<li class="building-plan__info-item-label">Этаж</li>
+								<li id="building-plan-offices-floor" class="building-plan__info-item-number">—</li>
+							</ul>
+							<ul class="building-plan__info-item">
+								<li class="building-plan__info-item-label">Офисов</li>
+								<li id="building-plan-offices-count" class="building-plan__info-item-number">—</li>
+							</ul>
+							<ul class="building-plan__info-item">
+								<li class="building-plan__info-item-label">Площадь офисов, м²</li>
+								<li id="building-plan-offices-area" class="building-plan__info-item-number">—</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -541,8 +547,8 @@
 			<div class="footer__list footer__list--infrastructure" role="list">
 				<p class="footer__list-item--title">Инфраструктура</p>
 				<a class="footer__list-item" href="offices.html" role="listitem" data-hover-anim><span>Аренда офисов</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Конференц-залы</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Апарт-отель 5★</span></a>
+				<a class="footer__list-item" href="conference.html" role="listitem" data-hover-anim><span>Конференц-залы</span></a>
+				<a class="footer__list-item" href="hotel.html" role="listitem" data-hover-anim><span>Апарт-отель 5★</span></a>
 				<a class="footer__list-item" href="restaurants.html" role="listitem" data-hover-anim><span>Рестораны</span></a>
 				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Вертолётная площадка</span></a>
 				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Парковка</span></a>
