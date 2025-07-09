@@ -1,18 +1,21 @@
 @use "../utils/abstracts" as *;
 
-.parking-advant {
+.helipad-advant {
 	overflow-x: clip;
 	@include block-padding();
 	&__container {
 		@include content-width();
 	}
 }
-.parking-floor {
+.helipad-floor {
 	&__container {
 		@include content-width();
 	}
+    .floor__info {
+        display: none;
+    }
 }
-.parking-rules {
+.helipad-rules {
 	@include block-padding();
 	&__container {
 		@include content-width();
@@ -117,7 +120,7 @@
 		}
 	}
 }
-.parking-frames {
+.helipad-frames {
 	background: linear-gradient(0deg, rgba($main-color, 0.7) 0%, rgba($main-color, 0.9) 5%, rgba($main-color, 0.9) 50%, rgba($main-color, 0.9) 95%, rgba($main-color, 0.7) 100%);
 	@include block-padding();
 	&__container {
@@ -186,7 +189,7 @@
 	}
 }
 @media (max-width: 1024px) {
-	.parking-frames {
+	.helipad-frames {
 		&__anim {
 			width: 100%;
 		}
@@ -199,7 +202,7 @@
 	}
 }
 @media (max-width: 768px) {
-    .parking-rules {
+    .helipad-rules {
         &__item {
             gap: rem(48);
         }
@@ -207,7 +210,7 @@
             left: rem(32);
         }
     }
-	.parking-frames {
+	.helipad-frames {
 		&__body {
 			translate: 0 0;
 			margin: 0 rem(16) 0 rem(64);

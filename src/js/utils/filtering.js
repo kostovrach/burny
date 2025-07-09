@@ -14,6 +14,11 @@
 			items.forEach((item) => {
 				const itemType = item.dataset.type;
 				item.style.display = selectedType === "all" || itemType === selectedType ? "" : "none";
+				if (selectedType === "all" || itemType === selectedType) {
+					item.classList.add("active");
+				} else {
+					item.classList.remove("active");
+				}
 			});
 		});
 	});

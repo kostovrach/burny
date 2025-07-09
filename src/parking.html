@@ -183,7 +183,7 @@
 			</li>
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="helipad.html">
 					<div class="menu__item-title">Вертолётная площадка</div>
 					<div class="menu__item-button">
 						<div class="menu__item-button--icon-wrapper">
@@ -205,7 +205,7 @@
 			</li>
 			<li class="menu__item-container soon liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="soon.html">
 					<div class="menu__item-title">Фитнес-центр</div>
 					<div class="menu__item-button">
 						<div class="menu__item-button--icon-wrapper">
@@ -216,7 +216,7 @@
 			</li>
 			<li class="menu__item-container soon liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="soon.html">
 					<div class="menu__item-title">Клуб здоровья и&nbsp;долголетия</div>
 					<div class="menu__item-button">
 						<div class="menu__item-button--icon-wrapper">
@@ -227,7 +227,7 @@
 			</li>
 			<li class="menu__item-container soon liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="soon.html">
 					<div class="menu__item-title">Торговая галерея</div>
 					<div class="menu__item-button">
 						<div class="menu__item-button--icon-wrapper">
@@ -380,42 +380,231 @@
 			<section class="parking-floor">
 				<div class="parking-floor__container">
 					<div class="floor">
-                        <div class="floor-layers"></div>
-						<div id="floor-parking" class="floor__wrap">
+						<div class="floor__layersbox">
+							<div class="floor__layer-container">
+								<div class="floor__layer js-filter active" data-type="1"></div>
+								<div class="floor__layer-tooltip">-1 этаж</div>
+							</div>
+							<div class="floor__layer-container">
+								<div class="floor__layer js-filter" data-type="2"></div>
+								<div class="floor__layer-tooltip">-2 этаж</div>
+							</div>
+							<div class="floor__layer-container">
+								<div class="floor__layer js-filter" data-type="3"></div>
+								<div class="floor__layer-tooltip">-3 этаж</div>
+							</div>
+						</div>
+						<div id="floor-parking-1" class="floor__wrap js-filtering-item active" data-type="1">
 							<div class="floor__container">
 								<div class="floor__plan">
 									<picture class="floor__image-container">
 										<img class="floor__image" src="assets/img/service/floor-diagrams/b1-f7_9-p1.png" alt="Здание BURNY City" />
 									</picture>
 
+									<div id="floor-plan-hint-1" class="floor__plan-hint floor__plan-hint--in">
+										<div class="floor__plan-hint-marker"></div>
+										<span>Въезд</span>
+									</div>
+									<div id="floor-plan-hint-1" class="floor__plan-hint floor__plan-hint--out">
+										<div class="floor__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
 									<div class="floor__overlay">
-										<svg id="floor-parking-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+										<svg id="floor-parking-1-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
 											<path class="floor__marker" data-floor="A" transform="translate(-70, -140)" data-floor-open d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
 
 											<path class="floor__marker" data-floor="C" transform="translate(-130, -205)" data-floor-open d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
 
 											<path class="floor__marker" data-floor="F" transform="translate(-100, -165)" data-floor-open d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
 										</svg>
-										<div id="floor-parking-tooltip" class="floor__tooltip"></div>
+										<div id="floor-parking-1-tooltip" class="floor__tooltip"></div>
 									</div>
 								</div>
 
-								<div id="floor-parking-info" class="floor__info">
-								<ul class="floor__info-item">
-									<li class="floor__info-item-label">Этаж</li>
-									<li id="floor-parking-floor" class="floor__info-item-number">—</li>
-								</ul>
-								<ul class="floor__info-item">
-									<li class="floor__info-item-label">Офисов</li>
-									<li id="floor-parking-count" class="floor__info-item-number">—</li>
-								</ul>
-								<ul class="floor__info-item">
-									<li class="floor__info-item-label">Площадь офисов, м²</li>
-									<li id="floor-parking-area" class="floor__info-item-number">—</li>
-								</ul>
-							</div>
+								<div id="floor-parking-1-info" class="floor__info">
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Зона</li>
+										<li id="floor-parking-1-floor" class="floor__info-item-number">—</li>
+									</ul>
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Парко-мест</li>
+										<li id="floor-parking-1-count" class="floor__info-item-number">—</li>
+									</ul>
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Суммарная площадь, м²</li>
+										<li id="floor-parking-1-area" class="floor__info-item-number">—</li>
+									</ul>
+								</div>
 							</div>
 						</div>
+						<div id="floor-parking-2" class="floor__wrap js-filtering-item" data-type="2">
+							<div class="floor__container">
+								<div class="floor__plan">
+									<picture class="floor__image-container">
+										<img class="floor__image" src="assets/img/service/floor-diagrams/b1-f3-p5.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="floor-plan-hint-2" class="floor__plan-hint floor__plan-hint--in">
+										<div class="floor__plan-hint-marker"></div>
+										<span>Въезд</span>
+									</div>
+									<div id="floor-plan-hint-2" class="floor__plan-hint floor__plan-hint--out">
+										<div class="floor__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="floor__overlay">
+										<svg id="floor-parking-2-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="floor__marker" data-floor="G" transform="translate(10, -260)" data-floor-open d="M 537 56 L 608 224 L 372 329 L 319 207 Q 289 105 377 32 Q 434 -2 521 17 z"></path>
+
+											<path class="floor__marker" data-floor="H" transform="translate(0, -295)" data-floor-open d="M 1028 1171 L 1062 1246 L 1161 1277 L 1093 1508 Q 899 1464 831 1257 z"></path>
+
+											<path class="floor__marker" data-floor="T" transform="translate(0, -280)" data-floor-open d="M 614 760 L 807 675 L 949 996 L 755 1085 z"></path>
+										</svg>
+										<div id="floor-parking-2-tooltip" class="floor__tooltip"></div>
+									</div>
+								</div>
+
+								<div id="floor-parking-2-info" class="floor__info">
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Зона</li>
+										<li id="floor-parking-2-floor" class="floor__info-item-number">—</li>
+									</ul>
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Парко-мест</li>
+										<li id="floor-parking-2-count" class="floor__info-item-number">—</li>
+									</ul>
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Суммарная площадь, м²</li>
+										<li id="floor-parking-2-area" class="floor__info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="floor-parking-3" class="floor__wrap js-filtering-item" data-type="3">
+							<div class="floor__container">
+								<div class="floor__plan">
+									<picture class="floor__image-container">
+										<img class="floor__image" src="assets/img/service/floor-diagrams/b1-f7_9-p1.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="floor-plan-hint-1" class="floor__plan-hint floor__plan-hint--in">
+										<div class="floor__plan-hint-marker"></div>
+										<span>Въезд</span>
+									</div>
+									<div id="floor-plan-hint-1" class="floor__plan-hint floor__plan-hint--out">
+										<div class="floor__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="floor__overlay">
+										<svg id="floor-parking-3-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="floor__marker" data-floor="N" transform="translate(-70, -140)" data-floor-open d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
+
+											<path class="floor__marker" data-floor="Y" transform="translate(-130, -205)" data-floor-open d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
+
+											<path class="floor__marker" data-floor="Q" transform="translate(-100, -165)" data-floor-open d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
+										</svg>
+										<div id="floor-parking-3-tooltip" class="floor__tooltip"></div>
+									</div>
+								</div>
+
+								<div id="floor-parking-3-info" class="floor__info">
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Зона</li>
+										<li id="floor-parking-3-floor" class="floor__info-item-number">—</li>
+									</ul>
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Парко-мест</li>
+										<li id="floor-parking-3-count" class="floor__info-item-number">—</li>
+									</ul>
+									<ul class="floor__info-item">
+										<li class="floor__info-item-label">Суммарная площадь, м²</li>
+										<li id="floor-parking-3-area" class="floor__info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="parking-rules" class="parking-rules js-progress-section">
+				<div class="parking-rules__container">
+					<div class="parking-rules__titlebox">
+						<h2 class="parking-rules__title">Правила <span class="parking-rules__title--accent">безопасного</span> <span class="parking-rules__title--accent">использования</span> паркинга</h2>
+						<button class="parking-rules__button"><span>Скачать PDF</span></button>
+					</div>
+					<div class="parking-rules__body">
+						<div class="parking-rules__content">
+							<div class="parking-rules__progressbar">
+								<div class="parking-rules__progressbar-inner js-progressbar-inner"></div>
+							</div>
+							<div class="parking-rules__item">
+								<ul class="parking-rules__item-wrapper">
+									<li class="parking-rules__item-title">Проезд</li>
+									<li class="parking-rules__item-desc">При въезде на парковку соблюдайте скорость не&nbsp;более 10 км/ч. Убедитесь, что у вас есть разрешение на проезд и следуйте указателям.</li>
+									<li class="parking-rules__item-desc">Не оставляйте автомобили без присмотра и всегда закрывайте окна.</li>
+								</ul>
+							</div>
+							<div class="parking-rules__item">
+								<ul class="parking-rules__item-wrapper">
+									<li class="parking-rules__item-title">Оплата</li>
+									<li class="parking-rules__item-desc">Регистрация осуществляется на стойке администратора при въезде. Оплата производится на&nbsp;выходе, обязательно сохраняйте чек.</li>
+								</ul>
+							</div>
+							<div class="parking-rules__item">
+								<ul class="parking-rules__item-wrapper">
+									<li class="parking-rules__item-title">Безопасность</li>
+									<li class="parking-rules__item-desc">При движении по парковке соблюдайте скорость не&nbsp;более 10 км/ч. Убедитесь, что у вас есть разрешение на проезд и следуйте указателям. Не оставляйте автомобили без присмотра и всегда закрывайте окна.</li>
+								</ul>
+							</div>
+							<div class="parking-rules__item">
+								<ul class="parking-rules__item-wrapper">
+									<li class="parking-rules__item-title">Бронирование мест</li>
+									<li class="parking-rules__item-desc">Мы предлагаем удобное бронирование мест на&nbsp;закрытой парковке, обеспечивая безопасность и&nbsp;комфорт для ваших автомобилей.</li>
+									<li class="parking-rules__item-desc">Просто <span class="parking-rules__item-desc--accent">выберите желаемую дату и время</span>, и мы гарантируем, что ваше место будет готово к вашему приезду.</li>
+								</ul>
+							</div>
+							<div class="parking-rules__item">
+								<ul class="parking-rules__item-wrapper">
+									<li class="parking-rules__item-title">Правила парковки</li>
+									<li class="parking-rules__item-desc">При использовании парковки, пожалуйста, следуйте следующим правилам:</li>
+									<li class="parking-rules__item-desc parking-rules__item-desc--numbered">Убедитесь, что ваше авто припарковано в пределах разметки.</li>
+									<li class="parking-rules__item-desc parking-rules__item-desc--numbered">Всегда закрывайте окна и двери.</li>
+									<li class="parking-rules__item-desc parking-rules__item-desc--numbered">Соблюдайте скорость не более 10 км/ч при&nbsp;движении по территории.</li>
+									<li class="parking-rules__item-desc parking-rules__item-desc--numbered">Убедитесь, что у вас есть разрешение на проезд и&nbsp;следуйте указателям.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="parking-frames">
+				<div class="parking-frames__container">
+					<div class="parking-frames__anim"><div class="building-static">
+	<canvas id="building-static" class="building-static__render"></canvas>
+</div>
+</div>
+					<div class="parking-frames__body" data-parallax>
+						<div class="parking-frames__content">
+							<h2 class="parking-frames__title">250 мест на&nbsp;закрытом паркинге</h2>
+							<ul class="parking-frames__list">
+								<li class="parking-frames__list-item">увеличенные габариты мест</li>
+								<li class="parking-frames__list-item">отопление</li>
+								<li class="parking-frames__list-item">пропускной въезд и выезд</li>
+								<li class="parking-frames__list-item">видеонаблюдение</li>
+								<li class="parking-frames__list-item--title">По любым вопросам или проблемам, пожалуйста, свяжитесь с нами по&nbsp;телефону <a class="parking-frames__list-item--title--link" href="tel:8 846 555-55-35">8&nbsp;846&nbsp;555-55-35</a></li>
+							</ul>
+						</div>
+						<button class="parking-frames__button">
+							<span>Забронировать</span>
+							<div class="parking-frames__button--icon-container">
+								<div class="parking-frames__button--icon-wrapper">
+									<i class="parking-frames__button--icon icon-arrow"></i>
+								</div>
+							</div>
+						</button>
 					</div>
 				</div>
 			</section>
@@ -448,11 +637,11 @@
 				<a class="footer__list-item" href="conference.html" role="listitem" data-hover-anim><span>Конференц-залы</span></a>
 				<a class="footer__list-item" href="hotel.html" role="listitem" data-hover-anim><span>Апарт-отель 5★</span></a>
 				<a class="footer__list-item" href="restaurants.html" role="listitem" data-hover-anim><span>Рестораны</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Вертолётная площадка</span></a>
+				<a class="footer__list-item" href="helipad.html" role="listitem" data-hover-anim><span>Вертолётная площадка</span></a>
 				<a class="footer__list-item" href="parking.html" role="listitem" data-hover-anim><span>Парковка</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Фитнес-центр</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Клуб здоровья и долголетия</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Торговая галерея</span></a>
+				<a class="footer__list-item" href="soon.html" role="listitem" data-hover-anim><span>Фитнес-центр</span></a>
+				<a class="footer__list-item" href="soon.html" role="listitem" data-hover-anim><span>Клуб здоровья и долголетия</span></a>
+				<a class="footer__list-item" href="soon.html" role="listitem" data-hover-anim><span>Торговая галерея</span></a>
 			</div>
 			<ul class="footer__list footer__list--contacts">
 				<li class="footer__list-item--title">Контакты</li>

@@ -53,7 +53,7 @@
 		gap: rem(16);
 		font-size: lineScale(28, 14, 480, 1440);
 		border: rem(2) solid $c-C6A47D;
-        padding: rem(16) rem(64);
+        padding: lineScale(16,12,480,1440) lineScale(64,24,480,1440);
 		@include icon-hover(diagonal-reverse, lineScale(20, 12, 480, 1440));
 		@media (pointer: fine) {
 			@include flowing-fill($anim-color: $c-C6A47D);
@@ -82,4 +82,15 @@
             rotate: 90deg;
         }
     }
+}
+@media (max-width: 1024px){
+	.service-hero {
+		&__titlebox {
+			display: flex;
+			flex-direction: column;
+		}
+		&__link {
+			align-self: initial;
+		}
+	}
 }

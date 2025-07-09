@@ -132,7 +132,7 @@
 			const floor = e.target.dataset.floor;
 			const data = this.floorData[floor] || InteractiveBuilding.fallbackData;
 
-			this.showTooltip(floor);
+			this.showTooltip(data);
 			this.positionTooltipRightOfMarker(e.target);
 			this.updateInfoPanel(data);
 			this.activeFloor = floor;
@@ -150,8 +150,8 @@
 			const data = this.floorData[floor] || InteractiveBuilding.fallbackData;
 		}
 
-		showTooltip(floor) {
-			this.elements.tooltip.textContent = floor;
+		showTooltip(data) {
+			this.elements.tooltip.textContent = data.floor;
 			this.elements.tooltip.classList.add("show");
 		}
 
@@ -223,12 +223,26 @@
 	});
 	
 	new InteractiveBuilding({
-		baseId: "floor-parking",
+		baseId: "floor-parking-1",
 		jsonPath: "./js/parking-plan.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "floor-parking-2",
+		jsonPath: "./js/parking-plan.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "floor-parking-3",
+		jsonPath: "./js/parking-plan.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "floor-helipad",
+		jsonPath: "./js/helipad-plan.json"
 	});
 
 	
-	// Ожидаемая HTML структура:
 	// <div id="building-plan-offices">
 	// 	<div class="building-plan__plan">
 	// 		<svg id="building-plan-offices-marker">
