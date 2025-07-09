@@ -62,7 +62,10 @@ const paths = {
       'src/js/main.min.js',
       'src/js/**/*.json'
     ],
-    assets: 'src/assets/**/*'
+    assets: [
+      'src/assets/**/*', 
+      'src/*.ico'
+    ]
   }
 };
 
