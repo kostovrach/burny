@@ -348,27 +348,30 @@
 		}
 
 		createOfficeListItem(office) {
-			const ul = document.createElement('ul');
-			ul.className = 'selection__list-item';
-			ul.innerHTML = `
-				<li class="selection__list-item-plan">
-					<a class="selection__list-item-image-container" href="${office.image || 'placeholder.jpg'}" data-fancybox="offices-plan">
-						<img class="selection__list-item-image" src="${office.image || 'placeholder.jpg'}" alt="Офис № ${office.id}">
-					</a>
-				</li>
-				<li class="selection__list-item-param">${office.id}</li>
-				<li class="selection__list-item-param">${office.floor}</li>
-				<li class="selection__list-item-param">${Math.round(office.area)}</li>
-				<li class="selection__list-item-param">${office.capacity} чел.</li>
-				<li class="selection__list-item-param">от ${office.price.toLocaleString()} ₽</li>
-				<li class="selection__list-item-button-container">
+			const div = document.createElement('div');
+			div.className = 'selection__list-item';
+			div.innerHTML = `
+				<a class="selection__list-item-wrapper" href="${office.image}" data-fancybox="offices-plan">
+					<div class="selection__list-item-plan">
+						<div class="selection__list-item-plan-overlay icon-zoom"></div>
+						<picture class="selection__list-item-image-container">
+							<img class="selection__list-item-image" src="${office.image}" alt="Офис № ${office.id}">
+						</picture>
+					</div>
+					<div class="selection__list-item-param">${office.id}</div>
+					<div class="selection__list-item-param">${office.floor}</div>
+					<div class="selection__list-item-param">${Math.round(office.area)}</div>
+					<div class="selection__list-item-param">${office.capacity} чел.</div>
+					<div class="selection__list-item-param">от ${office.price.toLocaleString()} ₽</div>
+				</a>
+				<div class="selection__list-item-button-container">
 					<button class="selection__list-item-button" type="button" data-modal="office-${office.id}">
 						<span>Выбрать</span>
 						<i class="selection__list-item-button--icon icon-arrow"></i>
 					</button>
-				</li>
+				</div>
 			`;
-			return ul;
+			return div;
 		}
 
 		destroy() {

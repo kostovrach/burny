@@ -204,7 +204,7 @@
 	}
 	&__list {
 		max-width: rem(1800);
-        overflow-y: hidden;
+		overflow-y: hidden;
 		overflow-x: auto;
 		margin: 0 auto;
 		margin-top: rem(96);
@@ -218,31 +218,68 @@
 			padding-right: rem(32);
 		}
 		&-head,
-		&-item {
+		&-item-wrapper {
 			min-width: rem(768);
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.2fr 1fr;
 		}
 		&-head {
+			grid-template-columns: repeat(6, minmax(rem(150), rem(230))) rem(160);
 			& > * {
 				text-transform: uppercase;
 				color: $c-FFFFFF;
 				font-size: lineScale(16, 12, 480, 1440);
-				padding: rem(64) 0 rem(64) rem(32);
+				padding: rem(64) 0 rem(64) lineScale(32, 1, 480, 1440);
 			}
 		}
 		&-item {
-			& > * {
-				padding: rem(64) 0 rem(64) rem(32);
-				border-right: rem(1) solid rgba($c-C6A47D, 0.25);
-				&:last-child {
-					border: none;
+			position: relative;
+			display: flex;
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($c-7E9CC0, 0.02);
+				opacity: 0;
+			}
+			@media (pointer: fine) {
+				&:hover {
+					&::before{
+						opacity: 1;
+					}
+					.selection__list-item-plan-overlay {
+						opacity: 1;
+					}
+				}
+			}
+			&-wrapper {
+				width: 100%;
+				grid-template-columns: repeat(6, minmax(rem(150), 1fr));
+				& > * {
+					padding: rem(64) 0 rem(64) rem(32);
+					border-right: rem(1) solid rgba($c-C6A47D, 0.25);
+					&:last-child {
+						border: none;
+					}
 				}
 			}
 			&-plan {
 				position: relative;
 				padding: 0;
 				@include flex-center();
+				&-overlay {
+					position: absolute;
+					inset: 0;
+					font-size: rem(24);
+					color: rgba($c-FFFFFF, 0.5);
+					background-color: rgba($main-color, 0.5);
+					opacity: 0;
+					pointer-events: none;
+					transition: opacity $duration;
+					@include flex-center();
+				}
 			}
 			&-image-container {
 				display: block;
@@ -296,33 +333,13 @@
 		line-height: 1;
 	}
 }
-@media (max-width: 1440px) {
+@media (max-width: 1285px) {
 	.selection {
-		&__list {
-			&-head {
-				&-item {
-					text-align: right;
-					writing-mode: sideways-rl;
-					text-orientation: mixed;
-					width: fit-content;
-					rotate: -45deg;
-					padding: 0;
-				}
-			}
+		&__button {
+			display: none;
 		}
-	}
-}
-@media (max-width: 1024px) {
-	.selection {
-        &__button {
-            display: none;
-        }
 		&__list {
-			&-item {
-				grid-template-columns: 1fr 1fr 1fr 1fr 1.2fr auto;
-			}
 			&-head {
-				grid-template-columns: 1fr 1fr 1fr 1fr 1.2fr auto;
 				:first-child {
 					display: none;
 				}
