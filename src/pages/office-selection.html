@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru" class="hide-scrollbar">
+	@@include('../components/head.html', { "title": "Burny City - Подбор Офиса" })
+	<body>
+		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Список офисов" })
+		<main id="start">
+			<section class="office-selection">
+				<div class="office-selection__container">
+                    @@include("../components/office-select.html")
+                </div>
+			</section>
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

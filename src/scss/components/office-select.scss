@@ -1,0 +1,8 @@
+@use "../utils/abstracts" as *;
+
+.office-select {
+    @include block-padding($break: rem(128));
+    &__container {
+        @include content-width();
+    }
+}

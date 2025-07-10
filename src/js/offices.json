@@ -1,0 +1,9 @@
+{
+	"id": 1,
+	"floor": 7,
+	"area": 78.5,
+	"hasDiningZone": true,
+	"capacity": 12,
+	"price": 5600,
+	"image": "office-1.png"
+}
