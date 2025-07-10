@@ -9,6 +9,7 @@
 
 	const swiper = new Swiper(sliderEl, {
         direction: "vertical",
+		hashNavigation:true,
         mousewheel: {
 			enabled: true,
 			forceToAxis: true,

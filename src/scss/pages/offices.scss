@@ -68,17 +68,24 @@
 }
 @media (max-width: 1024px) {
 	.offices-plan {
+		.building-plan {
+			display: none;
+		}
+	}
+	.offices-about {
+		&__container {
+			display: block;
+		}
+		&__anim-container {
+			display: none;
+		}
+		&__content {
+			gap: rem(64);
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.offices-plan__mobile {
 		display: none;
 	}
-    .offices-about {
-        &__container {
-            display: block;
-        }
-        &__anim-container {
-            display: none;
-        }
-        &__content {
-            gap: rem(64);
-        }
-    }
 }

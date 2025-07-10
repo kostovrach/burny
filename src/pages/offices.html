@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="hide-scrollbar">
-	@@include('../components/head.html', { "title": "Burny City - Бизнес центр" })
+	@@include('../components/head.html', { "title": "Burny - Бизнес центр" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Аренда офисов" })
 		<main id="start">
@@ -196,6 +196,7 @@
 			</section>
 			@@include('../components/footnote.html', { 'title': 'наша Философия', 'text': 'Успех достигается через сотрудничество и&nbsp;инновации. Мы&nbsp;создаём пространство, где идеи могут расти и&nbsp;развиваться, обеспечивая поддержку каждому предпринимателю' })
 			<section id="offices-select" class="offices-plan">
+				<div class="offices-plan__mobile">@@include("../components/selection.html")</div>
 				<div id="building-plan-offices" class="building-plan">
 					<div class="building-plan__container">
 						<div class="building-plan__titlebox">

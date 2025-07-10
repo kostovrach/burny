@@ -14,4 +14,5 @@
 	initGallery("gallery");
 	initGallery("index-demo");
 	initGallery("booking-hero-video");
+	initGallery("offices-plan");
 })();

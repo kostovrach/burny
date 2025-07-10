@@ -21,7 +21,7 @@
 		text-transform: uppercase;
 		writing-mode: sideways-lr;
 		text-orientation: mixed;
-		font-size: rem(32);
+		font-size: lineScale(32,24,480,1440);
 		font-weight: $fw-bold;
 		text-wrap: nowrap;
 		&--stroke {

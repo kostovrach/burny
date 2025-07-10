@@ -24,11 +24,22 @@
 	&__titlebox {
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        grid-template-areas: "title title"
+        grid-template-areas: "tag tag"
+							 "title title"
                              "desc desc"
                              "button link";
         gap: rem(32) rem(64);
 		color: $c-FFFFFF;
+	}
+	&__tag {
+		grid-area: tag;
+		width: fit-content;
+		color: $c-C6A47D;
+		font-size: lineScale(14,12,480,1440);
+		line-height: 1;
+		padding: rem(4) rem(16);
+		border: rem(1) solid $c-C6A47D;
+		border-radius: rem(32);
 	}
 	&__title {
         grid-area: title;

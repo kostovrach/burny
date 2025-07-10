@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="hide-scrollbar">
-	@@include('../components/head.html', { "title": "Burny City - Конференц-залы" })
+	@@include('../components/head.html', { "title": "Burny - Конференц-залы" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Конференц-залы" })
 		<main id="start">
@@ -197,53 +197,11 @@
 				</div>
 			</section>
 			@@include('../components/footnote.html', { 'title': '', 'text': 'BURNY — это комплекс с профессиональным управлением коммерческой недвижимостью и&nbsp;партнерскими отношениями с контрагентами' })
-			<section id="conference-select" class="conference-plan">
-				<div id="building-plan-conference" class="building-plan">
-					<div class="building-plan__container">
-						<div class="building-plan__titlebox">
-							<h2 class="building-plan__title">ВЫБОР Зала</h2>
-							<a class="building-plan__button" href="#"><span>Списком</span><i class="building-plan__button--icon icon-arrow"></i></a>
-						</div>
-						<div class="building-plan__hint">Выберите этаж</div>
-						<picture class="building-plan__cloud-container" data-parallax>
-							<img class="building-plan__cloud" src="assets/img/service/cloud.svg" alt="" />
-						</picture>
-						<div class="building-plan__plan">
-							<picture class="building-plan__image-container">
-								<img class="building-plan__image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
-							</picture>
-
-							<div class="building-plan__overlay">
-								<svg id="building-plan-conference-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
-									<path class="building-plan__marker" data-floor="2" transform="translate(-50, -60)" data-floor-open d="M439 675L439 675L782 670L878 673L912 670L918 669L938 668L1076 668L1088 668L1094 669L1094 710L938 710L918 710L912 710L878 710L787 712L439 715L439 675 z"></path>
-
-									<path class="building-plan__marker" data-floor="3" transform="translate(-50, -60)" data-floor-open d="M470 650L470 650L491 648L507 647L724 643L826 641L912 629L918 627L937 626L1076 625L1088 625L1094 626L1094 669L1088 668L1076 668L938 668L918 669L912 670L878 673L789 670L439 675L439 664L470 661L470 650 z"></path>
-
-									<path class="building-plan__marker" data-floor="9" transform="translate(3, -12)" data-floor-open d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
-
-									<path class="building-plan__marker" data-floor="10" transform="translate(3, -40)" data-floor-open d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
-
-									<path class="building-plan__marker" data-floor="13" transform="translate(3, -130)" data-floor-open d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
-								</svg>
-								<div id="building-plan-conference-tooltip" class="building-plan__tooltip"></div>
-							</div>
-						</div>
-
-						<div id="building-plan-conference-info" class="building-plan__info">
-							<ul class="building-plan__info-item">
-								<li class="building-plan__info-item-label">Этаж</li>
-								<li id="building-plan-conference-floor" class="building-plan__info-item-number">—</li>
-							</ul>
-							<ul class="building-plan__info-item">
-								<li class="building-plan__info-item-label">Залов</li>
-								<li id="building-plan-conference-count" class="building-plan__info-item-number">—</li>
-							</ul>
-							<ul class="building-plan__info-item">
-								<li class="building-plan__info-item-label">Площадь офисов, м²</li>
-								<li id="building-plan-conference-area" class="building-plan__info-item-number">—</li>
-							</ul>
-						</div>
-					</div>
+			<section class="conference-veiw">
+				<picture class="conference-veiw__image-container">
+				<div class="conference-veiw__container">
+					<div class="conference-veiw__anim">@@include('../components/building-static.html')</div>
+					<div class="conference-veiw__button">@@include('../components/button.html', { "title": "Выбрать", "text": "Конференц-зал", "href": "#" })</div>
 				</div>
 			</section>
 		</main>

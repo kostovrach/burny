@@ -8,6 +8,7 @@
 	}
 }
 .parking-floor {
+	display: none;
 	&__container {
 		@include content-width();
 	}
