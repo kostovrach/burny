@@ -299,7 +299,7 @@
         			<div class="selection__list-item-param">от ${office.price.toLocaleString()} ₽</div>
         		</a>
         		<div class="selection__list-item-button-container">
-        			<button class="selection__list-item-button" type="button" data-modal="office-${office.id}">
+        			<button class="selection__list-item-button" data-modal="room-booking">
         				<span>Выбрать</span>
         				<i class="selection__list-item-button--icon icon-arrow"></i>
         			</button>

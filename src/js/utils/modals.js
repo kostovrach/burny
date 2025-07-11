@@ -18,18 +18,15 @@
 		document.body.style.top = `-${scrollPosition}px`;
 	}
 
-	// Функция для управления прокруткой внутри модалки
 	function handleModalScroll(modal) {
 		const scrollableElements = modal.querySelectorAll('[style*="overflow-y: auto"], [style*="overflow-y:auto"]');
 		
-		// Добавляем сам modal если у него есть overflow
 		const allScrollableElements = [modal, ...scrollableElements].filter(el => {
 			const styles = getComputedStyle(el);
 			return styles.overflowY === 'auto' || styles.overflowY === 'scroll';
 		});
 
 		function handleWheel(e) {
-			// Находим ближайший прокручиваемый элемент
 			const scrollableParent = e.target.closest('[style*="overflow-y"], dialog');
 			
 			if (scrollableParent && allScrollableElements.includes(scrollableParent)) {
@@ -37,19 +34,16 @@
 				const isAtTop = scrollTop === 0;
 				const isAtBottom = scrollTop + clientHeight >= scrollHeight;
 				
-				// Если прокрутка возможна в нужном направлении, разрешаем её
 				if ((e.deltaY < 0 && !isAtTop) || (e.deltaY > 0 && !isAtBottom)) {
 					e.stopPropagation();
 					return;
 				}
 			}
 			
-			// Блокируем прокрутку для всех остальных случаев
 			e.preventDefault();
 			e.stopPropagation();
 		}
 
-		// Обработчик для touch событий
 		let touchStartY = 0;
 		function handleTouchStart(e) {
 			touchStartY = e.touches[0].clientY;
@@ -65,7 +59,6 @@
 				const touchY = e.touches[0].clientY;
 				const deltaY = touchStartY - touchY;
 				
-				// Если прокрутка возможна в нужном направлении, разрешаем её
 				if ((deltaY < 0 && !isAtTop) || (deltaY > 0 && !isAtBottom)) {
 					e.stopPropagation();
 					return;
@@ -76,12 +69,10 @@
 			e.stopPropagation();
 		}
 
-		// Добавляем обработчики событий
 		modal.addEventListener('wheel', handleWheel, { passive: false });
 		modal.addEventListener('touchstart', handleTouchStart, { passive: true });
 		modal.addEventListener('touchmove', handleTouchMove, { passive: false });
 
-		// Возвращаем функцию для удаления обработчиков
 		return function removeScrollHandlers() {
 			modal.removeEventListener('wheel', handleWheel);
 			modal.removeEventListener('touchstart', handleTouchStart);
@@ -94,7 +85,6 @@
 		setTimeout(() => {
 			modal.close();
 			handleScrollReturn();
-			// Удаляем обработчики прокрутки
 			if (removeScrollHandlers) {
 				removeScrollHandlers();
 			}
@@ -109,7 +99,7 @@
 		if (!modal) return;
 
 		let removeScrollHandlers = null;
-
+		
 		openBtns.forEach((el) => {
 			el.addEventListener("click", function () {
 				handleScrollBlock();
@@ -117,7 +107,6 @@
 				requestAnimationFrame(() => {
 					modal.classList.add(ANIM_CLASS);
 					document.activeElement?.blur();
-					// Инициализируем обработчики прокрутки
 					removeScrollHandlers = handleModalScroll(modal);
 				});
 			});
@@ -137,7 +126,11 @@
 		});
 	}
 
-	// initModal("#menu", "data-menu-open", ".menu__button-close");
+	initModal("#modal-privacy", "privacy", "data-modal-close");
 	initModal("#modal-office-21", "office-21", "data-modal-close");
 	initModal("#modal-room-booking", "room-booking", "data-modal-close");
+	initModal("#modal-feedback", "feedback", "data-modal-close");
+	initModal("#modal-parking", "parking", "data-modal-close");
+	initModal("#modal-helipad", "helipad", "data-modal-close");
+	initModal("#modal-subscribe", "subscribe", "data-modal-close");
 })();

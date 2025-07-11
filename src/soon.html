@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" href="./assets/fonts/icon-font/style.css">
-	<title>Burny - Скоро открытие</title>
+	<title>BURNY - Скоро открытие</title>
 </head>
 
 	<body>
@@ -240,6 +240,66 @@
 		</ul>
 	</div>
 </div>
+
+<dialog id="modal-privacy" class="modal-privacy hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-privacy__container">
+		<div class="modal-privacy__titlebox">
+			<div class="modal-privacy__title">Политика конфиденциальности</div>
+			<time class="modal-privacy__date" datetime="2025-02-27">Последнее обновление: 27.02.25</time>
+		</div>
+		<ul class="modal-privacy__list">
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Презентация</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Наши обязательства</li>
+					<li class="modal-privacy__subitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Обязательства пользователей</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Сбор вашей информации</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Личные данные</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Использовать вашу информацию</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Предоставление услуг</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Консультации</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Использовать вашу информацию</p>
+						<p class="modal-privacy__subsubitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</p>
+						<p class="modal-privacy__subsubitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</p>
+					</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Ремонт</p>
+						<p class="modal-privacy__subsubitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</dialog>
 
 <div id="modal-office-select" class="modal-select">
 	<div class="modal-select__container">
@@ -687,7 +747,7 @@
 			<div class="modal-form__form-submit">
 				<div class="modal-form__form-agreement">
 					<div class="modal-form__form-agreement-checkbox checkbox">
-						<input type="checkbox" id="room-booking-agreement" />
+						<input type="checkbox" id="room-booking-agreement" required/>
 					</div>
 					<label class="modal-form__form-agreement-label" for="room-booking-agreement"
 						>Согласен
@@ -697,6 +757,221 @@
 				</div>
 				<button class="modal-form__form-button" type="submit">
 					<span>Отправить заявку</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-feedback" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Напишите нам</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="feedback-name">ФИО</label>
+	<input id="feedback-name" class="input__input" type="text" placeholder="Ваше ФИО" required />
+</div>
+ 
+                <div class="input__inputbox">
+	<label class="input__label" for="feedback-tel">Телефон</label>
+	<input id="feedback-tel" class="input__input" type="tel" placeholder="Номер телефона" required />
+</div>
+
+				<div class="modal-form__form-inputbox input__inputbox">
+                    <label class="modal-form__form-input-label input__label" for="feedback-custom">Ваш вопрос</label>
+                    <textarea id="feedback-custom" class="modal-form__form-input--custom input__input" placeholder="Что вас интересует?"></textarea>
+                </div>
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="feedback-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="feedback-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Отправить</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-parking" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Бронирование парко-места</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="parking-name">ФИО</label>
+	<input id="parking-name" class="input__input" type="text" placeholder="Ваше ФИО" required />
+</div>
+ 
+                <div class="input__inputbox">
+	<label class="input__label" for="parking-tel">Телефон</label>
+	<input id="parking-tel" class="input__input" type="tel" placeholder="Номер телефона" required />
+</div>
+
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="parking-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="parking-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Забронировать</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-helipad" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Бронирование слота вертолетной площадки</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="helipad-name">ФИО</label>
+	<input id="helipad-name" class="input__input" type="text" placeholder="Ваше ФИО" required />
+</div>
+ 
+                <div class="input__inputbox">
+	<label class="input__label" for="helipad-tel">Телефон</label>
+	<input id="helipad-tel" class="input__input" type="tel" placeholder="Номер телефона" required />
+</div>
+
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="helipad-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="helipad-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Забронировать</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-subscribe" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Подпишитесь на&nbsp;обновления</div>
+			<p class="modal-form__desc">Узнавайте первыми о новостях МКФ BURNY. Обещаем писать только по&nbsp;делу. Отписаться от рассылки можно в любое время.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="subscribe-mail">E-mail</label>
+	<input id="subscribe-mail" class="input__input" type="email" placeholder="Ваш E-mail" required />
+</div>
+ 
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="subscribe-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="subscribe-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Подписаться</span>
 					<div class="modal-form__form-button--icon-container">
 						<div class="modal-form__form-button--icon-wrapper">
 							<i class="modal-form__form-button--icon icon-arrow"></i>
@@ -735,7 +1010,7 @@
 										<h2 class="soon-list__slider-slide-title fullscreen-slider__slide-title" data-swiper-parallax="-300" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">ФИТНЕС<span class="text-anim">-ЦЕНТР</span></h2>
 										<p class="soon-list__slider-slide-desc fullscreen-slider__slide-desc" data-swiper-parallax="-400" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Фитнес-центр премиального уровня с акватермальной зоной. Забота о&nbsp;здоровье — это не просто выбор, это образ жизни</p>
 										<div class="soon-list__slider-slide-button-container fullscreen-slider__slide-button-container">
-											<div class="soon-list__slider-slide-button fullscreen-slider__slide-button" role="button" tabindex="0" data-subscribe-open><a class="button " href="" data-swiper-parallax-scale="0.5">
+											<div class="soon-list__slider-slide-button fullscreen-slider__slide-button" role="button" tabindex="0" data-modal="subscribe"><a class="button " href="" data-swiper-parallax-scale="0.5">
 	<span class="button-content">
 		<span class="button-title">УВЕДОМИТЬ</span>
 		<span class="button-text">ОБ ОТКРЫТИИ</span>
@@ -762,7 +1037,7 @@
 										</ul>
 										<h2 class="soon-list__slider-slide-title fullscreen-slider__slide-title" data-swiper-parallax="-300" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">КЛУБ здоровья и&nbsp;<span class="text-anim">долголетия</span></h2>
 										<p class="soon-list__slider-slide-desc fullscreen-slider__slide-desc" data-swiper-parallax="-400" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Идеально подходит для проведения культурных мероприятий и концертов, создавая атмосферу для&nbsp;отдыха и общения.</p>
-										<div class="soon-list__slider-slide-button-container fullscreen-slider__slide-button-container" role="button" tabindex="0" data-subscribe-open>
+										<div class="soon-list__slider-slide-button-container fullscreen-slider__slide-button-container" role="button" tabindex="0" data-modal="subscribe">
 											<div class="soon-list__slider-slide-button fullscreen-slider__slide-button"><a class="button " href="" data-swiper-parallax-scale="0.5">
 	<span class="button-content">
 		<span class="button-title">УВЕДОМИТЬ</span>
@@ -790,7 +1065,7 @@
 										</ul>
 										<h2 class="soon-list__slider-slide-title fullscreen-slider__slide-title" data-swiper-parallax="-300" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Торговая <span class="text-anim">галерея</span></h2>
 										<p class="soon-list__slider-slide-desc fullscreen-slider__slide-desc" data-swiper-parallax="-400" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Настоящее корейское барбекю с живым огнём, премиальным мясом и&nbsp;эксклюзивным винным пэрингом</p>
-										<div class="soon-list__slider-slide-button-container fullscreen-slider__slide-button-container" role="button" tabindex="0" data-subscribe-open>
+										<div class="soon-list__slider-slide-button-container fullscreen-slider__slide-button-container" role="button" tabindex="0" data-modal="subscribe">
 											<div class="soon-list__slider-slide-button fullscreen-slider__slide-button"><a class="button " href="" data-swiper-parallax-scale="0.5">
 	<span class="button-content">
 		<span class="button-title">УВЕДОМИТЬ</span>
@@ -874,7 +1149,7 @@
 				</a>
 			</div>
 			<ul class="footer__legal">
-				<li class="footer__legal-privacy" role="button" data-privacy-open>Правовая информация</li>
+				<li class="footer__legal-privacy" role="button" data-modal="privacy">Правовая информация</li>
 				<li class="footer__legal-info">2025 &copy; BURNY City. All rights reserved</li>
 			</ul>
 		</div>

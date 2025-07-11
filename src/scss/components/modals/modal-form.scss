@@ -59,13 +59,20 @@
 		}
 	}
 	&__form {
+			height: 100%;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		gap: rem(96);
 		&-data {
 			display: flex;
 			flex-direction: column;
 			gap: rem(32);
+			textarea {
+				resize: none;
+				width: 100%;
+				height: rem(160);
+			}
 		}
 		&-submit {
             display: flex;

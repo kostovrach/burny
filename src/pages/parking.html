@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru" class="hide-scrollbar">
-	@@include('../components/head.html', { "title": "Burny - Паркинг" })
+	@@include('../components/head.html', { "title": "BURNY - Паркинг" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Паркинг" })
 		<main id="start">
-			@@include('../components/service-hero.html', { 'image-path': 'assets/img/content/services/example5.jpg', 'tag': 'от 800 &#8381;/час', 'title': 'Парковка', 'desc': 'Для наших гостей доступны как открытые, так и закрытые зоны паркинга. Крытый переход, который соединяет парковку с основным многофункциональным комплексом.', 'button-text': 'Забронировать место', 'link-text': 'Правила пользования паркингом', 'href':
+			@@include('../components/service-hero.html', { 'image-path': 'assets/img/content/services/example5.jpg', 'tag': 'от 800 &#8381;/час', 'title': 'Парковка', 'desc': 'Для наших гостей доступны как открытые, так и закрытые зоны паркинга. Крытый переход, который соединяет парковку с основным многофункциональным комплексом.', 'button-text': 'Забронировать место', 'attr': 'data-modal="parking"', 'link-text': 'Правила пользования паркингом', 'href':
 			'#parking-rules' })
 			<section class="parking-advant">
 				<div class="parking-advant__container" data-parallax data-axis="x" data-start="600">
@@ -321,7 +321,7 @@
 								<li class="parking-frames__list-item--title">По любым вопросам или проблемам, пожалуйста, свяжитесь с нами по&nbsp;телефону <a class="parking-frames__list-item--title--link" href="tel:8 846 555-55-35">8&nbsp;846&nbsp;555-55-35</a></li>
 							</ul>
 						</div>
-						<button class="parking-frames__button">
+						<button class="parking-frames__button" data-modal="parking">
 							<span>Забронировать</span>
 							<div class="parking-frames__button--icon-container">
 								<div class="parking-frames__button--icon-wrapper">

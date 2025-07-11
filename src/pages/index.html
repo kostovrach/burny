@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="hide-scrollbar">
-	@@include('../components/head.html', { "title": "Burny" })
+	@@include('../components/head.html', { "title": "BURNY" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "О комплексе" })
 		<main id="start">
@@ -201,16 +201,6 @@
 										<h3 class="index-services__slide-title" data-swiper-parallax="-600" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Набережная</h3>
 										<p class="index-services__slide-desc" data-swiper-parallax="1000" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Расположена рядом с бизнес-центром, предлагает живописные виды на реку и уютные прогулочные зоны</p>
 										@@include('../components/button.html', { 'title': 'ОТКРЫТЬ', 'text': 'ГАЛЕРЕЮ', 'href': '#', 'attr': 'data-swiper-parallax-scale="0.5"' })
-									</div>
-								</div>
-								<div class="index-services__slide swiper-slide">
-									<picture class="index-services__slide-image-container">
-										<img class="index-services__slide-image" src="assets/img/content/services/example8.jpg" alt="#" />
-									</picture>
-									<div class="index-services__slide-container">
-										<h3 class="index-services__slide-title" data-swiper-parallax="-600" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">АМФитеатр</h3>
-										<p class="index-services__slide-desc" data-swiper-parallax="1000" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Идеально подходит для проведения культурных мероприятий и концертов, создавая атмосферу для&nbsp;отдыха и общения.</p>
-										@@include('../components/button.html', { 'title': 'АРЕНДОВАТЬ', 'text': 'АМфИТЕАТР', 'href': '#', 'attr': 'data-swiper-parallax-scale="0.5"' })
 									</div>
 								</div>
 								<div class="index-services__slide swiper-slide">
@@ -452,7 +442,7 @@
 								<li class="index-frames__list-item">комфортные зоны для отдыха и&nbsp;работы</li>
 							</ul>
 						</div>
-						<button class="index-frames__button">
+						<button class="index-frames__button" data-modal="feedback">
 							<span>Связаться с нами</span>
 							<div class="index-frames__button--icon-container">
 								<div class="index-frames__button--icon-wrapper">

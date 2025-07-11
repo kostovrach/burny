@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru" class="hide-scrollbar">
-	@@include('../components/head.html', { "title": "Burny - Вертолетная площадка" })
+	@@include('../components/head.html', { "title": "BURNY - Вертолетная площадка" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Вертолетная площадка" })
 		<main id="start">
 			@@include('../components/service-hero.html', { 'image-path': 'assets/img/content/services/example6.jpg', 'title': 'Вертолетная площадка', 'tag': 'от 9000 &#8381;/день', 'desc': 'На крыше комплекса расположена вертолетная площадка с удобной смотровой зоной, защитой от ветра и двумя вместительными лифтами, едущими прямо до холла и подземной парковки', 'button-text': 'Забронировать слот',
-			'link-text': 'Сайт оператора', 'href': '#' })
+			'attr': 'data-modal="helipad"', 'link-text': 'Сайт оператора', 'href': '#' })
 			<section class="helipad-advant">
 				<div class="helipad-advant__container" data-parallax data-axis="x" data-start="600">
 					<div class="helipad-advant__slider card-slider swiper">
@@ -161,7 +161,7 @@
 								<ul class="helipad-rules__item-wrapper">
 									<li class="helipad-rules__item-title">Правила выбора компании для&nbsp;проверок безопасности</li>
 									<li class="helipad-rules__item-desc">Мы предлагаем удобное бронирование мест на&nbsp;закрытой парковке, обеспечивая безопасность и&nbsp;комфорт для ваших автомобилей.</li>
-									<li class="helipad-rules__item-desc">Просто <span class="helipad-rules__item-desc--accent">выберите желаемую дату и время</span>, и мы гарантируем, что ваше место будет готово к вашему приезду.</li>
+									<li class="helipad-rules__item-desc">Просто <button class="helipad-rules__item-desc--accent" data-modal="helipad">выберите желаемую дату и время</button>, и мы гарантируем, что ваше место будет готово к вашему приезду.</li>
 								</ul>
 							</div>
 						</div>
@@ -182,7 +182,7 @@
 								<li class="helipad-frames__list-item--title">По любым вопросам или проблемам, пожалуйста, свяжитесь с оператором <a class="helipad-frames__list-item--title--link" href="www.helicopter.ru">www.helicopter.ru</a></li>
 							</ul>
 						</div>
-						<button class="helipad-frames__button">
+						<button class="helipad-frames__button" data-modal="helipad">
 							<span>Забронировать</span>
 							<div class="helipad-frames__button--icon-container">
 								<div class="helipad-frames__button--icon-wrapper">
