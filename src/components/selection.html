@@ -9,14 +9,15 @@
 				<div class="selection__filter-group">
 					<p class="selection__filter-label">Этаж</p>
 					<div class="selection__range-container">
+						<div class="selection__range-wrapper">
+							<div class="selection__range-track"></div>
+							<div class="selection__range-fill" data-range="floor"></div>
+							<input class="selection__range-input selection__range-input--min" type="range" data-range="floor" data-type="min" min="1" max="20" value="1" />
+							<input class="selection__range-input selection__range-input--max" type="range" data-range="floor" data-type="max" min="1" max="20" value="20" />
+						</div>
 						<div class="selection__range-values">
 							<div class="selection__range-values-item">от <span data-value="floor-min">1</span></div>
 							<div class="selection__range-values-item">до <span data-value="floor-max">20</span></div>
-						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="floor"></div>
-							<div class="selection__range-thumb" data-range="floor" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="floor" data-type="max"></div>
 						</div>
 					</div>
 				</div>
@@ -24,14 +25,15 @@
 				<div class="selection__filter-group">
 					<p class="selection__filter-label">Площадь офиса, м²</p>
 					<div class="selection__range-container">
+						<div class="selection__range-wrapper">
+							<div class="selection__range-track"></div>
+							<div class="selection__range-fill" data-range="area"></div>
+							<input class="selection__range-input selection__range-input--min" type="range" data-range="area" data-type="min" min="50" max="200" value="50" />
+							<input class="selection__range-input selection__range-input--max" type="range" data-range="area" data-type="max" min="50" max="200" value="200" />
+						</div>
 						<div class="selection__range-values">
 							<div class="selection__range-values-item">от <span data-value="area-min">50</span></div>
 							<div class="selection__range-values-item">до <span data-value="area-max">200</span></div>
-						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="area"></div>
-							<div class="selection__range-thumb" data-range="area" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="area" data-type="max"></div>
 						</div>
 					</div>
 				</div>
@@ -39,18 +41,19 @@
 				<div class="selection__filter-group">
 					<p class="selection__filter-label">Рабочих мест</p>
 					<div class="selection__range-container">
+						<div class="selection__range-wrapper">
+							<div class="selection__range-track"></div>
+							<div class="selection__range-fill" data-range="capacity"></div>
+							<input class="selection__range-input selection__range-input--min" type="range" data-range="capacity" data-type="min" min="2" max="50" value="2" />
+							<input class="selection__range-input selection__range-input--max" type="range" data-range="capacity" data-type="max" min="2" max="50" value="50" />
+						</div>
 						<div class="selection__range-values">
 							<div class="selection__range-values-item">от <span data-value="capacity-min">2</span></div>
 							<div class="selection__range-values-item">до <span data-value="capacity-max">50</span></div>
 						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="capacity"></div>
-							<div class="selection__range-thumb" data-range="capacity" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="capacity" data-type="max"></div>
-						</div>
 					</div>
 				</div>
-				
+
 				<button class="selection__reset-btn" type="button"><i class="selection__reset-btn--icon icon-refresh"></i></button>
 			</div>
 		</div>

@@ -244,9 +244,29 @@
 <div id="modal-office-select" class="modal-select">
 	<div class="modal-select__container">
 		<div class="modal-select__slider-container">
+			<div class="modal-select__toolbar">
+				<div class="modal-select__toolbar-buttonbox">
+					<button class="modal-select__toolbar-button modal-select__toolbar-button--close" data-modal-office-close>
+						<i class="modal-select__toolbar-button-icon modal-select__toolbar-button--close-icon icon-arrow"></i>
+						<span>Назад</span>
+					</button>
+					<a class="modal-select__toolbar-button modal-select__toolbar-button--link" href="office-selection.html">
+						<span>Списком</span>
+						<i class="modal-select__toolbar-button-icon modal-select__toolbar-button--link-icon icon-arrow"></i>
+					</a>
+				</div>
+				<div class="modal-select__toolbar-nav">
+					<div class="modal-select__toolbar-navbutton modal-select__toolbar-navbutton--prev swiper-button-prev"><i class="modal-select__toolbar-navbutton-icon icon-arrow"></i></div>
+					<ul class="modal-select__toolbar-current">
+						<li class="modal-select__toolbar-current-number">-</li>
+						<li class="modal-select__toolbar-current-desc">Этаж</li>
+					</ul>
+					<div class="modal-select__toolbar-navbutton modal-select__toolbar-navbutton--next swiper-button-next"><i class="modal-select__toolbar-navbutton-icon icon-arrow"></i></div>
+				</div>
+			</div>
 			<div class="modal-select__slider swiper">
 				<div class="modal-select__slider-wrapper swiper-wrapper">
-					<div class="modal-select__slide swiper-slide">
+					<div class="modal-select__slide swiper-slide" data-office-floor="9">
 						<div class="modal-select__plan">
 							<div class="modal-select__plan-container">
 								<div class="modal-select__plan-body">
@@ -254,39 +274,212 @@
 										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f7_9-p1.png" alt="Здание BURNY City" />
 									</picture>
 
-									<div id="modal-select-plan-hint-1" class="modal-select__plan-hint modal-select__plan-hint--in">
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--in">
 										<div class="modal-select__plan-hint-marker"></div>
 										<span>Залив</span>
 									</div>
-									<div id="modal-select-plan-hint-1" class="modal-select__plan-hint modal-select__plan-hint--out">
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--out">
 										<div class="modal-select__plan-hint-marker"></div>
 										<span>Город</span>
 									</div>
 
 									<div class="modal-select__plan-overlay">
-										<svg id="modal-select-office-floor-1-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
-											<path class="modal-select__plan-marker" data-floor="A" transform="translate(-70, -140)" data-floor-open d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
+										<svg id="modal-select-office-floor-9-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="99" transform="translate(-70, -140)" data-modal="office-21" d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
 
-											<path class="modal-select__plan-marker" data-floor="C" transform="translate(-130, -205)" data-floor-open d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
+											<path class="modal-select__plan-marker" data-floor="91" transform="translate(-130, -205)" data-modal="office-21" d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
 
-											<path class="modal-select__plan-marker" data-floor="F" transform="translate(-100, -165)" data-floor-open d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
+											<path class="modal-select__plan-marker" data-floor="93" transform="translate(-100, -165)" data-modal="office-21" d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
 										</svg>
-										<div id="modal-select-office-floor-1-tooltip" class="modal-select__plan-tooltip"></div>
+										<div id="modal-select-office-floor-9-tooltip" class="modal-select__plan-tooltip"></div>
 									</div>
 								</div>
 
-								<div id="modal-select-office-floor-1-info" class="modal-select__plan-info">
+								<div id="modal-select-office-floor-9-info" class="modal-select__plan-info">
 									<ul class="modal-select__plan-info-item">
-										<li class="modal-select__plan-info-item-label">Зона</li>
-										<li id="modal-select-office-floor-1-modal-select" class="modal-select__plan-info-item-number">—</li>
-									</ul>
-									<ul class="modal-selectplan-__info-item">
-										<li class="modal-select__plan-info-item-label">Парко-мест</li>
-										<li id="modal-select-office-floor-1-count" class="modal-select__plan-info-item-number">—</li>
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-9-floor" class="modal-select__plan-info-item-number">—</li>
 									</ul>
 									<ul class="modal-select__plan-info-item">
-										<li class="modal-select__plan-info-item-label">Суммарная площадь, м²</li>
-										<li id="modal-select-office-floor-1-area" class="modal-select__plan-info-item-number">—</li>
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-9-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(3, -85)" data-modal-select-open d="M448 443L448 443L455 441L472 440L629 428L719 421L726 419L817 390L824 389L844 388L977 378L990 378L1006 381L1006 415L991 412L977 413L844 417L824 420L817 421L713 452L629 459L471 469L455 471L448 474L448 443 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="modal-select__slide swiper-slide" data-office-floor="8">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f7_9-p1.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-8-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="72" transform="translate(-70, -140)" data-modal="office-21" d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="73" transform="translate(-130, -205)" data-modal="office-21" d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="74" transform="translate(-100, -165)" data-modal="office-21" d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-8-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-8-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-8-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-8-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(3, -65)" data-modal-select-open d="M448 443L448 443L455 441L472 440L629 428L719 421L726 419L817 390L824 389L844 388L977 378L990 378L1006 381L1006 415L991 412L977 413L844 417L824 420L817 421L713 452L629 459L471 469L455 471L448 474L448 443 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="modal-select__slide swiper-slide" data-office-floor="7">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f3-p1.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-7" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-7" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-7-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="64" transform="translate(10, -240)" data-modal="office-21" d="M 415 17 L 919 158 L 784 611 L 283 461 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="63" transform="translate(30, -240)" data-modal="office-21" d="M 1083 208 Q 1375 293 1320 771 L 952 660 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="67" transform="translate(30, -210)" data-modal="office-21" d="M 1320 931 Q 1375 1545 935 1388 L 577 1279 L 742 742 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-7-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-7-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-7-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-7-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(3, -25)" data-modal-select-open d="M448 443L448 443L455 441L472 440L629 428L719 421L726 419L817 390L824 389L844 388L977 378L990 378L1006 381L1006 415L991 412L977 413L844 417L824 420L817 421L713 452L629 459L471 469L455 471L448 474L448 443 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="modal-select__slide swiper-slide" data-office-floor="3">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f7_9-p1.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-3-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="21" transform="translate(-70, -140)" data-modal="office-21" d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="23" transform="translate(-130, -205)" data-modal="office-21" d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="22" transform="translate(-100, -165)" data-modal="office-21" d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-3-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-3-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-3-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-3-area" class="modal-select__plan-info-item-number">—</li>
 									</ul>
 								</div>
 							</div>
@@ -309,11 +502,211 @@
 							</div>
 						</div>
 					</div>
+					<div class="modal-select__slide swiper-slide" data-office-floor="2">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f2-p6.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-2" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-2" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-2-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="7" transform="translate(-140, -240)" data-modal="office-21" d="M 999 202 L 870 269 L 952 470 L 481 677 L 312 282 L 923 14 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="12" transform="translate(-140, -243)" data-modal="office-21" d="M 1296 1244 L 829 1450 L 669 1077 L 736 1046 L 723 1018 L 659 1046 L 487 679 L 954 476 L 1121 843 L 1024 886 L 1035 911 L 1128 871 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-2-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-2-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-2-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-2-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(-50, -170)" data-modal-select-open d="M499 675L499 675L722 670L818 673L852 670L858 669L878 668L1016 668L1028 668L1034 669L1034 710L878 710L858 710L852 710L818 710L727 712L499 715L499 675 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<dialog id="modal-office-21" class="modal-booking hide-scrollbar">
+    <button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-booking__container">
+		<div class="modal-booking__content">
+			<div class="modal-booking__title">Офис №21</div>
+			<div class="modal-booking__target">
+				<p class="modal-booking__target-title">Назначение:</p>
+				<ul class="modal-booking__target-list">
+					<li class="modal-booking__target-item">БАНКЕТ</li>
+					<li class="modal-booking__target-item">КОРПОРАТИВ</li>
+				</ul>
+			</div>
+			<p class="modal-booking__desc">Светлый и просторный зал располагается на 2-м этаже с&nbsp;окнами, выходящими на берег японского моря. Доступен многоуровневый паркинг на 304 машиноместа, соединенный с бизнес-центром и крытым панорамным переходом.</p>
+			<div class="modal-booking__params">
+				<ul class="modal-booking__params-item">
+					<li class="modal-booking__params-name">ЭТАЖ</li>
+					<li class="modal-booking__params-value">7</li>
+				</ul>
+				<ul class="modal-booking__params-item">
+					<li class="modal-booking__params-name">ПЛОЩАДЬ, М²</li>
+					<li class="modal-booking__params-value">343.8</li>
+				</ul>
+				<ul class="modal-booking__params-item">
+					<li class="modal-booking__params-name">ВЫСОТА ПОТОЛКА, М</li>
+					<li class="modal-booking__params-value">3.5</li>
+				</ul>
+				<ul class="modal-booking__params-item">
+					<li class="modal-booking__params-name">ПОМЕЩЕНИЙ</li>
+					<li class="modal-booking__params-value">4</li>
+				</ul>
+			</div>
+			<picture class="modal-booking__plan-container">
+				<img class="modal-booking__plan" src="./assets/img/service/floor-diagrams/b1-f2-p6.png" alt="Схема помещения" />
+			</picture>
+		</div>
+		<div class="modal-booking__info">
+			<div class="modal-booking__info-titlebox">
+				<div class="modal-booking__tag">ТАРИФ БАЗОВЫЙ</div>
+				<div class="modal-booking__price">от 9 990 ₽<span class="modal-booking__price-unit">/день</span></div>
+			</div>
+			<ul class="modal-booking__rate">
+				<li class="modal-booking__rate-item">
+					<span>Максимум 1 пользователь</span>
+					<a class="modal-booking__rate-item-icon" href="#">i</a>
+				</li>
+				<li class="modal-booking__rate-item">
+					<span>Поддержка 1 сайта</span>
+					<a class="modal-booking__rate-item-icon" href="#">i</a>
+				</li>
+				<li class="modal-booking__rate-item">
+					<span>Надежная защита</span>
+					<a class="modal-booking__rate-item-icon" href="#">i</a>
+				</li>
+				<li class="modal-booking__rate-item">
+					<span>50 CMS-элементов на сайте</span>
+					<a class="modal-booking__rate-item-icon" href="#">i</a>
+				</li>
+			</ul>
+			<button class="modal-booking__button" data-modal="room-booking">
+				<span>Забронировать</span>
+				<div class="modal-booking__button--icon-container">
+					<div class="modal-booking__button--icon-wrapper">
+						<i class="modal-booking__button--icon icon-arrow"></i>
+					</div>
+				</div>
+			</button>
+		</div>
+	</div>
+</dialog>
+
+<dialog id="modal-room-booking" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Заявка на аренду площади</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="room-booking-name">ФИО</label>
+	<input id="room-booking-name" class="input__input" type="text" placeholder="Ваше ФИО" required />
+</div>
+ <div class="input__inputbox">
+	<label class="input__label" for="room-booking-tel">Телефон</label>
+	<input id="room-booking-tel" class="input__input" type="tel" placeholder="Номер телефона" required />
+</div>
+
+				<div class="modal-form__form-select select" tabindex="0" role="combobox">
+					<input id="room-booking-select" class="modal-form__form-select-input select__input" type="text" placeholder="Выберите помещение" tabindex="-1" readonly required />
+					<i class="modal-form__form-select-icon select__icon icon-check-mark"></i>
+					<ul class="modal-form__form-select-dropdown select__dropdown hide-scrollbar" role="listbox">
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №21, 1283.83м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №64, 46.83м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №96, 15.3м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №78, 920.83м</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="room-booking-agreement" />
+					</div>
+					<label class="modal-form__form-agreement-label" for="room-booking-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Отправить заявку</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
 
  <div class="sider">
 	<div class="sider__label-container">
@@ -559,14 +952,15 @@
 				<div class="selection__filter-group">
 					<p class="selection__filter-label">Этаж</p>
 					<div class="selection__range-container">
+						<div class="selection__range-wrapper">
+							<div class="selection__range-track"></div>
+							<div class="selection__range-fill" data-range="floor"></div>
+							<input class="selection__range-input selection__range-input--min" type="range" data-range="floor" data-type="min" min="1" max="20" value="1" />
+							<input class="selection__range-input selection__range-input--max" type="range" data-range="floor" data-type="max" min="1" max="20" value="20" />
+						</div>
 						<div class="selection__range-values">
 							<div class="selection__range-values-item">от <span data-value="floor-min">1</span></div>
 							<div class="selection__range-values-item">до <span data-value="floor-max">20</span></div>
-						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="floor"></div>
-							<div class="selection__range-thumb" data-range="floor" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="floor" data-type="max"></div>
 						</div>
 					</div>
 				</div>
@@ -574,14 +968,15 @@
 				<div class="selection__filter-group">
 					<p class="selection__filter-label">Площадь офиса, м²</p>
 					<div class="selection__range-container">
+						<div class="selection__range-wrapper">
+							<div class="selection__range-track"></div>
+							<div class="selection__range-fill" data-range="area"></div>
+							<input class="selection__range-input selection__range-input--min" type="range" data-range="area" data-type="min" min="50" max="200" value="50" />
+							<input class="selection__range-input selection__range-input--max" type="range" data-range="area" data-type="max" min="50" max="200" value="200" />
+						</div>
 						<div class="selection__range-values">
 							<div class="selection__range-values-item">от <span data-value="area-min">50</span></div>
 							<div class="selection__range-values-item">до <span data-value="area-max">200</span></div>
-						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="area"></div>
-							<div class="selection__range-thumb" data-range="area" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="area" data-type="max"></div>
 						</div>
 					</div>
 				</div>
@@ -589,18 +984,19 @@
 				<div class="selection__filter-group">
 					<p class="selection__filter-label">Рабочих мест</p>
 					<div class="selection__range-container">
+						<div class="selection__range-wrapper">
+							<div class="selection__range-track"></div>
+							<div class="selection__range-fill" data-range="capacity"></div>
+							<input class="selection__range-input selection__range-input--min" type="range" data-range="capacity" data-type="min" min="2" max="50" value="2" />
+							<input class="selection__range-input selection__range-input--max" type="range" data-range="capacity" data-type="max" min="2" max="50" value="50" />
+						</div>
 						<div class="selection__range-values">
 							<div class="selection__range-values-item">от <span data-value="capacity-min">2</span></div>
 							<div class="selection__range-values-item">до <span data-value="capacity-max">50</span></div>
 						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="capacity"></div>
-							<div class="selection__range-thumb" data-range="capacity" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="capacity" data-type="max"></div>
-						</div>
 					</div>
 				</div>
-				
+
 				<button class="selection__reset-btn" type="button"><i class="selection__reset-btn--icon icon-refresh"></i></button>
 			</div>
 		</div>
@@ -649,15 +1045,15 @@
 
 							<div class="building-plan__overlay">
 								<svg id="building-plan-offices-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
-									<path class="building-plan__marker" data-floor="2" transform="translate(-50, -60)" data-floor-open d="M439 675L439 675L782 670L878 673L912 670L918 669L938 668L1076 668L1088 668L1094 669L1094 710L938 710L918 710L912 710L878 710L787 712L439 715L439 675 z"></path>
+									<path class="building-plan__marker" data-floor="2" data-office-floor="2" transform="translate(-50, -60)" d="M439 675L439 675L782 670L878 673L912 670L918 669L938 668L1076 668L1088 668L1094 669L1094 710L938 710L918 710L912 710L878 710L787 712L439 715L439 675 z"></path>
 
-									<path class="building-plan__marker" data-floor="3" transform="translate(-50, -60)" data-floor-open d="M470 650L470 650L491 648L507 647L724 643L826 641L912 629L918 627L937 626L1076 625L1088 625L1094 626L1094 669L1088 668L1076 668L938 668L918 669L912 670L878 673L789 670L439 675L439 664L470 661L470 650 z"></path>
+									<path class="building-plan__marker" data-floor="3" data-office-floor="3" transform="translate(-50, -60)" d="M470 650L470 650L491 648L507 647L724 643L826 641L912 629L918 627L937 626L1076 625L1088 625L1094 626L1094 669L1088 668L1076 668L938 668L918 669L912 670L878 673L789 670L439 675L439 664L470 661L470 650 z"></path>
 
-									<path class="building-plan__marker" data-floor="7" transform="translate(3, 45)" data-floor-open d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
+									<path class="building-plan__marker" data-floor="7" data-office-floor="7" transform="translate(3, 45)" d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
 
-									<path class="building-plan__marker" data-floor="8" transform="translate(3, 15)" data-floor-open d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
+									<path class="building-plan__marker" data-floor="8" data-office-floor="8" transform="translate(3, 15)" d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
 
-									<path class="building-plan__marker" data-floor="9" transform="translate(3, -15)" data-floor-open d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
+									<path class="building-plan__marker" data-floor="9" data-office-floor="9" transform="translate(3, -15)" d="M418 443L418 443L425 441L442 440L659 428L749 421L756 419L847 390L854 389L874 388L1007 378L1020 378L1036 381L1036 415L1021 412L1007 413L874 417L854 420L847 421L743 452L659 459L441 469L425 471L418 474L418 443 z"></path>
 								</svg>
 								<div id="building-plan-offices-tooltip" class="building-plan__tooltip"></div>
 							</div>

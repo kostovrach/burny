@@ -12,7 +12,7 @@
 	}
 
 	function handleScrollReturn() {
-		document.body.classList.remove("lock");
+		document.body.classList.remove("menu-lock");
 		document.body.style.removeProperty("top");
 		document.body.style.removeProperty("position");
 		window.scrollTo(0, scrollPosition);
@@ -41,7 +41,7 @@
 		scrollPosition = window.pageYOffset;
 		document.body.style.position = "fixed";
 		document.body.style.top = `-${scrollPosition}px`;
-		document.body.classList.add("lock");
+		document.body.classList.add("menu-lock");
 
 		if (mainLenis) {
 			mainLenis.stop();

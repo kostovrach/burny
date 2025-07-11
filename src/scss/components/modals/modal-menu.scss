@@ -10,6 +10,7 @@
 	background-color: $main-color;
 	overflow: hidden;
 	translate: 100% 0;
+	pointer-events: none;
 	transition: translate $duration ease;
 	&::before {
 		content: "";
@@ -25,6 +26,7 @@
 	}
 	&.open {
 		translate: 0 0;
+		pointer-events: auto;
 	}
 	&__sider {
 		position: absolute;
@@ -39,7 +41,7 @@
 			text-transform: uppercase;
 			writing-mode: sideways-lr;
 			text-orientation: mixed;
-			font-size: rem(32);
+			font-size: lineScale(32,24,480,1440);
 			font-weight: $fw-bold;
 			text-wrap: nowrap;
 		}

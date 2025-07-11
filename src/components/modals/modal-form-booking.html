@@ -1,0 +1,44 @@
+<dialog id="modal-room-booking" class="modal-form hide-scrollbar">
+	@@include('../close-button.html', { 'attr': 'data-modal-close' })
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Заявка на аренду площади</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				@@include('../form-input.html', { 'inputId': 'room-booking-name', 'label': 'ФИО', 'type': 'text', 'placeholder': 'Ваше ФИО', 'required': 'true' }) @@include('../form-input.html', { 'inputId': 'room-booking-tel', 'label': 'Телефон', 'type': 'tel', 'placeholder': 'Номер телефона', 'required': 'true' })
+				<div class="modal-form__form-select select" tabindex="0" role="combobox">
+					<input id="room-booking-select" class="modal-form__form-select-input select__input" type="text" placeholder="Выберите помещение" tabindex="-1" readonly required />
+					<i class="modal-form__form-select-icon select__icon icon-check-mark"></i>
+					<ul class="modal-form__form-select-dropdown select__dropdown hide-scrollbar" role="listbox">
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №21, 1283.83м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №64, 46.83м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №96, 15.3м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №78, 920.83м</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="room-booking-agreement" />
+					</div>
+					<label class="modal-form__form-agreement-label" for="room-booking-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Отправить заявку</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>

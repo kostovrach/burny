@@ -60,7 +60,7 @@ const paths = {
       '!src/pages/**/*.html',
       'src/css/style.min.css',
       'src/js/main.min.js',
-      'src/js/**/*.json'
+      'src/data/**/*.json'
     ],
     assets: [
       'src/assets/**/*', 
