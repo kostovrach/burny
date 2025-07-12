@@ -9,8 +9,11 @@
 			"title title title"
 			"media media media"
 			"button subtitle subtitle";
-		gap: rem(32) rem(0);
+		gap: rem(32) 0;
 		@include content-width();
+		@media (max-width: 768px){
+			gap: 0;
+		}
 	}
 	&__title,
 	&__subtitle {
@@ -30,6 +33,7 @@
 	}
 	&__media-container {
 		grid-area: media;
+		cursor: pointer;
 		width: 100%;
 		height: rem(220);
 		overflow: hidden;

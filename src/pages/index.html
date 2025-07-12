@@ -28,11 +28,6 @@
 									<img class="index-hero__background-image" src="assets/img/backgrounds/index-hero-slider/bg3.jpg" alt="#" />
 								</picture>
 							</div>
-							<div class="index-hero__background-slide swiper-slide">
-								<picture class="index-hero__background-image-container">
-									<img class="index-hero__background-image" src="assets/img/backgrounds/index-hero-slider/bg.jpg" alt="#" />
-								</picture>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -58,11 +53,6 @@
 								<img class="index-hero__background-thumbs-image" src="assets/img/backgrounds/index-hero-slider/bg3.jpg" alt="#" />
 							</picture>
 						</div>
-						<div class="index-hero__background-thumbs-item swiper-slide">
-							<picture class="index-hero__background-thumbs-image-container">
-								<img class="index-hero__background-thumbs-image" src="assets/img/backgrounds/index-hero-slider/bg.jpg" alt="#" />
-							</picture>
-						</div>
 					</div>
 				</div>
 				<div class="index-hero__container">
@@ -70,7 +60,17 @@
 						<h1 class="index-hero__title" data-parallax>Океан рядом, Город вокруг — BURNY</h1>
 						<p class="index-hero__subtitle" data-parallax>это первый дальневосточный проект, построенный по&nbsp;концепции <span class="index-hero__subtitle--accent">город в&nbsp;городе</span>, собравший под одной крышей все, что нужно современному деловому&nbsp;человеку.</p>
 						<div class="index-hero__button-container" data-parallax>
-							<div class="index-hero__button">@@include('../components/button.html', { "title": "Смотреть", "text": "Фильм о нас", "href": "#" })</div>
+							<div class="index-hero__button">
+								<button class="button" data-modal="film">
+									<span class="button-content">
+										<span class="button-title">Смотреть</span>
+										<span class="button-text">Фильм о нас</span>
+									</span>
+									<span class="button-icon">
+										<span></span>
+									</span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -108,10 +108,10 @@
 							<picture id="index-buildingModelImage" class="index-demo__building-image-container">
 								<img id="buildingImage" class="index-demo__building-image" src="assets/img/service/building-demo.png" alt="Модель здания" />
 							</picture>
-							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--back" data-parallax data-start="-600">
+							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--back" data-parallax data-axis="x" data-start="-150">
 								<img class="index-demo__building-cloud" src="assets/img/service/cloud.svg" alt="" />
 							</picture>
-							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--front" data-parallax data-start="-600">
+							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--front" data-parallax data-axis="x" data-start="150">
 								<img class="index-demo__building-cloud" src="assets/img/service/cloud.svg" alt="" />
 							</picture>
 						</div>
@@ -200,7 +200,7 @@
 									<div class="index-services__slide-container">
 										<h3 class="index-services__slide-title" data-swiper-parallax="-600" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Набережная</h3>
 										<p class="index-services__slide-desc" data-swiper-parallax="1000" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Расположена рядом с бизнес-центром, предлагает живописные виды на реку и уютные прогулочные зоны</p>
-										@@include('../components/button.html', { 'title': 'ОТКРЫТЬ', 'text': 'ГАЛЕРЕЮ', 'href': '#', 'attr': 'data-swiper-parallax-scale="0.5"' })
+										@@include('../components/button.html', { 'title': 'ОТКРЫТЬ', 'text': 'ГАЛЕРЕЮ', 'href': 'gallery.html', 'attr': 'data-swiper-parallax-scale="0.5"' })
 									</div>
 								</div>
 								<div class="index-services__slide swiper-slide">

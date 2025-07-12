@@ -4,7 +4,7 @@
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Конференц-залы" })
 		<main id="start">
-			@@include('../components/booking-hero-static.html', { 'title': 'Конференц-залы', 'subtitle': 'и переговорные', 'imagepath': 'assets/img/content/services/example3.jpg', 'liteboxId': 'booking-hero-video', 'button-title': 'Выбрать', 'button-text': 'Офис', 'scroll-into': '#conference-select' })
+			@@include('../components/booking-hero-static.html', { 'title': 'Конференц-залы', 'subtitle': 'и переговорные', 'imagepath': 'assets/img/content/services/example3.jpg', 'liteboxId': 'booking-hero-video', 'button-title': 'Выбрать', 'button-text': 'Зал', 'scroll-into': 'conference-selection.html' })
 			<section class="conference-about">
 				<div class="conference-about__container">
 					<div class="conference-about__content">
@@ -139,6 +139,11 @@
 					</div>
 				</div>
 			</section>
+			<section class="conference-panorama">
+				<div class="conference-panorama__container">
+					<div id="panorama" class="conference-panorama__panorama"></div>
+				</div>
+			</section>
 			<section class="conference-news">
 				<div class="conference-news__container">
 					<div class="conference-news__titlebox">
@@ -201,7 +206,7 @@
 				<picture class="conference-veiw__image-container">
 				<div class="conference-veiw__container">
 					<div class="conference-veiw__anim">@@include('../components/building-static.html')</div>
-					<div class="conference-veiw__button">@@include('../components/button.html', { "title": "Выбрать", "text": "Конференц-зал", "href": "#" })</div>
+					<div class="conference-veiw__button">@@include('../components/button.html', { "title": "Выбрать", "text": "Конференц-зал", "href": "conference-selection.html" })</div>
 				</div>
 			</section>
 		</main>

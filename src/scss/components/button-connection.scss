@@ -1,0 +1,28 @@
+@use "../utils/abstracts" as *;
+
+.button-connection {
+	cursor: pointer;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 0;
+    translate: 0 -50%;
+    border: rem(1) solid $c-C6A47D;
+    border-right: none;
+    padding: rem(16) rem(4);
+    transition: all $duration;
+    @media (pointer: fine){
+        &:hover{
+            color: $c-FFFFFF;
+            background-color: $c-C6A47D;
+        }
+    }
+	&__text {
+		writing-mode: sideways-lr;
+		text-orientation: mixed;
+		text-wrap: nowrap;
+        font-size: lineScale(16,14,480,1440);
+        line-height: 1;
+        font-weight: $fw-bold;
+	}
+}

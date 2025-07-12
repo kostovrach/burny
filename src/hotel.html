@@ -108,6 +108,9 @@
 	</ul>
 </div>
 
+<button id="button-connection" class="button-connection">
+    <span class="button-connection__text">Напишите нам</span>
+</button>
 <div id="menu" class="menu" role="dialog" aria-hidden="true">
 	<div class="menu__sider">
 		<div class="menu__sider-label">Выбор раздела</div>
@@ -119,7 +122,7 @@
 		<ul class="menu__body" role="navigation">
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="gallery.html">
 					<div class="menu__item-title">BURNY</div>
 					<ul class="menu__item-tagsbox">
 						<li class="menu__item-tag">Галерея</li>
@@ -983,6 +986,64 @@
 	</div>
 </dialog>
 
+<dialog id="modal-film" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/film.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
+
+<dialog id="modal-media-office" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/office.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
+<dialog id="modal-media-hotel" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/apart.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
  <div class="sider">
 	<div class="sider__label-container">
 		<span class="sider__label sider__label--stroke">Апарт-отель</span>
@@ -996,12 +1057,12 @@
 		<main id="start">
 			<section class="booking-hero">
 	<div class="booking-hero__container">
-		<h1 class="booking-hero__title" data-parallax>АПАРТ-ОТЕЛЬ ★★★★★</h1>
-		<a class="booking-hero__media-container" href="assets/video/apart.mp4" data-fancybox="booking-hero-video">
+		<h1 class="booking-hero__title" data-parallax data-start="0">АПАРТ-ОТЕЛЬ ★★★★★</h1>
+		<div class="booking-hero__media-container" data-modal="media-hotel">
 			<video class="booking-hero__video" muted autoplay playsinline loop>
 				<source src="assets/video/apart.mp4" type="video/mp4" />
 			</video>
-		</a>
+		</div>
 		<div class="booking-hero__button"><a class="button " href="#hotel-select" @@attr>
 	<span class="button-content">
 		<span class="button-title">Выбрать</span>
@@ -1012,7 +1073,7 @@
 	</span>
 </a>
 </div>
-		<h2 class="booking-hero__subtitle" data-parallax data-start="100">на&nbsp;берегу амурского залива</h2>
+		<h2 class="booking-hero__subtitle">на&nbsp;берегу амурского залива</h2>
 	</div>
 </section>
 
@@ -1246,7 +1307,7 @@
 			<div class="footer__list footer__list--map" role="list">
 				<p class="footer__list-item--title">Карта сайта</p>
 				<a class="footer__list-item" href="index.html" role="listitem" data-hover-anim><span>О комплексе</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Галерея</span></a>
+				<a class="footer__list-item" href="gallery.html" role="listitem" data-hover-anim><span>Галерея</span></a>
 				<a class="footer__list-item" href="blog.html" role="listitem" data-hover-anim><span>Пресс-центр</span></a>
 				<a class="footer__list-item" href="contacts.html" role="listitem" data-hover-anim><span>Контакты</span></a>
 			</div>

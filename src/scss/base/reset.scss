@@ -50,6 +50,7 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+		pointer-events: none;
 	}
 	main {
 		transition: 0.8s;

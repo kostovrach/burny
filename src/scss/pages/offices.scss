@@ -54,6 +54,16 @@
 		margin-top: rem(128);
 	}
 }
+.offices-panorama {
+	@include block-padding();
+	&__container {
+		@include content-width();
+	}
+	&__panorama {
+		width: 100%;
+		height: rem(660);
+	}
+}
 .offices-gallery {
 	position: relative;
 	overflow-x: clip;

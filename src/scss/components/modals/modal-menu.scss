@@ -144,6 +144,7 @@
 				font-size: lineScale(16, 14, 480, 1440);
 				font-weight: $fw-bold;
 				pointer-events: none;
+				transition: all 0.05s;
 			}
 			.menu__item {
 				cursor: none;

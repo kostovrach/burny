@@ -108,6 +108,9 @@
 	</ul>
 </div>
 
+<button id="button-connection" class="button-connection">
+    <span class="button-connection__text">Напишите нам</span>
+</button>
 <div id="menu" class="menu" role="dialog" aria-hidden="true">
 	<div class="menu__sider">
 		<div class="menu__sider-label">Выбор раздела</div>
@@ -119,7 +122,7 @@
 		<ul class="menu__body" role="navigation">
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="gallery.html">
 					<div class="menu__item-title">BURNY</div>
 					<ul class="menu__item-tagsbox">
 						<li class="menu__item-tag">Галерея</li>
@@ -983,6 +986,64 @@
 	</div>
 </dialog>
 
+<dialog id="modal-film" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/film.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
+
+<dialog id="modal-media-office" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/office.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
+<dialog id="modal-media-hotel" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/apart.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
  <div class="sider">
 	<div class="sider__label-container">
 		<span class="sider__label sider__label--stroke">О комплексе</span>
@@ -1018,11 +1079,6 @@
 									<img class="index-hero__background-image" src="assets/img/backgrounds/index-hero-slider/bg3.jpg" alt="#" />
 								</picture>
 							</div>
-							<div class="index-hero__background-slide swiper-slide">
-								<picture class="index-hero__background-image-container">
-									<img class="index-hero__background-image" src="assets/img/backgrounds/index-hero-slider/bg.jpg" alt="#" />
-								</picture>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -1048,11 +1104,6 @@
 								<img class="index-hero__background-thumbs-image" src="assets/img/backgrounds/index-hero-slider/bg3.jpg" alt="#" />
 							</picture>
 						</div>
-						<div class="index-hero__background-thumbs-item swiper-slide">
-							<picture class="index-hero__background-thumbs-image-container">
-								<img class="index-hero__background-thumbs-image" src="assets/img/backgrounds/index-hero-slider/bg.jpg" alt="#" />
-							</picture>
-						</div>
 					</div>
 				</div>
 				<div class="index-hero__container">
@@ -1060,16 +1111,17 @@
 						<h1 class="index-hero__title" data-parallax>Океан рядом, Город вокруг — BURNY</h1>
 						<p class="index-hero__subtitle" data-parallax>это первый дальневосточный проект, построенный по&nbsp;концепции <span class="index-hero__subtitle--accent">город в&nbsp;городе</span>, собравший под одной крышей все, что нужно современному деловому&nbsp;человеку.</p>
 						<div class="index-hero__button-container" data-parallax>
-							<div class="index-hero__button"><a class="button " href="#" @@attr>
-	<span class="button-content">
-		<span class="button-title">Смотреть</span>
-		<span class="button-text">Фильм о нас</span>
-	</span>
-	<span class="button-icon">
-		<span></span>
-	</span>
-</a>
-</div>
+							<div class="index-hero__button">
+								<button class="button" data-modal="film">
+									<span class="button-content">
+										<span class="button-title">Смотреть</span>
+										<span class="button-text">Фильм о нас</span>
+									</span>
+									<span class="button-icon">
+										<span></span>
+									</span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1107,10 +1159,10 @@
 							<picture id="index-buildingModelImage" class="index-demo__building-image-container">
 								<img id="buildingImage" class="index-demo__building-image" src="assets/img/service/building-demo.png" alt="Модель здания" />
 							</picture>
-							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--back" data-parallax data-start="-600">
+							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--back" data-parallax data-axis="x" data-start="-150">
 								<img class="index-demo__building-cloud" src="assets/img/service/cloud.svg" alt="" />
 							</picture>
-							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--front" data-parallax data-start="-600">
+							<picture class="index-demo__building-cloud-container index-demo__building-cloud-container--front" data-parallax data-axis="x" data-start="150">
 								<img class="index-demo__building-cloud" src="assets/img/service/cloud.svg" alt="" />
 							</picture>
 						</div>
@@ -1263,7 +1315,7 @@
 									<div class="index-services__slide-container">
 										<h3 class="index-services__slide-title" data-swiper-parallax="-600" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Набережная</h3>
 										<p class="index-services__slide-desc" data-swiper-parallax="1000" data-swiper-parallax-duration="1600" data-swiper-parallax-opacity="0">Расположена рядом с бизнес-центром, предлагает живописные виды на реку и уютные прогулочные зоны</p>
-										<a class="button " href="#" data-swiper-parallax-scale="0.5">
+										<a class="button " href="gallery.html" data-swiper-parallax-scale="0.5">
 	<span class="button-content">
 		<span class="button-title">ОТКРЫТЬ</span>
 		<span class="button-text">ГАЛЕРЕЮ</span>
@@ -1687,7 +1739,7 @@
 			<div class="footer__list footer__list--map" role="list">
 				<p class="footer__list-item--title">Карта сайта</p>
 				<a class="footer__list-item" href="index.html" role="listitem" data-hover-anim><span>О комплексе</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Галерея</span></a>
+				<a class="footer__list-item" href="gallery.html" role="listitem" data-hover-anim><span>Галерея</span></a>
 				<a class="footer__list-item" href="blog.html" role="listitem" data-hover-anim><span>Пресс-центр</span></a>
 				<a class="footer__list-item" href="contacts.html" role="listitem" data-hover-anim><span>Контакты</span></a>
 			</div>

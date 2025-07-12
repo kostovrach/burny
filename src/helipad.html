@@ -108,6 +108,9 @@
 	</ul>
 </div>
 
+<button id="button-connection" class="button-connection">
+    <span class="button-connection__text">Напишите нам</span>
+</button>
 <div id="menu" class="menu" role="dialog" aria-hidden="true">
 	<div class="menu__sider">
 		<div class="menu__sider-label">Выбор раздела</div>
@@ -119,7 +122,7 @@
 		<ul class="menu__body" role="navigation">
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="gallery.html">
 					<div class="menu__item-title">BURNY</div>
 					<ul class="menu__item-tagsbox">
 						<li class="menu__item-tag">Галерея</li>
@@ -983,6 +986,64 @@
 	</div>
 </dialog>
 
+<dialog id="modal-film" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/film.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
+
+<dialog id="modal-media-office" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/office.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
+<dialog id="modal-media-hotel" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/apart.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
  <div class="sider">
 	<div class="sider__label-container">
 		<span class="sider__label sider__label--stroke">Вертолетная площадка</span>
@@ -1146,7 +1207,7 @@
 			</section>
 			<section class="helipad-rules js-progress-section">
 				<div class="helipad-rules__container">
-					<div class="helipad-rules__titlebox">
+					<div class="helipad-rules__titlebox" data-parallax data-start="-200">
 						<h2 class="helipad-rules__title">Условия использования</h2>
 						<a class="helipad-rules__button" href="#"><span>Договор оферты</span></a>
 					</div>
@@ -1156,26 +1217,26 @@
 								<div class="helipad-rules__progressbar-inner js-progressbar-inner"></div>
 							</div>
 							<div class="helipad-rules__item">
-								<ul class="helipad-rules__item-wrapper">
+								<ul class="helipad-rules__item-wrapper" data-parallax data-axis="x" data-start="200">
 									<li class="helipad-rules__item-title">Услуги по реагированию на&nbsp;аварийные ситуации</li>
 									<li class="helipad-rules__item-desc">При въезде на парковку соблюдайте скорость не&nbsp;более 10 км/ч. Убедитесь, что у вас есть разрешение на проезд и следуйте указателям.</li>
 									<li class="helipad-rules__item-desc">Не оставляйте автомобили без присмотра и всегда закрывайте окна.</li>
 								</ul>
 							</div>
 							<div class="helipad-rules__item">
-								<ul class="helipad-rules__item-wrapper">
+								<ul class="helipad-rules__item-wrapper" data-parallax data-axis="x" data-start="200">
 									<li class="helipad-rules__item-title">Обучение и аттестация по&nbsp;безопасной работе</li>
 									<li class="helipad-rules__item-desc">Регистрация осуществляется на стойке администратора при въезде. Оплата производится на&nbsp;выходе, обязательно сохраняйте чек.</li>
 								</ul>
 							</div>
 							<div class="helipad-rules__item">
-								<ul class="helipad-rules__item-wrapper">
+								<ul class="helipad-rules__item-wrapper" data-parallax data-axis="x" data-start="200">
 									<li class="helipad-rules__item-title">Обеспечение безопасности на&nbsp;вертолетной площадке</li>
 									<li class="helipad-rules__item-desc">При движении по парковке соблюдайте скорость не&nbsp;более 10 км/ч. Убедитесь, что у вас есть разрешение на проезд и следуйте указателям. Не оставляйте автомобили без присмотра и всегда закрывайте окна.</li>
 								</ul>
 							</div>
 							<div class="helipad-rules__item">
-								<ul class="helipad-rules__item-wrapper">
+								<ul class="helipad-rules__item-wrapper" data-parallax data-axis="x" data-start="200">
 									<li class="helipad-rules__item-title">Правила выбора компании для&nbsp;проверок безопасности</li>
 									<li class="helipad-rules__item-desc">Мы предлагаем удобное бронирование мест на&nbsp;закрытой парковке, обеспечивая безопасность и&nbsp;комфорт для ваших автомобилей.</li>
 									<li class="helipad-rules__item-desc">Просто <button class="helipad-rules__item-desc--accent" data-modal="helipad">выберите желаемую дату и время</button>, и мы гарантируем, что ваше место будет готово к вашему приезду.</li>
@@ -1232,7 +1293,7 @@
 			<div class="footer__list footer__list--map" role="list">
 				<p class="footer__list-item--title">Карта сайта</p>
 				<a class="footer__list-item" href="index.html" role="listitem" data-hover-anim><span>О комплексе</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Галерея</span></a>
+				<a class="footer__list-item" href="gallery.html" role="listitem" data-hover-anim><span>Галерея</span></a>
 				<a class="footer__list-item" href="blog.html" role="listitem" data-hover-anim><span>Пресс-центр</span></a>
 				<a class="footer__list-item" href="contacts.html" role="listitem" data-hover-anim><span>Контакты</span></a>
 			</div>

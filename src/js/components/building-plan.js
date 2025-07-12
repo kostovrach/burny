@@ -57,9 +57,7 @@
 					throw new Error(`HTTP error! status: ${response.status}`);
 				}
 				this.floorData = await response.json();
-				console.log(`Floor data loaded successfully for ${this.config.baseId}`);
 			} catch (error) {
-				console.warn(`Failed to load floor data from ${this.config.jsonPath}. Using fallback data.`, error);
 				this.floorData = InteractiveBuilding.fallbackData;
 			}
 		}

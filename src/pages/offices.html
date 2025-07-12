@@ -4,7 +4,7 @@
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Аренда офисов" })
 		<main id="start">
-			@@include('../components/booking-hero.html', { 'title': 'Бизнес-центр класса «А»', 'subtitle': 'деловой центр ВО&nbsp;владивостоке', 'videopath': 'assets/video/office.mp4', 'liteboxId': 'booking-hero-video', 'button-title': 'Выбрать', 'button-text': 'Офис', 'scroll-into': '#offices-select' })
+			@@include('../components/booking-hero.html', { 'title': 'Бизнес-центр класса «А»', 'subtitle': 'деловой центр ВО&nbsp;владивостоке', 'videopath': 'assets/video/office.mp4', 'liteboxId': 'media-office', 'button-title': 'Выбрать', 'button-text': 'Офис', 'scroll-into': '#offices-select' })
 			<section class="offices-about">
 				<div class="offices-about__container">
 					<div class="offices-about__content">
@@ -137,6 +137,11 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section class="offices-panorama">
+				<div class="offices-panorama__container">
+					<div id="panorama" class="offices-panorama__panorama"></div>
 				</div>
 			</section>
 			<section class="offices-gallery">

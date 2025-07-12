@@ -1,6 +1,18 @@
 (function () {
 	class OfficeSelector {
-		constructor() {
+		constructor(config) {
+			// Валидация обязательных параметров
+			if (!config || !config.containerId || !config.dataUrl || !config.cardTemplate) return;
+
+			this.containerId = config.containerId;
+			this.dataUrl = config.dataUrl;
+			this.cardTemplate = config.cardTemplate;
+			this.modalTarget = config.modalTarget || "room-booking";
+			this.fancyboxGroup = config.fancyboxGroup || `offices-plan-${this.containerId}`;
+
+			this.container = document.getElementById(this.containerId);
+			if (!this.container) return;
+
 			this.offices = [];
 			this.filteredOffices = [];
 			this.currentSort = "default";
@@ -25,17 +37,19 @@
 		}
 
 		getElement(selector) {
-			if (!this.domCache[selector]) {
-				this.domCache[selector] = document.querySelector(selector);
+			const key = `${this.containerId}-${selector}`;
+			if (!this.domCache[key]) {
+				this.domCache[key] = this.container.querySelector(selector);
 			}
-			return this.domCache[selector];
+			return this.domCache[key];
 		}
 
 		getElements(selector) {
-			if (!this.domCache[selector]) {
-				this.domCache[selector] = document.querySelectorAll(selector);
+			const key = `${this.containerId}-${selector}`;
+			if (!this.domCache[key]) {
+				this.domCache[key] = this.container.querySelectorAll(selector);
 			}
-			return this.domCache[selector];
+			return this.domCache[key];
 		}
 
 		async init() {
@@ -47,22 +61,21 @@
 				this.bindEvents();
 				this.applyFilters();
 			} catch (error) {
-				console.error("Ошибка при инициализации:", error);
+				console.error(`Ошибка при инициализации экземпляра ${this.containerId}:`, error);
 				this.showError("Ошибка загрузки данных");
 			}
 		}
 
 		async loadOfficesData() {
 			try {
-				const response = await fetch("./data/offices/offices-list.json");
+				const response = await fetch(this.dataUrl);
 				if (!response.ok) {
 					throw new Error(`HTTP error. status: ${response.status}`);
 				}
 				this.offices = await response.json();
 				this.filteredOffices = [...this.offices];
 			} catch (error) {
-				console.warn("Не удалось загрузить данные из JSON, используются тестовые данные:", error);
-				this.offices = [{ id: 1, floor: 1, area: 1, capacity: 1, price: 1 }];
+				this.offices = [{ id: 1, floor: 1, area: 1, capacity: 1, price: 1, image: "" }];
 				this.filteredOffices = [...this.offices];
 			}
 		}
@@ -73,7 +86,7 @@
 			});
 
 			if (this.offices.length === 0) {
-				throw new Error("Нет корректных данных для отображения");
+				return;
 			}
 		}
 
@@ -182,11 +195,15 @@
 				});
 			});
 
-			document.addEventListener("click", (e) => {
+			const documentClickHandler = (e) => {
 				if (!sortContainer.contains(e.target)) {
 					this.closeSortDropdown();
 				}
-			});
+			};
+
+			document.addEventListener("click", documentClickHandler);
+
+			this.documentClickHandler = documentClickHandler;
 		}
 
 		toggleSortDropdown() {
@@ -279,32 +296,34 @@
 
 			resultsContainer.innerHTML = "";
 			resultsContainer.appendChild(fragment);
+
+			window.initModal("#modal-room-booking", "room-booking", "data-modal-close");
 		}
 
 		createOfficeListItem(office) {
 			const div = document.createElement("div");
 			div.className = "selection__list-item";
-			div.innerHTML = `
-        		<a class="selection__list-item-wrapper" href="${office.image}" data-fancybox="offices-plan">
-        			<div class="selection__list-item-plan">
-        				<div class="selection__list-item-plan-overlay icon-zoom"></div>
-        				<picture class="selection__list-item-image-container">
-        					<img class="selection__list-item-image" src="${office.image}" alt="Офис № ${office.id}">
-        				</picture>
-        			</div>
-        			<div class="selection__list-item-param">${office.id}</div>
-        			<div class="selection__list-item-param">${office.floor}</div>
-        			<div class="selection__list-item-param">${Math.round(office.area)}</div>
-        			<div class="selection__list-item-param">${office.capacity} чел.</div>
-        			<div class="selection__list-item-param">от ${office.price.toLocaleString()} ₽</div>
-        		</a>
-        		<div class="selection__list-item-button-container">
-        			<button class="selection__list-item-button" data-modal="room-booking">
-        				<span>Выбрать</span>
-        				<i class="selection__list-item-button--icon icon-arrow"></i>
-        			</button>
-        		</div>
-      		`;
+
+			let html = this.cardTemplate;
+
+			html = html.replace(/\{\{id\}\}/g, office.id);
+			html = html.replace(/\{\{floor\}\}/g, office.floor);
+			html = html.replace(/\{\{area\}\}/g, office.area);
+			html = html.replace(/\{\{capacity\}\}/g, office.capacity);
+			html = html.replace(/\{\{price\}\}/g, office.price?.toLocaleString() || office.price);
+			html = html.replace(/\{\{image\}\}/g, office.image || "");
+
+			html = html.replace(/\{\{fancyboxGroup\}\}/g, this.fancyboxGroup);
+			html = html.replace(/\{\{modalTarget\}\}/g, this.modalTarget);
+
+			Object.keys(office).forEach((key) => {
+				if (!["id", "floor", "area", "capacity", "price", "image"].includes(key)) {
+					const regex = new RegExp(`\\{\\{${key}\\}\\}`, "g");
+					html = html.replace(regex, office[key]);
+				}
+			});
+
+			div.innerHTML = html;
 			return div;
 		}
 
@@ -337,9 +356,69 @@
 			if (this.debounceTimer) {
 				clearTimeout(this.debounceTimer);
 			}
+
+			if (this.documentClickHandler) {
+				document.removeEventListener("click", this.documentClickHandler);
+			}
+
 			this.domCache = {};
 		}
 	}
 
-	new OfficeSelector();
+	window.OfficeSelector = OfficeSelector;
+
+	new OfficeSelector({
+		containerId: "office-selection",
+		dataUrl: "./data/offices/offices-list.json",
+		cardTemplate: `
+      		<a class="selection__list-item-wrapper" href="{{image}}" data-fancybox="{{fancyboxGroup}}">
+      			<div class="selection__list-item-plan">
+      				<div class="selection__list-item-plan-overlay icon-zoom"></div>
+      				<picture class="selection__list-item-image-container">
+      					<img class="selection__list-item-image" src="{{image}}" alt="Офис № {{id}}">
+      				</picture>
+      			</div>
+      			<div class="selection__list-item-param">{{id}}</div>
+      			<div class="selection__list-item-param">{{floor}}</div>
+      			<div class="selection__list-item-param">{{area}}</div>
+      			<div class="selection__list-item-param">{{capacity}} чел.</div>
+      			<div class="selection__list-item-param">от {{price}} ₽</div>
+      		</a>
+      		<div class="selection__list-item-button-container">
+      			<button class="selection__list-item-button" data-modal="{{modalTarget}}">
+      				<span>Выбрать</span>
+      				<i class="selection__list-item-button--icon icon-arrow"></i>
+      			</button>
+      		</div>
+		`,
+		modalTarget: "room-booking",
+		fancyboxGroup: "offices-plan",
+	});
+	new OfficeSelector({
+		containerId: "conference-selection",
+		dataUrl: "./data/conference/conference-list.json",
+		cardTemplate: `
+      		<a class="selection__list-item-wrapper" href="{{image}}" data-fancybox="{{fancyboxGroup}}">
+      			<div class="selection__list-item-plan">
+      				<div class="selection__list-item-plan-overlay icon-zoom"></div>
+      				<picture class="selection__list-item-image-container">
+      					<img class="selection__list-item-image" src="{{image}}" alt="Офис № {{id}}">
+      				</picture>
+      			</div>
+      			<div class="selection__list-item-param">{{id}}</div>
+      			<div class="selection__list-item-param">{{floor}}</div>
+      			<div class="selection__list-item-param">{{area}}</div>
+      			<div class="selection__list-item-param">{{capacity}} чел.</div>
+      			<div class="selection__list-item-param">от {{price}} ₽</div>
+      		</a>
+      		<div class="selection__list-item-button-container">
+      			<button class="selection__list-item-button" data-modal="{{modalTarget}}">
+      				<span>Выбрать</span>
+      				<i class="selection__list-item-button--icon icon-arrow"></i>
+      			</button>
+      		</div>
+		`,
+		modalTarget: "room-booking",
+		fancyboxGroup: "conference-plan",
+	});
 })();

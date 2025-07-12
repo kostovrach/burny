@@ -2,10 +2,9 @@
 
 .modal-booking {
 	position: fixed;
-	z-index: 10; // <-----
 	top: 0;
 	left: 0;
-	height: 100lvh;
+	height: 100vh;
 	max-width: rem(980);
 	overflow-x: hidden;
 	overflow-y: auto;

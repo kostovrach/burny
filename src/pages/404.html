@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru" class="hide-scrollbar">
-	@@include('../components/head.html', { "title": "Страница не найдена" })
+	@@include('../components/head.html', { "title": "Страница не найдена - BURNY" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "" })
 		<main id="start">
 			<section class="not-found">
 				<div class="not-found__container">
-					<div class="not-found__title">404</div>
+					<div class="not-found__title">
+						<div class="not-found__title-text">404</div>
+						<video class="not-found__title-video" autoplay loop muted playsinline>
+							<source src="./assets/video/view.mp4" type="video/mp4" />
+						</video>
+					</div>
 					<div class="not-found__button">@@include('../components/button.html', { 'title': 'ВЕРНУТЬСЯ', 'text': 'НА ГЛАВНУЮ', 'href': 'index.html' })</div>
 					<div class="not-found__desc">Ошибка: страница не найдена. Попробуйте обновить страницу или&nbsp;вернитесь на&nbsp;главную.</div>
 				</div>

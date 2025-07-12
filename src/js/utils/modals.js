@@ -126,6 +126,8 @@
 		});
 	}
 
+	window.initModal = initModal;
+
 	initModal("#modal-privacy", "privacy", "data-modal-close");
 	initModal("#modal-office-21", "office-21", "data-modal-close");
 	initModal("#modal-room-booking", "room-booking", "data-modal-close");
@@ -133,4 +135,7 @@
 	initModal("#modal-parking", "parking", "data-modal-close");
 	initModal("#modal-helipad", "helipad", "data-modal-close");
 	initModal("#modal-subscribe", "subscribe", "data-modal-close");
+	initModal("#modal-film", "film", "data-modal-close");
+	initModal("#modal-media-office", "media-office", "data-modal-close");
+	initModal("#modal-media-hotel", "media-hotel", "data-modal-close");
 })();
