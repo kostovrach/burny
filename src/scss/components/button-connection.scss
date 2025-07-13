@@ -5,11 +5,12 @@
     position: fixed;
     z-index: 10;
     top: 50%;
-    right: 0;
+    right: -3.5rem;
     translate: 0 -50%;
     border: rem(1) solid $c-C6A47D;
-    border-right: none;
-    padding: rem(16) rem(4);
+    border-bottom: none;
+    padding: rem(4) rem(16);
+    rotate: -90deg;
     transition: all $duration;
     @media (pointer: fine){
         &:hover{
@@ -18,8 +19,6 @@
         }
     }
 	&__text {
-		writing-mode: sideways-lr;
-		text-orientation: mixed;
 		text-wrap: nowrap;
         font-size: lineScale(16,14,480,1440);
         line-height: 1;

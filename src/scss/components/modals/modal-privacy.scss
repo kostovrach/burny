@@ -6,12 +6,12 @@
 	right: 0;
 	bottom: 0;
 	left: auto;
-    max-width: rem(680);
-	height: 100vh;
+	max-width: rem(680);
+	height: 100lvh;
 	overflow-y: auto;
 	pointer-events: none;
-    color: $main-color;
-    background-color: $c-C6A47D;
+	color: $main-color;
+	background-color: $c-C6A47D;
 	translate: 100% 0;
 	transition: translate $duration;
 	&.anim {
@@ -31,12 +31,13 @@
 		position: absolute;
 		top: rem(32);
 		right: rem(32);
-        .close-button__chunk {
-            background-color: $main-color;
-        }
+		.close-button__chunk {
+			background-color: $main-color;
+		}
 	}
 	&__container {
 		font-size: rem(18);
+		min-height: 100lvh;
 		padding: rem(32);
 	}
 	&__titlebox {

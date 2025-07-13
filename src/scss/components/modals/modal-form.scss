@@ -5,14 +5,14 @@
 	top: 0;
 	left: 0;
 	max-width: rem(680);
-	height: 100vh;
+	height: 100lvh;
 	overflow-x: hidden;
 	overflow-y: auto;
 	color: $c-FFFFFF;
 	background-color: $main-color;
-    translate: -100% 0;
-    pointer-events: none;
-    transition: translate $duration;
+	translate: -100% 0;
+	pointer-events: none;
+	transition: translate $duration;
 	&.anim {
 		translate: 0 0;
 		pointer-events: auto;
@@ -33,15 +33,12 @@
 	}
 	&__container {
 		width: 100%;
-		height: 100%;
+		min-height: 100lvh;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		gap: rem(64);
 		padding: rem(64);
-		@media (max-width: 768px){
-			padding: rem(64) rem(32);
-		}
 	}
 	&__titlebox {
 		display: flex;
@@ -62,7 +59,7 @@
 		}
 	}
 	&__form {
-			height: 100%;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -78,9 +75,9 @@
 			}
 		}
 		&-submit {
-            display: flex;
-            flex-direction: column;
-            gap: rem(32);
+			display: flex;
+			flex-direction: column;
+			gap: rem(32);
 		}
 		&-agreement {
 			width: 100%;
@@ -98,30 +95,38 @@
 			}
 		}
 		&-button {
-            cursor: pointer;
-            width: 100%;
+			cursor: pointer;
+			width: 100%;
 			display: flex;
 			align-items: center;
-            justify-content: center;
+			justify-content: center;
 			gap: rem(16);
 			font-size: lineScale(24, 18, 480, 1440);
-            line-height: 1;
-            border: rem(1) solid $c-C6A47D;
-            border-radius: rem(32);
-            padding: rem(18) 0;
+			line-height: 1;
+			border: rem(1) solid $c-C6A47D;
+			border-radius: rem(32);
+			padding: rem(18) 0;
 			@include icon-hover(diagonal-reverse, lineScale(20, 12, 480, 1440));
-            @media (pointer: fine){
-                @include flowing-fill($anim-color: $c-C6A47D);
-                &:hover{
-                    color: $main-color;
-                }
-            }
+			@media (pointer: fine) {
+				@include flowing-fill($anim-color: $c-C6A47D);
+				&:hover {
+					color: $main-color;
+				}
+			}
 			&--icon {
 				padding: {
 					top: rem(8);
 					right: rem(8);
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.modal-form {
+		&__container {
+			padding: rem(64) rem(32);
 		}
 	}
 }

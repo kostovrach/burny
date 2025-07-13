@@ -92,8 +92,8 @@
 		grid-row: 2;
 		position: relative;
 		text-transform: lowercase;
-		font-size: lineScale(22, 16, 480, 1440);
-		line-height: 150%;
+		font-size: lineScale(22, 14, 480, 1440);
+		line-height: 120%;
 		padding-left: rem(32);
 		&::before {
 			content: "—";
@@ -838,10 +838,11 @@
 		&__titlebox {
 			display: flex;
 			flex-direction: column;
+			align-items: flex-end;
 		}
 		&__button {
 			position: static;
-			align-self: flex-end;
+			translate: 0 0;
 		}
 	}
 	.index-about {
