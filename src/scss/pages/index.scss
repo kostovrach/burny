@@ -92,8 +92,8 @@
 		grid-row: 2;
 		position: relative;
 		text-transform: lowercase;
-		font-size: lineScale(22, 14, 480, 1440);
-		line-height: 120%;
+		font-size: lineScale(22, 16, 480, 1440);
+		line-height: 150%;
 		padding-left: rem(32);
 		&::before {
 			content: "—";
@@ -103,6 +103,7 @@
 		}
 		&--accent {
 			display: inline-block;
+			line-height: 1;
 			border-bottom: rem(2) dotted $c-FFFFFF;
 		}
 	}
