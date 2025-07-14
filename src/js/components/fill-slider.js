@@ -14,14 +14,17 @@
 		// 	pauseOnMouseEnter: true,
 		// },
 		// freeMode: true,
+		mousewheel: {
+			forceToAxis: true,
+		},
 		navigation: {
 			nextEl: ".fill-slider__button--next",
 			prevEl: ".fill-slider__button--prev",
 		},
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+		},
 	};
 
 	new Swiper(slider, sliderParams);

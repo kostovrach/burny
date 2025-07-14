@@ -54,6 +54,7 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
+				text-transform: uppercase;
 		border: rem(1.5) solid $c-C6A47D;
 		border-radius: rem(32);
 		overflow: hidden;
@@ -72,15 +73,9 @@
 		}
 		&:nth-child(6n + 3) {
 			grid-row: span 2;
-			.blog-main__item-title {
-				text-transform: uppercase;
-			}
 		}
 		&:nth-child(6n + 6) {
 			grid-column: span 2;
-			.blog-main__item-title {
-				text-transform: uppercase;
-			}
 		}
 		&-wrapper {
 			width: 100%;

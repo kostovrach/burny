@@ -22,11 +22,11 @@
 
 	function updateGalleryProgress(activeIndex) {
 		if (!galleryTitlebox || totalSlides === 0) return;
-		
+
 		const progress = ((activeIndex + 1) / totalSlides) * 100;
-		const progressPercent = Math.min(progress, 100).toFixed(2) + '%';
-		
-		galleryTitlebox.style.setProperty('--gallery-progress', progressPercent);
+		const progressPercent = Math.min(progress, 100).toFixed(2) + "%";
+
+		galleryTitlebox.style.setProperty("--gallery-progress", progressPercent);
 	}
 
 	generatePaginationNumbers();
@@ -47,17 +47,20 @@
 		slidesPerView: "auto",
 		spaceBetween: 16,
 		centeredSlides: true,
-        loop: true,
+		loop: true,
 		speed: 800,
-        parallax: true,
-        // mousewheel: {
+		parallax: true,
+		mousewheel: {
+			forceToAxis: true,
+		},
+		// mousewheel: {
 		// 	enabled: true,
 		// 	sensitivity: 1
 		// },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+		},
 		navigation: {
 			nextEl: ".gallery__button--next",
 			prevEl: ".gallery__button--prev",

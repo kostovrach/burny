@@ -43,6 +43,9 @@
 			nextEl: ".gallery-slider__button--next",
 			prevEl: ".gallery-slider__button--prev",
 		},
+		mousewheel: {
+			forceToAxis: true,
+		},
 		effect: "creative",
 		creativeEffect: {
 			limitProgress: 2,

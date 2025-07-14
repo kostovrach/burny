@@ -23,7 +23,7 @@
 	}
 	&__titlebox {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: auto 1fr;
         grid-template-areas: "tag tag"
 							 "title title"
                              "desc desc"

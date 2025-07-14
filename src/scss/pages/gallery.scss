@@ -13,10 +13,10 @@
 		top: 50%;
 		left: 0;
 		translate: 0 -50%;
-		width: rem(180);
+		width: rem(128);
 		height: 150%;
 		backdrop-filter: blur(20px);
-		-webkit-backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(10px);
 		-webkit-mask-size: 100% 100%;
 		mask-size: 100% 100%;
 		-webkit-mask-repeat: no-repeat;
@@ -68,6 +68,27 @@
 				-webkit-mask-size: 100% 100%;
 				transition: mask-size $duration;
 			}
+		}
+	}
+	&__slider {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 2;
+			left: 0;
+			width: 100%;
+			height: rem(48);
+			background-color: $main-color;
+		}
+		&::before {
+			top: 0;
+			border-radius: 0 0 100% 100%;
+		}
+		&::after {
+			top: rem(445);
+			border-radius: 100% 100% 0 0;
 		}
 	}
 	&__slide {
@@ -191,6 +212,12 @@
 		&::before,
 		&::after {
 			display: none;
+		}
+		&__slider {
+			&::before,
+			&::after {
+				display: none;
+			}
 		}
 		&__slide {
 			max-width: rem(400);

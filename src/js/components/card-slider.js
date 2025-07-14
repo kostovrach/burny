@@ -1,13 +1,16 @@
 (function () {
-    const slider = document.querySelector(".card-slider");
+	const slider = document.querySelector(".card-slider");
 
-    if (!slider) return;
+	if (!slider) return;
 
 	const sliderParams = {
 		slidesPerView: "auto",
 		spaceBetween: 16,
 		grabCursor: true,
 		speed: 16000,
+		mousewheel: {
+			forceToAxis: true,
+		},
 		//loop: true,
 		// autoplay: {
 		// 	delay: 0,
@@ -15,5 +18,5 @@
 		// },
 		//freeMode: true,
 	};
-    new Swiper(slider, sliderParams)
+	new Swiper(slider, sliderParams);
 })();
