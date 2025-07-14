@@ -19,7 +19,7 @@
 
 	const markers = [];
 
-	fetch("./js/map-points.json")
+	fetch("./data/map/map-points.json")
 		.then((res) => res.json())
 		.then((points) => {
 			points.forEach((point) => {

@@ -1,0 +1,139 @@
+@use "../../utils/abstracts" as *;
+
+.modal-privacy {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: auto;
+	max-width: rem(680);
+	height: 100lvh;
+	overflow-y: auto;
+	pointer-events: none;
+	color: $main-color;
+	background-color: $c-C6A47D;
+	translate: 100% 0;
+	transition: translate $duration;
+	&.anim {
+		translate: 0 0;
+		pointer-events: auto;
+		&::backdrop {
+			background-color: rgba($main-color, 0.5);
+			backdrop-filter: blur(10px);
+		}
+	}
+	&::backdrop {
+		background-color: transparent;
+		transition: all $duration;
+	}
+	.close-button {
+		cursor: pointer;
+		position: absolute;
+		top: rem(32);
+		right: rem(32);
+		.close-button__chunk {
+			background-color: $main-color;
+		}
+	}
+	&__container {
+		font-size: rem(18);
+		min-height: 100lvh;
+		padding: rem(32);
+	}
+	&__titlebox {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+	}
+	&__title {
+		font-size: rem(32);
+		line-height: 1;
+		font-weight: $fw-bold;
+	}
+	&__date {
+		opacity: 0.5;
+	}
+	&__subtitle {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+		margin-top: rem(32);
+	}
+	&__item {
+		counter-reset: subitem-counter;
+		counter-increment: item-counter;
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		&-title {
+			position: relative;
+			font-size: rem(22);
+			font-weight: $fw-bold;
+			padding-left: rem(48);
+			&::before {
+				content: counter(item-counter) ".";
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		&-text {
+			padding-left: rem(48);
+		}
+	}
+	&__subitem {
+		counter-reset: subsubitem-counter;
+		counter-increment: subitem-counter;
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		&-title {
+			position: relative;
+			font-size: rem(20);
+			font-weight: $fw-bold;
+			padding-left: rem(48);
+			&::before {
+				content: counter(item-counter) "." counter(subitem-counter);
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		&-text {
+			padding-left: rem(48);
+		}
+	}
+	&__subsubitem {
+		counter-increment: subsubitem-counter;
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		&-title {
+			position: relative;
+			font-size: rem(20);
+			font-weight: $fw-bold;
+			padding-left: rem(64);
+			&::before {
+				content: counter(item-counter) "." counter(subitem-counter) "." counter(subsubitem-counter);
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		&-text {
+			padding-left: rem(64);
+		}
+	}
+}
+@media (max-width: 768px){
+	.modal-privacy {
+		&__container {
+			padding: rem(32) rem(32) rem(96) rem(32);
+		}
+	}
+}

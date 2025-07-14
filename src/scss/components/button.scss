@@ -11,7 +11,7 @@
 	transition: $duration;
 	@include flex-center();
 	&.disable {
-		opacity: .7;
+		opacity: 0.7;
 		border-color: $c-FFFFFF;
 		color: $c-FFFFFF;
 		pointer-events: none;
@@ -33,6 +33,12 @@
 						&::after {
 							width: rem(60);
 						}
+						&::before {
+							rotate: 45deg;
+						}
+						&::after {
+							rotate: -45deg;
+						}
 					}
 				}
 			}
@@ -49,14 +55,14 @@
 	}
 	&-title {
 		text-transform: uppercase;
-		font-size: lineScale(32, 16, 480, 1440);
+		font-size: lineScale(32, 20, 480, 1440);
 		line-height: 1;
 		font-weight: $fw-bold;
 		transition: $duration;
 	}
 	&-text {
 		text-transform: uppercase;
-		font-size: lineScale(16, 12, 480, 1440);
+		font-size: lineScale(16, 14, 480, 1440);
 		line-height: 1;
 		transition: $duration;
 	}
@@ -82,15 +88,15 @@
 				background-color: inherit;
 				height: rem(4);
 				width: 0;
-				transition: width $duration 0.2s;
+				transition: all $duration;
 			}
 			&::before {
 				left: -0.5rem;
-				rotate: 45deg;
+				rotate: 60deg;
 			}
 			&::after {
 				right: -0.5rem;
-				rotate: -45deg;
+				rotate: -60deg;
 			}
 		}
 	}

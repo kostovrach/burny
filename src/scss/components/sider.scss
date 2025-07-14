@@ -21,7 +21,7 @@
 		text-transform: uppercase;
 		writing-mode: sideways-lr;
 		text-orientation: mixed;
-		font-size: lineScale(32,24,480,1440);
+		font-size: lineScale(32, 24, 480, 1440);
 		font-weight: $fw-bold;
 		text-wrap: nowrap;
 		&--stroke {
@@ -33,15 +33,21 @@
 			color: $c-C6A47D;
 			-webkit-text-stroke: 0;
 			text-stroke: 0;
-			mask-image: linear-gradient(to bottom, black var(--fill-height, 0%), transparent var(--fill-height, 0%));
-			-webkit-mask-image: linear-gradient(to bottom, black var(--fill-height, 0%), transparent var(--fill-height, 0%));
-			mask-repeat: no-repeat;
-			-webkit-mask-repeat: no-repeat;
-			mask-size: 100% 100%;
-			-webkit-mask-size: 100% 100%;
-			mask-composite: intersect;
-			-webkit-mask-composite: destination-in;
-			transition: all $duration $spring;
+			clip-path: polygon(0 0, 100% 0, 100% var(--fill-height, 0%), 0 var(--fill-height, 0%));
+			-webkit-transform: translateZ(0);
+			transform: translateZ(0);
+			will-change: clip-path, mask-size;
+			transition: clip-path $duration $spring;
+			@supports not (clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)) {
+				clip-path: none;
+				mask-image: linear-gradient(to bottom, black var(--fill-height, 0%), transparent var(--fill-height, 0%));
+				-webkit-mask-image: linear-gradient(to bottom, black var(--fill-height, 0%), transparent var(--fill-height, 0%));
+				mask-repeat: no-repeat;
+				-webkit-mask-repeat: no-repeat;
+				mask-size: 100% 100%;
+				-webkit-mask-size: 100% 100%;
+				transition: mask-size $duration $spring;
+			}
 		}
 	}
 	&__icon-container {

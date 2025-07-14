@@ -22,7 +22,7 @@
 		&:has([data-input-tel].filled) .input__label {
 			translate: 0 0;
 			color: $c-C6A47D;
-			font-size: lineScale(14,12,480,1440); // <----- 
+			font-size: lineScale(14, 12, 480, 1440); // <-----
 		}
 	}
 	&__label {
@@ -30,8 +30,8 @@
 		left: 0;
 		top: 0;
 		translate: 0 1.5rem;
-		color: $c-C2C0C1; // <----- 
-		font-size: lineScale(18,14,480,1440); // <----- 
+		color: $c-C2C0C1; // <-----
+		font-size: lineScale(18, 14, 480, 1440); // <-----
 		pointer-events: none;
 		transition: all $duration;
 	}
@@ -57,7 +57,7 @@
 .checkbox {
 	cursor: pointer;
 	position: relative;
-	width: rem(24); // <----- 
+	width: rem(24); // <-----
 	height: rem(24);
 	aspect-ratio: 1/1;
 	border: rem(2) solid $c-C6A47D; // <-----
@@ -89,7 +89,7 @@
 		&:hover {
 			&::before,
 			&::after {
-				background-color: $c-C6A47D; // <----- 
+				background-color: $c-C6A47D; // <-----
 				opacity: 1;
 			}
 			&::before {
@@ -98,10 +98,10 @@
 		}
 	}
 	&:has(input:checked) {
-		background-color: $c-C6A47D; // <----- 
+		background-color: $c-C6A47D; // <-----
 		&::before,
 		&::after {
-			background-color: $c-FFFFFF; // <----- 
+			background-color: $c-FFFFFF; // <-----
 			opacity: 1;
 		}
 		&::before {
@@ -114,6 +114,68 @@
 			top: 60%;
 			width: 0.5rem;
 			rotate: -135deg;
+		}
+	}
+}
+.select {
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+	user-select: none;
+	border-bottom: rem(2) solid rgba($c-C6A47D, 0.5);
+	&__input {
+		background-color: transparent;
+		color: inherit;
+		font-size: rem(20);
+		padding: 1.8rem 0 0.5rem 0;
+		pointer-events: none;
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+	}
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		translate: -50% 0;
+		font-size: rem(12);
+		transition: transform $duration;
+		.select.open & {
+			transform: scaleY(-1);
+		}
+	}
+	&__dropdown {
+		position: absolute;
+		// top: rem(64);
+		bottom: rem(64);
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+		color: inherit;
+		font-size: inherit;
+		border-radius: rem(16) rem(16) 0 0;
+		background-color: rgba($c-FFFFFF, .1);
+		backdrop-filter: blur(10px);
+		overflow: hidden;
+		overflow-y: auto;
+		pointer-events: none;
+		opacity: 0;
+		transition: all $duration;
+		.select.open & {
+			opacity: 1;
+			gap: 0;
+			pointer-events: auto;
+		}
+	}
+	&__item {
+		cursor: pointer;
+		padding: rem(16) rem(8);
+		border-bottom: rem(2) solid rgba($c-C6A47D, 0.5);
+		&:hover {
+			background-color: $c-C6A47D;
 		}
 	}
 }

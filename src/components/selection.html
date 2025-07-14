@@ -1,82 +1,89 @@
-<div class="selection">
-	<div class="selection__container">
-		<div class="selection__head">
-			<div class="selection__titlebox">
-				<h1 class="selection__title" data-parallax>Подбор офиса</h1>
-				<a class="selection__button" href="offices.html#offices-select"><i class="selection__button--icon icon-arrow"></i><span>на схеме</span></a>
-			</div>
-			<div class="selection__filterbox" data-parallax>
-				<div class="selection__filter-group">
-					<p class="selection__filter-label">Этаж</p>
-					<div class="selection__range-container">
-						<div class="selection__range-values">
-							<div class="selection__range-values-item">от <span data-value="floor-min">1</span></div>
-							<div class="selection__range-values-item">до <span data-value="floor-max">20</span></div>
-						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="floor"></div>
-							<div class="selection__range-thumb" data-range="floor" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="floor" data-type="max"></div>
-						</div>
+<div id="office-selection" class="office-selection">
+	<div class="office-selection__container">
+		<div class="selection">
+			<div class="selection__container">
+				<div class="selection__head">
+					<div class="selection__titlebox">
+						<h1 class="selection__title" data-parallax>Подбор офиса</h1>
+						<a class="selection__button" href="offices.html#offices-select"><i class="selection__button--icon icon-arrow"></i><span>на схеме</span></a>
 					</div>
-				</div>
+					<div class="selection__filterbox" data-parallax>
+						<div class="selection__filter-group">
+							<p class="selection__filter-label">Этаж</p>
+							<div class="selection__range-container">
+								<div class="selection__range-wrapper">
+									<div class="selection__range-track"></div>
+									<div class="selection__range-fill" data-range="floor"></div>
+									<input class="selection__range-input selection__range-input--min" type="range" data-range="floor" data-type="min" min="1" max="20" value="1" />
+									<input class="selection__range-input selection__range-input--max" type="range" data-range="floor" data-type="max" min="1" max="20" value="20" />
+								</div>
+								<div class="selection__range-values">
+									<div class="selection__range-values-item">от <span data-value="floor-min">1</span></div>
+									<div class="selection__range-values-item">до <span data-value="floor-max">20</span></div>
+								</div>
+							</div>
+						</div>
 
-				<div class="selection__filter-group">
-					<p class="selection__filter-label">Площадь офиса, м²</p>
-					<div class="selection__range-container">
-						<div class="selection__range-values">
-							<div class="selection__range-values-item">от <span data-value="area-min">50</span></div>
-							<div class="selection__range-values-item">до <span data-value="area-max">200</span></div>
+						<div class="selection__filter-group">
+							<p class="selection__filter-label">Площадь офиса, м²</p>
+							<div class="selection__range-container">
+								<div class="selection__range-wrapper">
+									<div class="selection__range-track"></div>
+									<div class="selection__range-fill" data-range="area"></div>
+									<input class="selection__range-input selection__range-input--min" type="range" data-range="area" data-type="min" min="50" max="200" value="50" />
+									<input class="selection__range-input selection__range-input--max" type="range" data-range="area" data-type="max" min="50" max="200" value="200" />
+								</div>
+								<div class="selection__range-values">
+									<div class="selection__range-values-item">от <span data-value="area-min">50</span></div>
+									<div class="selection__range-values-item">до <span data-value="area-max">200</span></div>
+								</div>
+							</div>
 						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="area"></div>
-							<div class="selection__range-thumb" data-range="area" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="area" data-type="max"></div>
-						</div>
-					</div>
-				</div>
 
-				<div class="selection__filter-group">
-					<p class="selection__filter-label">Рабочих мест</p>
-					<div class="selection__range-container">
-						<div class="selection__range-values">
-							<div class="selection__range-values-item">от <span data-value="capacity-min">2</span></div>
-							<div class="selection__range-values-item">до <span data-value="capacity-max">50</span></div>
+						<div class="selection__filter-group">
+							<p class="selection__filter-label">Рабочих мест</p>
+							<div class="selection__range-container">
+								<div class="selection__range-wrapper">
+									<div class="selection__range-track"></div>
+									<div class="selection__range-fill" data-range="capacity"></div>
+									<input class="selection__range-input selection__range-input--min" type="range" data-range="capacity" data-type="min" min="2" max="50" value="2" />
+									<input class="selection__range-input selection__range-input--max" type="range" data-range="capacity" data-type="max" min="2" max="50" value="50" />
+								</div>
+								<div class="selection__range-values">
+									<div class="selection__range-values-item">от <span data-value="capacity-min">2</span></div>
+									<div class="selection__range-values-item">до <span data-value="capacity-max">50</span></div>
+								</div>
+							</div>
 						</div>
-						<div class="selection__range-track">
-							<div class="selection__range-fill" data-range="capacity"></div>
-							<div class="selection__range-thumb" data-range="capacity" data-type="min"></div>
-							<div class="selection__range-thumb" data-range="capacity" data-type="max"></div>
-						</div>
+
+						<button class="selection__reset-btn" type="button"><i class="selection__reset-btn--icon icon-refresh"></i></button>
 					</div>
 				</div>
-				
-				<button class="selection__reset-btn" type="button"><i class="selection__reset-btn--icon icon-refresh"></i></button>
-			</div>
-		</div>
-		<div class="selection__body">
-			<div class="selection__results">
-				<div class="selection__results-count">Совпадений: <span data-count>0</span></div>
-				<div class="selection__sort" data-sort>
-					<span class="selection__sort-current">По умолчанию</span>
-					<i class="selection__sort-icon icon-check-mark"></i>
-					<ul class="selection__sort-list">
-						<li class="selection__sort-item" value="default">По умолчанию</li>
-						<li class="selection__sort-item" value="price-asc">По возрастанию цены</li>
-						<li class="selection__sort-item" value="price-desc">По убыванию цены</li>
-					</ul>
+				<div class="selection__body">
+					<div class="selection__results">
+						<div class="selection__results-count">Совпадений: <span data-count>0</span></div>
+						<div class="selection__sort" data-sort>
+							<span class="selection__sort-current">По умолчанию</span>
+							<i class="selection__sort-icon icon-check-mark"></i>
+							<ul class="selection__sort-list">
+								<li class="selection__sort-item" value="default">По умолчанию</li>
+								<li class="selection__sort-item" value="price-asc">По возрастанию цены</li>
+								<li class="selection__sort-item" value="price-desc">По убыванию цены</li>
+							</ul>
+						</div>
+					</div>
+					<div class="selection__list">
+						<ul class="selection__list-head">
+							<li class="selection__list-head-item">СХЕМА</li>
+							<li class="selection__list-head-item">№ ОФИСА</li>
+							<li class="selection__list-head-item">ЭТАЖ</li>
+							<li class="selection__list-head-item">ПЛОЩАДЬ, М²</li>
+							<li class="selection__list-head-item">ВМЕСТИМОСТЬ</li>
+							<li class="selection__list-head-item">СТОИМОСТЬ В ДЕНЬ</li>
+						</ul>
+						<div class="selection__list-body" data-results></div>
+					</div>
 				</div>
-			</div>
-			<div class="selection__list">
-				<ul class="selection__list-head">
-					<li class="selection__list-head-item">СХЕМА</li>
-					<li class="selection__list-head-item">№ ОФИСА</li>
-					<li class="selection__list-head-item">ЭТАЖ</li>
-					<li class="selection__list-head-item">ПЛОЩАДЬ, М²</li>
-					<li class="selection__list-head-item">ВМЕСТИМОСТЬ</li>
-					<li class="selection__list-head-item">СТОИМОСТЬ В ДЕНЬ</li>
-				</ul>
-				<div class="selection__list-body" data-results></div>
 			</div>
 		</div>
 	</div>

@@ -4,15 +4,66 @@
 	min-height: 100lvh;
 	@include block-padding($break: rem(128));
 	&__container {
+		display: grid;
+		grid-template-areas:
+			"title title title"
+			"desc . button";
 		@include content-width();
 	}
 	&__title {
-		// font-size: lineScale(640,180,480,1440);
-		// line-height: 1;
-		// font-weight: $fw-bold;
-		// color: transparent;
-		// background: url('../assets/video/view.mp4');
-		// background-size: cover;
-		// background-clip: text;
+		grid-area: title;
+		position: relative;
+		&-video {
+			position: absolute;
+			z-index: 1;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			-webkit-mask: url("../assets/img/service/404.svg");
+			mask: url("../assets/img/service/404.svg");
+			-webkit-mask-size: contain;
+			mask-size: contain;
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			-webkit-mask-position: center;
+			mask-position: center;
+			pointer-events: none;
+		}
+		&-text {
+			font-size: lineScale(520, 180, 480, 1440);
+			line-height: 1;
+			font-weight: $fw-bold;
+			color: transparent;
+			-webkit-text-fill-color: transparent;
+			@supports not (mask: url()) {
+				color: $c-C6A47D;
+				-webkit-text-fill-color: $c-C6A47D;
+			}
+			@supports not (-webkit-mask: url()) {
+				color: $c-C6A47D;
+				-webkit-text-fill-color: $c-C6A47D;
+			}
+		}
+	}
+	&__desc {
+		grid-area: desc;
+		max-width: 50ch;
+		font-size: lineScale(18,16,480,1440);
+		line-height: 150%;
+		color: $c-FFFFFF;
+		opacity: 0.8;
+	}
+	&__button {
+		grid-area: button;
+		position: relative;
+		width: 100%;
+		.button {
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			right: 0;
+			translate: 0 -50%;
+		}
 	}
 }

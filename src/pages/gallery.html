@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru" class="hide-scrollbar">
+	@@include('../components/head.html', { "title": "BURNY - Галерея" })
+	<body>
+		@@include('../components/header.html') @@include('../components/sider.html', { "text": "" })
+		<main id="start">
+			<section class="gallery">
+				<div class="gallery__container">
+					<div class="gallery__titlebox">
+                        <span class="gallery__title gallery__title--stroke">Галерея</span>
+                        <span class="gallery__title gallery__title--fill">Галерея</span>
+					</div>
+					<div class="gallery__body">
+						<div class="gallery__slider swiper">
+							<div class="gallery__slider-wrapper swiper-wrapper">
+								<div class="gallery__slide swiper-slide">
+									<a class="gallery__slide-image-container" href="assets/img/content/services/example.jpg" data-fancybox="gallery-page">
+										<img class="gallery__slide-image" src="assets/img/content/services/example.jpg" alt="#" />
+									</a>
+									<div class="gallery__slide-desc" data-swiper-parallax-opacity="0">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+								</div>
+								<div class="gallery__slide swiper-slide">
+									<a class="gallery__slide-image-container" href="assets/img/content/services/example4.jpg" data-fancybox="gallery-page">
+										<img class="gallery__slide-image" src="assets/img/content/services/example4.jpg" alt="#" />
+									</a>
+									<div class="gallery__slide-desc" data-swiper-parallax-opacity="0">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+								</div>
+								<div class="gallery__slide swiper-slide">
+									<a class="gallery__slide-image-container" href="assets/img/content/services/example1.jpg" data-fancybox="gallery-page">
+										<img class="gallery__slide-image" src="assets/img/content/services/example1.jpg" alt="#" />
+									</a>
+									<div class="gallery__slide-desc" data-swiper-parallax-opacity="0">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+								</div>
+								<div class="gallery__slide swiper-slide">
+									<a class="gallery__slide-image-container" href="assets/img/content/services/example3.jpg" data-fancybox="gallery-page">
+										<img class="gallery__slide-image" src="assets/img/content/services/example3.jpg" alt="#" />
+									</a>
+									<div class="gallery__slide-desc" data-swiper-parallax-opacity="0">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+								</div>
+								<div class="gallery__slide swiper-slide">
+									<a class="gallery__slide-image-container" href="assets/img/content/services/example5.jpg" data-fancybox="gallery-page">
+										<img class="gallery__slide-image" src="assets/img/content/services/example5.jpg" alt="#" />
+									</a>
+									<div class="gallery__slide-desc" data-swiper-parallax-opacity="0">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+								</div>
+								<div class="gallery__slide swiper-slide">
+									<a class="gallery__slide-image-container" href="assets/img/content/services/example6.jpg" data-fancybox="gallery-page">
+										<img class="gallery__slide-image" src="assets/img/content/services/example6.jpg" alt="#" />
+									</a>
+									<div class="gallery__slide-desc" data-swiper-parallax-opacity="0">Просторные торговые площади, современные бизнес-офисы и&nbsp;вертолетная площадка гармонично сочетаются, обеспечивая комфорт и&nbsp;вдохновение.</div>
+								</div>
+							</div>
+						</div>
+						<ul class="gallery__footer">
+							<li class="gallery__button gallery__button--prev swiper-button-prev"><i class="gallery__button--icon icon-arrow"></i></li>
+							<li class="gallery__pagination-container">
+								<div class="gallery__pagination swiper">
+									<div class="gallery__pagination-wrapper swiper-wrapper"></div>
+								</div>
+							</li>
+							<li class="gallery__button gallery__button--next swiper-button-next"><i class="gallery__button--icon icon-arrow"></i></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

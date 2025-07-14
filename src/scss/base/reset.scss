@@ -50,15 +50,22 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+		pointer-events: none;
 	}
 	main {
 		transition: 0.8s;
 	}
 	@media (min-width: 768px) {
-		&.lock {
+		&.menu-lock {
 			main,
 			footer {
 				translate: -100% 0;
+			}
+		}
+		&.select-lock {
+			main,
+			footer {
+				translate: 0 -100lvh;
 			}
 		}
 	}

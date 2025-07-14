@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru" class="hide-scrollbar">
-	@@include('../components/head.html', { "title": "Burny - Подбор Офиса" })
+	@@include('../components/head.html', { "title": "BURNY - Подбор Офиса" })
 	<body>
 		@@include('../components/header.html') @@include('../components/sider.html', { "text": "Список офисов" })
 		<main id="start">
-			<section class="office-selection">
-				<div class="office-selection__container">
-                    @@include("../components/selection.html")
-                </div>
-			</section>
+			<section class="office-selection--page"></section>
+			@@include("../components/selection.html")
 		</main>
 		@@include("../components/footer.html")
 	</body>

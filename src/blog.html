@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.min.css">
 	<link rel="stylesheet" href="./assets/fonts/icon-font/style.css">
-	<title>Burny - Пресс-центр</title>
+	<title>BURNY - Пресс-центр</title>
 </head>
 
 	<body>
@@ -108,6 +108,9 @@
 	</ul>
 </div>
 
+<button id="button-connection" class="button-connection">
+    <span class="button-connection__text">Напишите нам</span>
+</button>
 <div id="menu" class="menu" role="dialog" aria-hidden="true">
 	<div class="menu__sider">
 		<div class="menu__sider-label">Выбор раздела</div>
@@ -119,7 +122,7 @@
 		<ul class="menu__body" role="navigation">
 			<li class="menu__item-container liquid-item">
 				<div class="liquid-fill"></div>
-				<a class="menu__item" href="#">
+				<a class="menu__item" href="gallery.html">
 					<div class="menu__item-title">BURNY</div>
 					<ul class="menu__item-tagsbox">
 						<li class="menu__item-tag">Галерея</li>
@@ -241,6 +244,806 @@
 	</div>
 </div>
 
+<dialog id="modal-privacy" class="modal-privacy hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-privacy__container">
+		<div class="modal-privacy__titlebox">
+			<div class="modal-privacy__title">Политика конфиденциальности</div>
+			<time class="modal-privacy__date" datetime="2025-02-27">Последнее обновление: 27.02.25</time>
+		</div>
+		<ul class="modal-privacy__list">
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Презентация</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Наши обязательства</li>
+					<li class="modal-privacy__subitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Обязательства пользователей</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Сбор вашей информации</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Личные данные</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Использовать вашу информацию</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Предоставление услуг</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Консультации</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Использовать вашу информацию</p>
+						<p class="modal-privacy__subsubitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</p>
+						<p class="modal-privacy__subsubitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</p>
+					</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Ремонт</p>
+						<p class="modal-privacy__subsubitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</dialog>
+
+<div id="modal-office-select" class="modal-select">
+	<div class="modal-select__container">
+		<div class="modal-select__slider-container">
+			<div class="modal-select__toolbar">
+				<div class="modal-select__toolbar-buttonbox">
+					<button class="modal-select__toolbar-button modal-select__toolbar-button--close" data-modal-office-close>
+						<i class="modal-select__toolbar-button-icon modal-select__toolbar-button--close-icon icon-arrow"></i>
+						<span>Назад</span>
+					</button>
+					<a class="modal-select__toolbar-button modal-select__toolbar-button--link" href="office-selection.html">
+						<span>Списком</span>
+						<i class="modal-select__toolbar-button-icon modal-select__toolbar-button--link-icon icon-arrow"></i>
+					</a>
+				</div>
+				<div class="modal-select__toolbar-nav">
+					<div class="modal-select__toolbar-navbutton modal-select__toolbar-navbutton--prev swiper-button-prev"><i class="modal-select__toolbar-navbutton-icon icon-arrow"></i></div>
+					<ul class="modal-select__toolbar-current">
+						<li class="modal-select__toolbar-current-number">-</li>
+						<li class="modal-select__toolbar-current-desc">Этаж</li>
+					</ul>
+					<div class="modal-select__toolbar-navbutton modal-select__toolbar-navbutton--next swiper-button-next"><i class="modal-select__toolbar-navbutton-icon icon-arrow"></i></div>
+				</div>
+			</div>
+			<div class="modal-select__slider swiper">
+				<div class="modal-select__slider-wrapper swiper-wrapper">
+					<div class="modal-select__slide swiper-slide" data-office-floor="9">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f7_9-p1.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-9-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="99" transform="translate(-70, -140)" data-modal="office-21" d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="91" transform="translate(-130, -205)" data-modal="office-21" d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="93" transform="translate(-100, -165)" data-modal="office-21" d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-9-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-9-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-9-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-9-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(3, -85)" data-modal-select-open d="M448 443L448 443L455 441L472 440L629 428L719 421L726 419L817 390L824 389L844 388L977 378L990 378L1006 381L1006 415L991 412L977 413L844 417L824 420L817 421L713 452L629 459L471 469L455 471L448 474L448 443 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="modal-select__slide swiper-slide" data-office-floor="8">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f7_9-p1.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-8-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="72" transform="translate(-70, -140)" data-modal="office-21" d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="73" transform="translate(-130, -205)" data-modal="office-21" d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="74" transform="translate(-100, -165)" data-modal="office-21" d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-8-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-8-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-8-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-8-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(3, -65)" data-modal-select-open d="M448 443L448 443L455 441L472 440L629 428L719 421L726 419L817 390L824 389L844 388L977 378L990 378L1006 381L1006 415L991 412L977 413L844 417L824 420L817 421L713 452L629 459L471 469L455 471L448 474L448 443 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="modal-select__slide swiper-slide" data-office-floor="7">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f3-p1.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-7" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-7" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-7-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="64" transform="translate(10, -240)" data-modal="office-21" d="M 415 17 L 919 158 L 784 611 L 283 461 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="63" transform="translate(30, -240)" data-modal="office-21" d="M 1083 208 Q 1375 293 1320 771 L 952 660 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="67" transform="translate(30, -210)" data-modal="office-21" d="M 1320 931 Q 1375 1545 935 1388 L 577 1279 L 742 742 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-7-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-7-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-7-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-7-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(3, -25)" data-modal-select-open d="M448 443L448 443L455 441L472 440L629 428L719 421L726 419L817 390L824 389L844 388L977 378L990 378L1006 381L1006 415L991 412L977 413L844 417L824 420L817 421L713 452L629 459L471 469L455 471L448 474L448 443 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="modal-select__slide swiper-slide" data-office-floor="3">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f7_9-p1.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-3" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-3-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="21" transform="translate(-70, -140)" data-modal="office-21" d="M 235 47 L 356 325 L 189 399 L 71 131 Q 74 3 184 7 Q 208 7 226 28 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="23" transform="translate(-130, -205)" data-modal="office-21" d="M 923 953 L 1409 1094 L 1357 1263 L 874 1124 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="22" transform="translate(-100, -165)" data-modal="office-21" d="M 613 352 L 673 486 L 717 594 L 661 616 L 613 510 L 507 556 L 447 420 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-3-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-3-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-3-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-3-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(3, -15)" data-modal-select-open d="M448 443L448 443L455 441L472 440L629 428L719 421L726 419L817 390L824 389L844 388L977 378L990 378L1006 381L1006 415L991 412L977 413L844 417L824 420L817 421L713 452L629 459L471 469L455 471L448 474L448 443 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="modal-select__slide swiper-slide" data-office-floor="2">
+						<div class="modal-select__plan">
+							<div class="modal-select__plan-container">
+								<div class="modal-select__plan-body">
+									<picture class="modal-select__plan-image-container">
+										<img class="modal-select__plan-image" src="assets/img/service/floor-diagrams/b1-f2-p6.png" alt="Здание BURNY City" />
+									</picture>
+
+									<div id="modal-select-plan-hint-2" class="modal-select__plan-hint modal-select__plan-hint--in">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Залив</span>
+									</div>
+									<div id="modal-select-plan-hint-2" class="modal-select__plan-hint modal-select__plan-hint--out">
+										<div class="modal-select__plan-hint-marker"></div>
+										<span>Город</span>
+									</div>
+
+									<div class="modal-select__plan-overlay">
+										<svg id="modal-select-office-floor-2-marker" viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+											<path class="modal-select__plan-marker" data-floor="7" transform="translate(-140, -240)" data-modal="office-21" d="M 999 202 L 870 269 L 952 470 L 481 677 L 312 282 L 923 14 z"></path>
+
+											<path class="modal-select__plan-marker" data-floor="12" transform="translate(-140, -243)" data-modal="office-21" d="M 1296 1244 L 829 1450 L 669 1077 L 736 1046 L 723 1018 L 659 1046 L 487 679 L 954 476 L 1121 843 L 1024 886 L 1035 911 L 1128 871 z"></path>
+										</svg>
+										<div id="modal-select-office-floor-2-tooltip" class="modal-select__plan-tooltip"></div>
+									</div>
+								</div>
+
+								<div id="modal-select-office-floor-2-info" class="modal-select__plan-info">
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">№ офиса</li>
+										<li id="modal-select-office-floor-2-floor" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+									<ul class="modal-select__plan-info-item">
+										<li class="modal-select__plan-info-item-label">Площадь, м²</li>
+										<li id="modal-select-office-floor-2-area" class="modal-select__plan-info-item-number">—</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<picture class="modal-select__city-container">
+							<img class="modal-select__city" src="./assets/img/backgrounds/city.png" alt="#" />
+						</picture>
+						<picture class="modal-select__ocean-container">
+							<img class="modal-select__ocean" src="./assets/img/backgrounds/ocean.png" alt="#" />
+						</picture>
+						<div class="modal-select__overview">
+							<picture class="modal-select__overview-image-container">
+								<img class="modal-select__overview-image" src="assets/img/service/building-plan.jpg" alt="Здание BURNY City" />
+							</picture>
+							<div class="modal-select__overview-overlay">
+								<svg viewBox="0 0 1470 980" preserveAspectRatio="xMidYMid meet">
+									<path class="modal-select__overview-marker" transform="translate(-50, -170)" data-modal-select-open d="M499 675L499 675L722 670L818 673L852 670L858 669L878 668L1016 668L1028 668L1034 669L1034 710L878 710L858 710L852 710L818 710L727 712L499 715L499 675 z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<dialog id="modal-office-21" class="modal-booking hide-scrollbar">
+    <button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-booking__container">
+		<div class="modal-booking__content">
+			<div class="modal-booking__title">Офис №21</div>
+			<div class="modal-booking__target">
+				<p class="modal-booking__target-title">Назначение:</p>
+				<ul class="modal-booking__target-list">
+					<li class="modal-booking__target-item">БАНКЕТ</li>
+					<li class="modal-booking__target-item">КОРПОРАТИВ</li>
+				</ul>
+			</div>
+			<p class="modal-booking__desc">Светлый и просторный зал располагается на 2-м этаже с&nbsp;окнами, выходящими на берег японского моря. Доступен многоуровневый паркинг на 304 машиноместа, соединенный с бизнес-центром и крытым панорамным переходом.</p>
+			<div class="modal-booking__params">
+				<ul class="modal-booking__params-item">
+					<li class="modal-booking__params-name">ЭТАЖ</li>
+					<li class="modal-booking__params-value">7</li>
+				</ul>
+				<ul class="modal-booking__params-item">
+					<li class="modal-booking__params-name">ПЛОЩАДЬ, М²</li>
+					<li class="modal-booking__params-value">343.8</li>
+				</ul>
+				<ul class="modal-booking__params-item">
+					<li class="modal-booking__params-name">ВЫСОТА ПОТОЛКА, М</li>
+					<li class="modal-booking__params-value">3.5</li>
+				</ul>
+				<ul class="modal-booking__params-item">
+					<li class="modal-booking__params-name">ПОМЕЩЕНИЙ</li>
+					<li class="modal-booking__params-value">4</li>
+				</ul>
+			</div>
+			<picture class="modal-booking__plan-container">
+				<img class="modal-booking__plan" src="./assets/img/service/floor-diagrams/b1-f2-p6.png" alt="Схема помещения" />
+			</picture>
+		</div>
+		<div class="modal-booking__info">
+			<div class="modal-booking__info-titlebox">
+				<div class="modal-booking__tag">ТАРИФ БАЗОВЫЙ</div>
+				<div class="modal-booking__price">от 9 990 ₽<span class="modal-booking__price-unit">/день</span></div>
+			</div>
+			<ul class="modal-booking__rate">
+				<li class="modal-booking__rate-item">
+					<span>Максимум 1 пользователь</span>
+					<a class="modal-booking__rate-item-icon" href="#">i</a>
+				</li>
+				<li class="modal-booking__rate-item">
+					<span>Поддержка 1 сайта</span>
+					<a class="modal-booking__rate-item-icon" href="#">i</a>
+				</li>
+				<li class="modal-booking__rate-item">
+					<span>Надежная защита</span>
+					<a class="modal-booking__rate-item-icon" href="#">i</a>
+				</li>
+				<li class="modal-booking__rate-item">
+					<span>50 CMS-элементов на сайте</span>
+					<a class="modal-booking__rate-item-icon" href="#">i</a>
+				</li>
+			</ul>
+			<button class="modal-booking__button" data-modal="room-booking">
+				<span>Забронировать</span>
+				<div class="modal-booking__button--icon-container">
+					<div class="modal-booking__button--icon-wrapper">
+						<i class="modal-booking__button--icon icon-arrow"></i>
+					</div>
+				</div>
+			</button>
+		</div>
+	</div>
+</dialog>
+
+<dialog id="modal-room-booking" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Заявка на аренду площади</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="room-booking-name">ФИО</label>
+	<input id="room-booking-name" class="input__input" type="text" placeholder="Ваше ФИО" required />
+</div>
+ <div class="input__inputbox">
+	<label class="input__label" for="room-booking-tel">Телефон</label>
+	<input id="room-booking-tel" class="input__input" type="tel" placeholder="Номер телефона" required />
+</div>
+
+				<div class="modal-form__form-select select" tabindex="0" role="combobox">
+					<input id="room-booking-select" class="modal-form__form-select-input select__input" type="text" placeholder="Выберите помещение" tabindex="-1" readonly required />
+					<i class="modal-form__form-select-icon select__icon icon-check-mark"></i>
+					<ul class="modal-form__form-select-dropdown select__dropdown hide-scrollbar" role="listbox">
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №21, 1283.83м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №64, 46.83м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №96, 15.3м</li>
+						<li class="modal-form__form-select-item select__item" role="option" tabindex="0">Офис №78, 920.83м</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="room-booking-agreement" required/>
+					</div>
+					<label class="modal-form__form-agreement-label" for="room-booking-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Отправить заявку</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-feedback" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Напишите нам</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="feedback-name">ФИО</label>
+	<input id="feedback-name" class="input__input" type="text" placeholder="Ваше ФИО" required />
+</div>
+ 
+                <div class="input__inputbox">
+	<label class="input__label" for="feedback-tel">Телефон</label>
+	<input id="feedback-tel" class="input__input" type="tel" placeholder="Номер телефона" required />
+</div>
+
+				<div class="modal-form__form-inputbox input__inputbox">
+                    <label class="modal-form__form-input-label input__label" for="feedback-custom">Ваш вопрос</label>
+                    <textarea id="feedback-custom" class="modal-form__form-input--custom input__input" placeholder="Что вас интересует?"></textarea>
+                </div>
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="feedback-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="feedback-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Отправить</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-parking" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Бронирование парко-места</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="parking-name">ФИО</label>
+	<input id="parking-name" class="input__input" type="text" placeholder="Ваше ФИО" required />
+</div>
+ 
+                <div class="input__inputbox">
+	<label class="input__label" for="parking-tel">Телефон</label>
+	<input id="parking-tel" class="input__input" type="tel" placeholder="Номер телефона" required />
+</div>
+
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="parking-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="parking-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Забронировать</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-helipad" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Бронирование слота вертолетной площадки</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="helipad-name">ФИО</label>
+	<input id="helipad-name" class="input__input" type="text" placeholder="Ваше ФИО" required />
+</div>
+ 
+                <div class="input__inputbox">
+	<label class="input__label" for="helipad-tel">Телефон</label>
+	<input id="helipad-tel" class="input__input" type="tel" placeholder="Номер телефона" required />
+</div>
+
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="helipad-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="helipad-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Забронировать</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-subscribe" class="modal-form hide-scrollbar">
+	<button class="close-button" role="button" aria-label="Закрыть" data-modal-close>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button>
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Подпишитесь на&nbsp;обновления</div>
+			<p class="modal-form__desc">Узнавайте первыми о новостях МКФ BURNY. Обещаем писать только по&nbsp;делу. Отписаться от рассылки можно в любое время.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				<div class="input__inputbox">
+	<label class="input__label" for="subscribe-mail">E-mail</label>
+	<input id="subscribe-mail" class="input__input" type="email" placeholder="Ваш E-mail" required />
+</div>
+ 
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="subscribe-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="subscribe-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Подписаться</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>
+
+<dialog id="modal-film" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/film.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
+
+<dialog id="modal-media-office" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/office.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
+<dialog id="modal-media-hotel" class="modal-media">
+	<div class="modal-media__button" data-modal-close><button class="close-button" role="button" aria-label="Закрыть" @@attr>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+    <span class="close-button__chunk"></span>
+</button></div>
+	<div class="modal-media__container">
+        <div class="modal-media__video-button"><i class="modal-media__video-button-icon icon-volume-on"></i></div>
+        <video class="modal-media__video" loop playsinline>
+            <source src="./assets/video/apart.mp4" type="video/mp4">
+        </video>
+    </div>
+</dialog>
  <div class="sider">
 	<div class="sider__label-container">
 		<span class="sider__label sider__label--stroke">Пресс-центр</span>
@@ -407,8 +1210,8 @@
 								</div>
 								<label class="blog-subscribe__form-agreement-desc" for="blog-subscribe-checkbox">
 									Согласен 
-									<span class="blog-subscribe__form-agreement-button" role="button" data-privacy-open>с&nbsp;обработкой данных</span>
-									<span class="blog-subscribe__form-agreement-button" role="button" data-privacy-open>и&nbsp;политикой конфиденциальности</span>
+									<span class="blog-subscribe__form-agreement-button" role="button" data-modal="privacy">с&nbsp;обработкой данных</span>
+									<span class="blog-subscribe__form-agreement-button" role="button" data-modal="privacy">и&nbsp;политикой конфиденциальности</span>
 								</label>
 							</div>
 							<button class="blog-subscribe__form-button" type="submit">
@@ -442,7 +1245,7 @@
 			<div class="footer__list footer__list--map" role="list">
 				<p class="footer__list-item--title">Карта сайта</p>
 				<a class="footer__list-item" href="index.html" role="listitem" data-hover-anim><span>О комплексе</span></a>
-				<a class="footer__list-item" href="#" role="listitem" data-hover-anim><span>Галерея</span></a>
+				<a class="footer__list-item" href="gallery.html" role="listitem" data-hover-anim><span>Галерея</span></a>
 				<a class="footer__list-item" href="blog.html" role="listitem" data-hover-anim><span>Пресс-центр</span></a>
 				<a class="footer__list-item" href="contacts.html" role="listitem" data-hover-anim><span>Контакты</span></a>
 			</div>
@@ -486,7 +1289,7 @@
 				</a>
 			</div>
 			<ul class="footer__legal">
-				<li class="footer__legal-privacy" role="button" data-privacy-open>Правовая информация</li>
+				<li class="footer__legal-privacy" role="button" data-modal="privacy">Правовая информация</li>
 				<li class="footer__legal-info">2025 &copy; BURNY City. All rights reserved</li>
 			</ul>
 		</div>

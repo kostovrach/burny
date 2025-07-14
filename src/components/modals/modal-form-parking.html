@@ -1,0 +1,35 @@
+<dialog id="modal-parking" class="modal-form hide-scrollbar">
+	@@include('../close-button.html', { 'attr': 'data-modal-close' })
+	<div class="modal-form__container">
+		<div class="modal-form__titlebox">
+			<div class="modal-form__title">Бронирование парко-места</div>
+			<p class="modal-form__desc">Мы дадим ответ в течение 24 часов в ближайший рабочий день. Вы также можете связаться с нами по телефону отдела продаж: <a class="modal-form__desc-link" href="tel:+7 999 555-55-35">+7&nbsp;999&nbsp;555-55-35</a>.</p>
+		</div>
+		<form class="modal-form__form" action="" method="post">
+			<div class="modal-form__form-data">
+				@@include('../form-input.html', { 'inputId': 'parking-name', 'label': 'ФИО', 'type': 'text', 'placeholder': 'Ваше ФИО', 'required': 'true' }) 
+                @@include('../form-input.html', { 'inputId': 'parking-tel', 'label': 'Телефон', 'type': 'tel', 'placeholder': 'Номер телефона', 'required': 'true' })
+			</div>
+			<div class="modal-form__form-submit">
+				<div class="modal-form__form-agreement">
+					<div class="modal-form__form-agreement-checkbox checkbox">
+						<input type="checkbox" id="parking-agreement" required />
+					</div>
+					<label class="modal-form__form-agreement-label" for="parking-agreement"
+						>Согласен
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">с&nbsp;обработкой данных</span>
+						<span class="modal-form__form-agreement-label-button" data-modal="privacy" role="button">и&nbsp;политикой конфиденциальности</span>
+					</label>
+				</div>
+				<button class="modal-form__form-button" type="submit">
+					<span>Забронировать</span>
+					<div class="modal-form__form-button--icon-container">
+						<div class="modal-form__form-button--icon-wrapper">
+							<i class="modal-form__form-button--icon icon-arrow"></i>
+						</div>
+					</div>
+				</button>
+			</div>
+		</form>
+	</div>
+</dialog>

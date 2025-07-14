@@ -57,9 +57,7 @@
 					throw new Error(`HTTP error! status: ${response.status}`);
 				}
 				this.floorData = await response.json();
-				console.log(`Floor data loaded successfully for ${this.config.baseId}`);
 			} catch (error) {
-				console.warn(`Failed to load floor data from ${this.config.jsonPath}. Using fallback data.`, error);
 				this.floorData = InteractiveBuilding.fallbackData;
 			}
 		}
@@ -214,12 +212,12 @@
 
 	new InteractiveBuilding({
 		baseId: "building-plan-offices",
-		jsonPath: "./js/offices-plan.json"
+		jsonPath: "./data/offices/offices-overview.json"
 	});
 	
 	new InteractiveBuilding({
 		baseId: "building-plan-conference",
-		jsonPath: "./js/conference-plan.json"
+		jsonPath: "./data/conference/conference-overview.json"
 	});
 	
 	new InteractiveBuilding({
@@ -234,12 +232,37 @@
 	
 	new InteractiveBuilding({
 		baseId: "floor-parking-3",
-		jsonPath: "./js/parking-plan.json"
+		jsonPath: "./data/parking-plan.json"
 	});
 	
 	new InteractiveBuilding({
 		baseId: "floor-helipad",
-		jsonPath: "./js/helipad-plan.json"
+		jsonPath: "./data/helipad-plan.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "modal-select-office-floor-2",
+		jsonPath: "./data/offices/floors/offices-floor-2.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "modal-select-office-floor-3",
+		jsonPath: "./data/offices/floors/offices-floor-3.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "modal-select-office-floor-7",
+		jsonPath: "./data/offices/floors/offices-floor-7.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "modal-select-office-floor-8",
+		jsonPath: "./data/offices/floors/offices-floor-8.json"
+	});
+	
+	new InteractiveBuilding({
+		baseId: "modal-select-office-floor-9",
+		jsonPath: "./data/offices/floors/offices-floor-9.json"
 	});
 
 	
