@@ -88,14 +88,34 @@
 			}
 			.header__links-wrapper {
 				gap: rem(16);
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+		@media (pointer: fine) {
+			&:not(.active):hover {
+				.header__links-item,
+				.header__links-title {
+					color: $c-C6A47D;
+					&--icon {
+						transform: scaleY(-1);
+					}
+				}
+				.header__links-wrapper {
+					gap: rem(16);
+					opacity: 1;
+					pointer-events: auto;
+				}
 			}
 		}
 		&-wrapper {
 			position: absolute;
 			display: flex;
 			flex-direction: column;
-			gap: rem(64);
-			margin-top: rem(16);
+			gap: rem(32);
+			opacity: 0;
+			padding-top: rem(16);
+			pointer-events: none;
 			transition: all $duration;
 		}
 		&-title {

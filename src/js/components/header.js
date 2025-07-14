@@ -1,24 +1,19 @@
-// (function () {
-// 	const header = document.querySelector(".header");
+(function () {
+	const header = document.querySelector(".header");
 
-// 	if (!header) return;
+	if (!header) return;
 
-// 	window.addEventListener("scroll", () => {
-// 		const isStickyMode = window.scrollY > 10 && header.classList.contains("js-sticky") || document.body.classList.contains("lock");
+    const dropdown = header.querySelector(".header__links")
+    const dropdownTitle = header.querySelector(".header__links-title")
+    const dropdownList = header.querySelector(".header__links-title")
 
-// 		header.classList.toggle("sticky", isStickyMode);
-// 	});
+    dropdownTitle.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+    })
 
-// 	// const navItemMore = header.querySelector(".header__nav-item--more");
-
-// 	// navItemMore.addEventListener("click", function (event) {
-// 	// 	event.stopPropagation();
-// 	// 	this.classList.toggle("active");
-// 	// });
-
-// 	// document.addEventListener("click", function (e) {
-// 	// 	if (!navItemMore.contains(e.target)) {
-// 	// 		navItemMore.classList.remove("active");
-// 	// 	}
-// 	// });
-// })();
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 10 && dropdown.classList.contains("active")) {
+            dropdown.classList.remove("active");
+        }
+    })
+})();
